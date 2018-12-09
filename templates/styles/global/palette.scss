@@ -1,0 +1,28 @@
+$black: #000000;
+$white: #FFFFFF;
+$grey: #F4F4F4;
+$dark-grey: #979797;
+
+.bg-black {
+    background-color: $black;
+}
+
+.bg-grey {
+    background-color: $grey;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+.txt-black {
+    color: $black;
+}
+
+.txt-grey {
+    color: $grey;
+}
+
+.txt-white {
+    color: $white;
+}

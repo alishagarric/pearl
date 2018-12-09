@@ -1,0 +1,22 @@
+.testimonial {
+    position: relative;
+    .testimonial-slider {
+        .slide {
+            //on file named base.scss
+            width: 100%;
+            @extend .image-with-text;
+        }
+    }
+    .arrow {
+        display: inline-block;
+        position: absolute;
+        top: calc(50% - 13px);
+        cursor: pointer;
+    }
+    .arrow-left {
+        left: $base * 1.5;
+    }
+    .arrow-right {
+        right: $base * 1.5;
+    }
+}

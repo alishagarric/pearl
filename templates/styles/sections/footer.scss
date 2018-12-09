@@ -1,0 +1,41 @@
+.footer {
+    background-color: $grey;
+    position: relative;
+    margin-top: $base;
+    .leaves {
+        position: absolute;
+        top: -50%;
+        right: 0;
+        width: 180px;
+    }
+    .inner {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        .logo {
+            width: 164px;
+            img {
+                mix-blend-mode: darken;
+            }
+        }
+        .menu, .contact {
+            padding-left: $base / 3;
+            border-left: 1px solid $dark-grey;
+            display: flex;
+            align-items: center;
+        }
+        .contact {
+            margin-right: $base * 2;
+        }
+    }
+}
+
+.copywright {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: $base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

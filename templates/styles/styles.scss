@@ -1,0 +1,16 @@
+
+
+//vendor: external stylesheets. loaded first so we override any funky behavior.
+@import 'vendors/normalize';
+
+
+//global: sitewide variables & classes.
+@import 'global/palette';
+@import 'global/base';
+@import 'global/typography';
+
+
+// site elements & modules.
+@import 'sections/footer';
+@import 'sections/testimonial-slider';
+@import 'sections/services-slider';

@@ -1,0 +1,75 @@
+$fnt-header: 'Playfair Display', serif;
+$fnt-body: 'Montserrat', sans-serif;
+
+
+h1, .h1 {
+    font-family: $fnt-header;
+    font-size: 205px;
+    margin-bottom: 0;
+    line-height: 1.2;
+    @media (max-width: $screen-base){
+        font-size: 20vw;
+    }
+}
+
+h2, .h2 {
+    font-family: $fnt-header;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: $base / 4;
+    @media (max-width: $screen-base){
+        font-size: 6.2vw;
+    }
+}
+
+h3, .h3 {
+    font-family: $fnt-header;
+    font-size: 48px;
+    @media (max-width: $screen-base){
+        font-size: 4.7vw;
+    }
+}
+
+h4, .h4 {
+    font-family: $fnt-header;
+    font-size:36px;
+    @media (max-width: $screen-base){
+        font-size: 3.5vw;
+    }
+}
+
+h5, .h5 {
+    font-family: $fnt-header;
+    font-size: 20px;
+    @media (max-width: $screen-base){
+        font-size: 1.95vw;
+    }
+}
+
+p, .p {
+    font-family: $fnt-body;
+    font-size: 14px;
+    @media (max-width: $screen-base){
+        font-size: 1.359vw;
+    }
+}
+
+.small {
+    font-family: $fnt-body;
+    font-size: 12px;
+    @media (max-width: $screen-base){
+        font-size: 1.18vw;
+    }
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.light {
+    font-weight: 300;
+}

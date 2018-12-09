@@ -1,0 +1,42 @@
+
+<div class="section testimonial double-padding">
+    <div class="inner">
+        <div class="testimonial-slider">
+            {% for article in blogs.testimonial.articles %}
+                {% include 'testimonial-slider-parsing' %}
+                <div class="slide">
+                    <div class="text">
+                        <h2>"{{ article-snippet}}"</h2>
+                        <p>{{ article-content }}</p>
+                        <p class="bold">{{ article.title }}</p>
+                    </div>
+                    <div class="background-image" style="background-image: url(' {{ article.image.src | img_url: '500x' }}');"></div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="arrow arrow-left" onclick="slickPrev()">
+            {% include 'svg-arrow-left' %}
+        </div>  
+        <div class="arrow arrow-right" onclick="slickNext()">
+            {% include 'svg-arrow-right' %}
+        </div>  
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+      $('.testimonial-slider').slick({
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000
+      });
+    });
+
+    function slickPrev() {
+        $('.testimonial-slider').slick("slickPrev");
+    }
+
+    function slickNext() {
+        $('.testimonial-slider').slick("slickNext");
+    }
+</script>

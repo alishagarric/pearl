@@ -1,0 +1,8 @@
+{% assign content = article.content %}
+
+{% assign article-snippet = content | split: "<strong>" %}
+{% assign article-snippet = article-snippet[1] %}
+{% assign article-snippet = article-snippet | split: "</strong>" %}
+{% assign article-snippet = article-snippet[0] %}
+
+{% assign article-content = content | remove: "<strong>" | remove: "</strong>" %}

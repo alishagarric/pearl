@@ -1,0 +1,97 @@
+<div class="section services-slider">
+    <div class="sliders">
+        <div class="left-sliders">
+            <div class="services-title-slider">
+                {% for article in blogs.service.articles %}
+                    <h1>{{ article.title }}</h1>
+                {% endfor %}
+            </div>
+            <div class="services-main-slider">
+                {% for article in blogs.service.articles %}
+                    <div class="background-image" style="background-image: url('{{ article.image.src | img_url: '500x' }}');"></div>
+                {% endfor %}
+            </div>
+            <div class="services-info-slider">
+                {% for article in blogs.service.articles %}
+                    <div>
+                        <p>{{ article.content }}</p>
+                        <p class="bold"> +haircut </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="right-slider-and-tools">
+            <div class="services-secondary-slider-container">
+                <div class="services-secondary-slider">
+                    {% for article in blogs.service.articles %}
+                        {% if forloop.index != 1 %}
+                            <div class="background-image" style="background-image: url('{{ article.image.src | img_url: '500x' }}');"></div>
+                        {% endif %}
+                    {% endfor %}
+                    <div class="background-image" style="background-image: url('{{ blogs.service.articles[0].image.src | img_url: '500x' }}');"></div>
+                </div>
+                <div class="arrows">
+                    <div class="arrow arrow-left" onclick="slickServicesPrev()">
+                        {% include 'svg-arrow-left' %}
+                    </div>  
+                    <div class="arrow arrow-right" onclick="slickServicesNext()">
+                        {% include 'svg-arrow-right' %}
+                    </div>  
+                </div>
+            </div>
+            <div class="slider-nav">
+                {% for article in blogs.service.articles %}
+                    <p>{{ article.title }}</p>
+                {% endfor %}    
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+      $('.services-main-slider').slick({
+          arrows: false/*,
+          autoplay: true,
+          autoplaySpeed: 2000*/
+      });
+    });
+
+    $(document).ready(function(){
+      $('.services-secondary-slider').slick({
+          arrows: false/*,
+          autoplay: true,
+          autoplaySpeed: 2000*/
+      });
+    });
+
+    $(document).ready(function(){
+      $('.services-title-slider').slick({
+          arrows: false/*,
+          autoplay: true,
+          autoplaySpeed: 2000*/
+      });
+    });
+
+    $(document).ready(function(){
+      $('.services-info-slider').slick({
+          arrows: false/*,
+          autoplay: true,
+          autoplaySpeed: 2000*/
+      });
+    });
+
+    function slickServicesPrev() {
+        $('.services-main-slider').slick("slickPrev");
+        $('.services-secondary-slider').slick("slickPrev");
+        $('.services-title-slider').slick("slickPrev");
+        $('.services-info-slider').slick("slickPrev");
+    }
+
+    function slickServicesNext() {
+        $('.services-main-slider').slick("slickNext");
+        $('.services-secondary-slider').slick("slickNext");
+        $('.services-title-slider').slick("slickNext");
+        $('.services-info-slider').slick("slickNext");
+    }
+</script>
