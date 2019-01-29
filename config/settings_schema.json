@@ -824,6 +824,18 @@
   },
   {
     "name": {
+      "en": "Address Block"
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "address-img",
+        "label": "image"
+      }
+    ]
+  },
+  {
+    "name": {
       "de": "Warenkorb",
       "en": "Cart",
       "es": "Carrito",

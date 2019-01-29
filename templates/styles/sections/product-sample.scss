@@ -1,0 +1,23 @@
+.product-sample {
+    h4 {
+        border-bottom: 1px solid $dark-grey;
+    }
+    .items {
+        display: flex;
+        flex-direction: row;
+        .item {
+            margin-right: 2.5vw;
+            text-align: center;
+            p {
+                margin-bottom: 0;
+                margin-top: $base / 4;
+                &.light {
+                    margin-top: $base / 10;
+                }
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}

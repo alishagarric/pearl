@@ -1,0 +1,13 @@
+<div class="section text-image-block {% if orientation == 'reversed' %} reversed {% endif %}">
+    <div class="text">
+        <h3><strong>{{ header }}</strong></h3>
+        <p>{{ paragraph }}</p>
+        <p><strong>{{ bullet1 }}</strong></p>
+        <p><strong>{{ bullet2 }}</strong></p>
+        <p><strong>{{ bullet3 }}</strong></p>
+        {% if buttonText != null %}
+            <button><a href="{{buttonDest}}">{{buttonText}}</a></button>
+        {% endif %}
+    </div>
+    <div class="background-image" style="background-image:url(' {{ settings.address-img | img_url: '1000x' }} ')"></div>
+</div>

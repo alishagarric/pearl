@@ -8,9 +8,12 @@
 @import 'global/palette';
 @import 'global/base';
 @import 'global/typography';
+@import 'global/animations';
 
 
 // site elements & modules.
 @import 'sections/footer';
 @import 'sections/testimonial-slider';
 @import 'sections/services-slider';
+@import 'sections/product-sample';
+@import 'sections/one-stop-shop';

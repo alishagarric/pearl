@@ -39,28 +39,82 @@ img {
     padding-right: $base;
     align-items: center;
     justify-content: center;
+    .text {
+        // flex-grow: 1;
+        text-align: right;
+        margin-right: $base * 1.5;
+    }
+    .background-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: relative;
+        &:before {
+            content: "";
+            width: 1px;
+            background-color: $dark-grey;
+            position: absolute;
+            left: $base * -.75;
+            top: 0;
+            bottom: 0;
+        }
+        @media(max-width: $screen-base){
+            width: 19.5vw;
+            height: 19.5vw;
+        }
+    }
+}
+
+.text-image-block {
+    display: flex;
+    flex-direction: row;
+    min-height: 300px;
+    .text {
+        width: 40vw;
+        background-color: $black;
+        color: $white;
+        margin-right: 2.5vw;
+        padding: 5vw;
+        position: relative;
+        &::after {
+            position: absolute;
+            width: 1px;
+            height: 130%;
+            content: "";
+            background-color: $dark-grey;
+            right: 0;
+            top: -15%;
+        }
+        h3 {
+            color: $white;
+        }
+    }
+    &.reversed {
+        flex-direction: row-reverse;
         .text {
-           // flex-grow: 1;
-            text-align: right;
-            margin-right: $base * 1.5;
-        }
-        .background-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            position: relative;
-            &:before {
-                content: "";
-                width: 1px;
-                background-color: $dark-grey;
-                position: absolute;
-                left: $base * -.75;
-                top: 0;
-                bottom: 0;
-            }
-            @media(max-width: $screen-base){
-                width: 19.5vw;
-                height: 19.5vw;
+            margin-right: 0;
+            margin-left: 2.5vw;
+            &::after {
+                right: auto;
+                left: 0;
             }
         }
+    }
+    .background-image {
+        width: 60vw;
+    }
+}
+
+button {
+    border: 1px solid $white;
+    background-color: transparent;
+    a {
+        color: $white;
+        display: inline-block;
+        font-size: 14px;
+        padding: 13.5px 40px;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: .3px;
+    }
 }
