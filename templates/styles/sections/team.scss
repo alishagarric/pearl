@@ -3,5 +3,10 @@
         //on file named base.scss
         width: 100%;
         @extend .image-with-text;
+        .ability {
+            display: inline-block;
+            margin-left: $base / 2;
+            margin-bottom: 0;
+        }
     }
 }

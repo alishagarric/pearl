@@ -1,61 +1,72 @@
 <!-- /templates/page.team.liquid -->
  <div class="section team">
-    <h1>{{ page.title }}</h1>
-    {% assign namess = '' %}
-    {% assign descriptions = '' %}
-    {% assign abilitiess = '' %}
-    {% assign pictures = '' %}
-    {% for article in blogs.hair-stylist.articles %}
-        {% assign names = names | append: article.title | append: "$$$" %}
-        {% assign description = description | append: article.content | append: "$$$" %}
-        {% assign picture = picture | append: article.image.src | img_url: '500x' | append: "$$$" %}
-        {% for tag in article.tags %}
-            {% assign abilities = abilities | append: tag | append: "," %}
-        {% endfor %}
-        {% assign abilities = abilities | append: "$$$" %}
-    {% endfor %}
-    {% for article in blogs.nail-tech.articles %}
-        {% assign names = names | append: article.title | append: "$$$" %}
-        {% assign description = description | append: article.content | append: "$$$" %}
-        {% assign picture = picture | append: article.image.src | img_url: '500x' | append: "$$$" %}
-        {% for tag in article.tags %}
-            {% assign abilities = abilities | append: tag | append: "," %}
-        {% endfor %}
-        {% assign abilities = abilities | append: "$$$" %}
-    {% endfor %}
-    {% for article in blogs.lash-stylist.articles %}
-        {% assign names = names | append: article.title | append: "$$$" %}
-        {% assign description = description | append: article.content | append: "$$$" %}
-        {% assign picture = picture | append: article.image.src | img_url: '500x' | append: "$$$" %}
-        {% for tag in article.tags %}
-            {% assign abilities = abilities | append: tag | append: "," %}
-        {% endfor %}
-        {% assign abilities = abilities | append: "$$$" %}
-    {% endfor %}
-    {% for article in blogs.esthetician.articles %}
-        {% assign names = names | append: article.title | append: "$$$" %}
-        {% assign description = description | append: article.content | append: "$$$" %}
-        {% assign picture = picture | append: article.image.src | img_url: '500x' | append: "$$$" %}
-        {% for tag in article.tags %}
-            {% assign abilities = abilities | append: tag | append: "," %}
-        {% endfor %}
-        {% assign abilities = abilities | append: "$$$" %}
-    {% endfor %}
-
-    {% assign names = names | split: "$$$" %}
-    {% assign descriptions = descriptions | split: "$$$" %}
-    {% assign pictures = pictures | split: "$$$" %}
-    {% assign abilities = abilities | split: "$$$" %}
-    
-
-    {% for name in names %}
-        <div class="employee">
-            <div class="text">
-                <h2>{{ name }}</h2>
-                <p>{{ descriptions[forloop.index0]}}</p>
-                <p class="bold">tag</p>
-            </div>
-            <div class="background-image" style="background-image: url(' {{ pictures }}');"></div>
+    <div class="inner">
+        <div class="page-title">
+            <img src="{{ 'title-team.png' | asset_url }}">
         </div>
-    {% endfor %}
+        {% assign namess = '' %}
+        {% assign descriptions = '' %}
+        {% assign abilitiess = '' %}
+        {% assign pictures = '' %}
+        {% for article in blogs.hair-stylist.articles %}
+            {% assign names = names | append: article.title | append: "$$$" %}
+            {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
+            {% assign source = article.image.src | img_url: '500x' %}
+            {% assign pictures = pictures | append: source | append: "$$$" %}      
+            {% for tag in article.tags %}
+                {% assign abilities = abilities | append: tag | append: "," %}
+            {% endfor %}
+            {% assign abilities = abilities | append: "$$$" %}
+        {% endfor %}
+        {% for article in blogs.nail-tech.articles %}
+            {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
+            {% assign source = article.image.src | img_url: '500x' %}
+            {% assign pictures = pictures | append: source | append: "$$$" %}      
+            {% for tag in article.tags %}
+                {% assign abilities = abilities | append: tag | append: "," %}
+            {% endfor %}
+            {% assign abilities = abilities | append: "$$$" %}
+        {% endfor %}
+        {% for article in blogs.lash-stylist.articles %}
+            {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
+            {% assign source = article.image.src | img_url: '500x' %}
+            {% assign pictures = pictures | append: source | append: "$$$" %}      
+            {% for tag in article.tags %}
+                {% assign abilities = abilities | append: tag | append: "," %}
+            {% endfor %}
+            {% assign abilities = abilities | append: "$$$" %}
+        {% endfor %}
+        {% for article in blogs.esthetician.articles %}
+            {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
+            {% assign source = article.image.src | img_url: '500x' %}
+            {% assign pictures = pictures | append: source | append: "$$$" %}      
+            {% for tag in article.tags %}
+                {% assign abilities = abilities | append: tag | append: "," %}
+            {% endfor %}
+            {% assign abilities = abilities | append: "$$$" %}
+        {% endfor %}
+
+        {% assign names = names | split: "$$$" %}
+        {% assign descriptions = descriptions | split: "$$$" %}
+        {% assign pictures = pictures | split: "$$$" %}
+        {% assign abilities = abilities | split: "$$$" %}
+        
+        {% for name in names %}
+            <div class="employee">
+                <div class="text">
+                    <h2>{{ name }}</h2>
+                    <p>{{ descriptions[forloop.index0]}}</p>
+                    {% for ability-list in abilities[forloop.index0] %}
+                        {% assign this-ability-list = ability-list | split: "," %}
+                        {% for ability in this-ability-list %}
+                            <p class="ability bold">+{{ ability }}</p>
+                        {% endfor %}
+                    {% endfor %} 
+                </div>
+                <div class="background-image" style="background-image: url(' {{ pictures[forloop.index0] }}');"></div>
+            </div>
+        {% endfor %}
+    </div>
  </div>
+
+ {% include 'text-image-block' with header:"Seeing is believing", paragraph:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", buttonText:"View Galleries" buttonDest:"/" orientation: "reversed" %} 

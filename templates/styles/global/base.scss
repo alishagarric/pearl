@@ -33,6 +33,14 @@ img {
     background-repeat: no-repeat !important;
 }
 
+.page-title {
+    text-align: center;
+    img {
+        max-width: 400px;
+       
+    }
+}
+
 .image-with-text {
     display: flex;
     flex-direction: row;
@@ -124,7 +132,9 @@ img {
             }
         }
         .background-image {
-            margin-left: 2.5vw;
+            @media (max-width: 650px){
+                margin-left: 2.5vw;
+            }
             &::after {
                 right: auto;
                 left: 0;

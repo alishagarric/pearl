@@ -1,0 +1,18 @@
+.prices {
+    .menu {
+        background-color: $cool-grey;
+        .title {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            h2 {
+                line-height: 1;
+                margin-right: $base;
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: row;            
+        }
+    }
+}

@@ -416,6 +416,11 @@ img {
   background-position: center center !important;
   background-repeat: no-repeat !important; }
 
+.page-title {
+  text-align: center; }
+  .page-title img {
+    max-width: 400px; }
+
 .image-with-text, .testimonial .testimonial-slider .slide, .team .employee {
   display: flex;
   flex-direction: row;
@@ -492,11 +497,12 @@ img {
       .text-image-block.reversed .text::after {
         right: auto;
         left: 0; }
-    .text-image-block.reversed .background-image {
-      margin-left: 2.5vw; }
-      .text-image-block.reversed .background-image::after {
-        right: auto;
-        left: 0; }
+    @media (max-width: 650px) {
+      .text-image-block.reversed .background-image {
+        margin-left: 2.5vw; } }
+    .text-image-block.reversed .background-image::after {
+      right: auto;
+      left: 0; }
   .text-image-block .background-image {
     width: 60vw; }
     @media (max-width: 650px) {
@@ -775,3 +781,20 @@ nav {
 
 .team .employee {
   width: 100%; }
+  .team .employee .ability {
+    display: inline-block;
+    margin-left: 25px;
+    margin-bottom: 0; }
+
+.prices .menu {
+  background-color: #F4F4F4; }
+  .prices .menu .title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end; }
+    .prices .menu .title h2 {
+      line-height: 1;
+      margin-right: 50px; }
+  .prices .menu .content {
+    display: flex;
+    flex-direction: row; }
