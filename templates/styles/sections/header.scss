@@ -1,0 +1,18 @@
+nav {
+    background-color: $black;
+    padding: $base / 2;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        li {
+            margin-right: $base / 2;
+            &:last-of-type {
+                margin-right: 0;
+            }
+            a {
+                color: $white;
+            }
+        }
+    }
+}

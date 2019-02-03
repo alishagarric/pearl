@@ -41,7 +41,7 @@
             </div>
             <div class="slider-nav">
                 {% for article in blogs.service.articles %}
-                    <p>{{ article.title }}</p>
+                    <p class="{% if forloop.index == 1 %} selected {% endif %}" data-index="{{forloop.index0}}">{{ article.title }}</p>
                 {% endfor %}    
             </div>
         </div>
@@ -86,6 +86,7 @@
         $('.services-secondary-slider').slick("slickPrev");
       //  $('.services-title-slider').slick("slickPrev");
         $('.services-info-slider').slick("slickPrev");
+        changeNav();
     }
 
     function slickServicesNext() {
@@ -93,5 +94,13 @@
         $('.services-secondary-slider').slick("slickNext");
       //  $('.services-title-slider').slick("slickNext");
         $('.services-info-slider').slick("slickNext");
+        changeNav();
+    }
+
+    function changeNav(){
+        var currentSlide = $('.services-main-slider').slick('slickCurrentSlide');
+        $('.slider-nav p').removeClass("selected");
+        var navTitles = $('.slider-nav p');
+        $(navTitles[currentSlide]).addClass("selected");
     }
 </script>

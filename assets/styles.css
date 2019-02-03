@@ -416,22 +416,22 @@ img {
   background-position: center center !important;
   background-repeat: no-repeat !important; }
 
-.image-with-text, .testimonial .testimonial-slider .slide {
+.image-with-text, .testimonial .testimonial-slider .slide, .team .employee {
   display: flex;
   flex-direction: row;
   padding-left: 50px;
   padding-right: 50px;
   align-items: center;
   justify-content: center; }
-  .image-with-text .text, .testimonial .testimonial-slider .slide .text {
+  .image-with-text .text, .testimonial .testimonial-slider .slide .text, .team .employee .text {
     text-align: right;
     margin-right: 75px; }
-  .image-with-text .background-image, .testimonial .testimonial-slider .slide .background-image {
+  .image-with-text .background-image, .testimonial .testimonial-slider .slide .background-image, .team .employee .background-image {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     position: relative; }
-    .image-with-text .background-image:before, .testimonial .testimonial-slider .slide .background-image:before {
+    .image-with-text .background-image:before, .testimonial .testimonial-slider .slide .background-image:before, .team .employee .background-image:before {
       content: "";
       width: 1px;
       background-color: #979797;
@@ -440,14 +440,26 @@ img {
       top: 0;
       bottom: 0; }
     @media (max-width: 1024px) {
-      .image-with-text .background-image, .testimonial .testimonial-slider .slide .background-image {
+      .image-with-text .background-image, .testimonial .testimonial-slider .slide .background-image, .team .employee .background-image {
         width: 19.5vw;
         height: 19.5vw; } }
+  @media (max-width: 750px) {
+    .image-with-text, .testimonial .testimonial-slider .slide, .team .employee {
+      flex-direction: column; }
+      .image-with-text .text, .testimonial .testimonial-slider .slide .text, .team .employee .text {
+        margin-right: 0;
+        text-align: center; }
+      .image-with-text .background-image:before, .testimonial .testimonial-slider .slide .background-image:before, .team .employee .background-image:before {
+        height: 0px;
+        width: 0px; } }
 
 .text-image-block {
   display: flex;
   flex-direction: row;
   min-height: 300px; }
+  @media (max-width: 650px) {
+    .text-image-block {
+      flex-direction: column; } }
   .text-image-block .text {
     width: 40vw;
     background-color: #000000;
@@ -465,16 +477,41 @@ img {
       top: -15%; }
     .text-image-block .text h3 {
       color: #FFFFFF; }
+    @media (max-width: 650px) {
+      .text-image-block .text {
+        width: 97.5vw;
+        padding: 50px 10vw; } }
   .text-image-block.reversed {
     flex-direction: row-reverse; }
+    @media (max-width: 650px) {
+      .text-image-block.reversed {
+        flex-direction: column; } }
     .text-image-block.reversed .text {
       margin-right: 0;
       margin-left: 2.5vw; }
       .text-image-block.reversed .text::after {
         right: auto;
         left: 0; }
+    .text-image-block.reversed .background-image {
+      margin-left: 2.5vw; }
+      .text-image-block.reversed .background-image::after {
+        right: auto;
+        left: 0; }
   .text-image-block .background-image {
     width: 60vw; }
+    @media (max-width: 650px) {
+      .text-image-block .background-image {
+        width: 97.5vw;
+        min-height: 300px;
+        position: relative; }
+        .text-image-block .background-image::after {
+          position: absolute;
+          width: 1px;
+          height: 130%;
+          content: "";
+          background-color: #979797;
+          right: 0;
+          top: -15%; } }
 
 button {
   border: 1px solid #FFFFFF;
@@ -487,6 +524,12 @@ button {
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: .3px; }
+  button.dark {
+    border: 1px solid #000000; }
+    button.dark a {
+      color: #000000; }
+  button.full-width {
+    width: 100%; }
 
 h1, .h1 {
   font-family: "Playfair Display", serif;
@@ -512,6 +555,9 @@ h3, .h3 {
   @media (max-width: 1024px) {
     h3, .h3 {
       font-size: 4.7vw; } }
+  @media (max-width: 700px) {
+    h3, .h3 {
+      font-size: 32.9px; } }
 
 h4, .h4 {
   font-family: "Playfair Display", serif;
@@ -536,6 +582,9 @@ p, .p {
   @media (max-width: 1024px) {
     p, .p {
       font-size: 1.359vw; } }
+  @media (max-width: 883px) {
+    p, .p {
+      font-size: 12px; } }
 
 .small {
   font-family: "Montserrat", sans-serif;
@@ -562,6 +611,20 @@ p, .p {
     transform: translate3d(0, 0, 0); } }
 .fadeInDown {
   animation-name: fadeInDown; }
+
+nav {
+  background-color: #000000;
+  padding: 25px; }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
+    nav ul li {
+      margin-right: 25px; }
+      nav ul li:last-of-type {
+        margin-right: 0; }
+      nav ul li a {
+        color: #FFFFFF; }
 
 .footer {
   background-color: #F4F4F4;
@@ -651,6 +714,8 @@ p, .p {
       .services-slider .sliders .right-slider-and-tools .slider-nav p {
         line-height: 1.5;
         margin-bottom: 0; }
+        .services-slider .sliders .right-slider-and-tools .slider-nav p.selected {
+          font-weight: 700; }
     .services-slider .sliders .right-slider-and-tools .services-secondary-slider-container {
       position: relative; }
       .services-slider .sliders .right-slider-and-tools .services-secondary-slider-container .arrows {
@@ -697,8 +762,16 @@ p, .p {
     background-color: #979797;
     left: 0;
     top: -15%; }
+  .one-stop-shop .arrow {
+    transform: rotate(-90deg) translateY(3px);
+    margin-bottom: 12.5px; }
   .one-stop-shop .text {
-    padding: 5vw;
+    padding-right: 5vw;
     text-align: center;
-    width: 60vw;
-    margin-left: 37.5vw; }
+    width: 40vw;
+    margin-left: 50vw; }
+    .one-stop-shop .text button {
+      margin-top: 25px; }
+
+.team .employee {
+  width: 100%; }

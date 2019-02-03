@@ -12,10 +12,17 @@
         top: -15%;
 
     }
+    .arrow {
+        transform: rotate(-90deg) translateY(3px);
+        margin-bottom: $base / 4;
+    }
    .text {
-       padding: 5vw;
+       padding-right: 5vw;
        text-align: center;
-       width: 60vw;
-       margin-left: 37.5vw;
+       width: 40vw;
+       margin-left: 50vw;
+       button {
+           margin-top: $base / 2;
+       }
    } 
 }

@@ -1,5 +1,6 @@
 $screen-md: 1224px;
 $screen-base: 1024px;
+$screen-sm: 700px;
 
 $base: 50px;
 
@@ -63,12 +64,28 @@ img {
             height: 19.5vw;
         }
     }
+    @media (max-width: 750px){
+        flex-direction: column;
+        .text {
+            margin-right: 0;
+            text-align: center;
+        }
+        .background-image {
+            &:before {
+                height: 0px;
+                width: 0px;
+            }
+        }
+    }
 }
 
 .text-image-block {
     display: flex;
     flex-direction: row;
     min-height: 300px;
+    @media (max-width: 650px){
+        flex-direction: column;
+    }
     .text {
         width: 40vw;
         background-color: $black;
@@ -88,11 +105,25 @@ img {
         h3 {
             color: $white;
         }
+        @media (max-width: 650px){
+            width: 97.5vw;
+            padding: $base 10vw;
+        }
     }
     &.reversed {
         flex-direction: row-reverse;
+        @media (max-width: 650px){
+            flex-direction: column;
+        }
         .text {
             margin-right: 0;
+            margin-left: 2.5vw;
+            &::after {
+                right: auto;
+                left: 0;
+            }
+        }
+        .background-image {
             margin-left: 2.5vw;
             &::after {
                 right: auto;
@@ -102,6 +133,20 @@ img {
     }
     .background-image {
         width: 60vw;
+        @media (max-width: 650px){
+            width: 97.5vw;
+            min-height: 300px;
+            position: relative;
+            &::after {
+                position: absolute;
+                width: 1px;
+                height: 130%;
+                content: "";
+                background-color: $dark-grey;
+                right: 0;
+                top: -15%;
+            }
+        }
     }
 }
 
@@ -116,5 +161,14 @@ button {
         line-height: 1;
         text-transform: uppercase;
         letter-spacing: .3px;
+    }
+    &.dark {
+        border: 1px solid $black;
+        a {
+            color: $black;
+        }
+    }
+    &.full-width {
+        width: 100%;
     }
 }

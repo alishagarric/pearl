@@ -59,10 +59,13 @@
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | split: '.' | first | handle }}">
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
-
+    {% section "header" %}
 
       <main class="" id="MainContent" role="main">
-        {% if settings.show_breadcrumb_nav and template.name != 'index' %}
+        {% if canonical_url contains "team" %}
+          {% assign show = false %}
+        {% endif %}
+        {% if settings.show_breadcrumb_nav and template.name != 'index' and show %}
           {% include 'breadcrumb-nav' %}
         {% endif %}
         {{ content_for_layout }}

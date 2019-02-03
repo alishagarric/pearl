@@ -1,3 +1,19 @@
+<nav>
+  <ul>
+    {% for link in linklists.footer.links %}
+      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+{% comment %}
 {% if section.settings.show_announcement and section.settings.home_page_only == false or template.name == 'index' %}
   <style>
     .announcement-bar--link:hover {
@@ -55,7 +71,9 @@
           {% include 'icon-search' %}
         </a>
         <form action="/search" method="get" class="search-bar small--hide" role="search">
+          {% endcomment %}
           {% comment %}<input type="hidden" name="type" value="product">{% endcomment %}
+          {% comment %}
           <button type="submit" class="search-bar__submit">
             {% include 'icon-search' %}
             <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
@@ -106,10 +124,12 @@
   <header class="site-header grid medium-up--grid--table" role="banner">
     <div class="grid__item small--text-center">
       <div itemscope itemtype="http://schema.org/Organization">
+      {% endcomment %}
         {% comment %}
           Use the uploaded logo from theme settings if enabled.
           Site name uses `h1` tag on homepage, div on other pages.
         {% endcomment %}
+        {% comment %}
         {%- assign img_url = section.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
         {% assign width = section.settings.logo_max_width | times: 1 %}
         {% include 'image-style' with image: section.settings.logo, width: width, height: 600, small_style: false, wrapper_id: 'HeaderLogoWrapper', img_id: 'HeaderLogo' %}
@@ -167,7 +187,7 @@
 </div>
 
 
-
+{% endcomment %}
 {% schema %}
 {
   "name": {

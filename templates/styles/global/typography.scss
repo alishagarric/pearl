@@ -28,6 +28,9 @@ h3, .h3 {
     @media (max-width: $screen-base){
         font-size: 4.7vw;
     }
+    @media (max-width: $screen-sm){
+        font-size: 32.9px;
+    }
 }
 
 h4, .h4 {
@@ -54,6 +57,9 @@ p, .p {
     font-size: 14px;
     @media (max-width: $screen-base){
         font-size: 1.359vw;
+    }
+    @media (max-width: 883px){
+        font-size: 12px;
     }
 }
 

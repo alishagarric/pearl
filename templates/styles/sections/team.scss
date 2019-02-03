@@ -1,0 +1,7 @@
+.team {
+    .employee {
+        //on file named base.scss
+        width: 100%;
+        @extend .image-with-text;
+    }
+}
