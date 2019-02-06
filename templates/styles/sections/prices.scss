@@ -1,6 +1,12 @@
 .prices {
     .menu {
         background-color: $cool-grey;
+        &.secondary {
+            width: 50%;
+            &:last-of-type {
+                width: 100%;
+            }
+        }
         .title {
             display: flex;
             flex-direction: row;
@@ -12,7 +18,13 @@
         }
         .content {
             display: flex;
-            flex-direction: row;            
+            flex-direction: column;
+            flex-wrap: wrap;   
+            max-height: 50vh;
+            min-height: 300px;  
+            p {
+                display: inline-block;
+            }     
         }
     }
 }

@@ -635,8 +635,7 @@ nav {
 
 .footer {
   background-color: #F4F4F4;
-  position: relative;
-  margin-top: 50px; }
+  position: relative; }
   .footer .leaves {
     position: absolute;
     top: -50%;
@@ -666,6 +665,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+footer {
+  margin-top: 150px; }
 
 .testimonial {
   position: relative; }
@@ -837,6 +839,10 @@ nav {
 
 .prices .menu {
   background-color: #F4F4F4; }
+  .prices .menu.secondary {
+    width: 50%; }
+    .prices .menu.secondary:last-of-type {
+      width: 100%; }
   .prices .menu .title {
     display: flex;
     flex-direction: row;
@@ -846,4 +852,9 @@ nav {
       margin-right: 50px; }
   .prices .menu .content {
     display: flex;
-    flex-direction: row; }
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 50vh;
+    min-height: 300px; }
+    .prices .menu .content p, .prices .menu .content .team-header .filters .filter, .team-header .filters .prices .menu .content .filter {
+      display: inline-block; }
