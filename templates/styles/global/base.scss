@@ -7,7 +7,7 @@ $base: 50px;
 .section {
     width: 100vw;
     max-width: 100vw;
-    padding: $base 0;
+    padding: $base * 2 0;
     margin: 0 !important;
     &.double-padding {
         padding: $base * 2 0;
@@ -49,7 +49,7 @@ img {
     align-items: center;
     justify-content: center;
     .text {
-        // flex-grow: 1;
+        flex-shrink: 180;
         text-align: right;
         margin-right: $base * 1.5;
     }

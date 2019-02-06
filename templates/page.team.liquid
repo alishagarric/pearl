@@ -1,58 +1,90 @@
 <!-- /templates/page.team.liquid -->
- <div class="section team">
+
+<!-- team parsing -->
+{% assign namess = '' %}
+{% assign descriptions = '' %}
+{% assign abilitiess = '' %}
+{% assign pictures = '' %}
+{% assign type = '' %}
+{% for article in blogs.hair-stylist.articles %}
+    {% assign names = names | append: article.title | append: "$$$" %}
+    {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
+    {% assign source = article.image.src | img_url: '500x' %}
+    {% assign pictures = pictures | append: source | append: "$$$" %}      
+    {% for tag in article.tags %}
+        {% assign abilities = abilities | append: tag | append: "," %}
+    {% endfor %}
+    {% assign abilities = abilities | append: "$$$" %}
+    {% assign type = type | append: "hair" | append: "$$$" %}
+{% endfor %}
+{% for article in blogs.nail-tech.articles %}
+    {% assign names = names | append: article.title | append: "$$$" %}
+    {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
+    {% assign source = article.image.src | img_url: '500x' %}
+    {% assign pictures = pictures | append: source | append: "$$$" %}      
+    {% for tag in article.tags %}
+        {% assign abilities = abilities | append: tag | append: "," %}
+    {% endfor %}
+    {% assign abilities = abilities | append: "$$$" %}
+    {% assign type = type | append: "nails" | append: "$$$" %}
+{% endfor %}
+{% for article in blogs.esthetician.articles %}
+    {% assign names = names | append: article.title | append: "$$$" %}
+    {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
+    {% assign source = article.image.src | img_url: '500x' %}
+    {% assign pictures = pictures | append: source | append: "$$$" %}      
+    {% for tag in article.tags %}
+        {% assign abilities = abilities | append: tag | append: "," %}
+    {% endfor %}
+    {% assign abilities = abilities | append: "$$$" %}
+    {% assign type = type | append: "skin" | append: "$$$" %}
+{% endfor %}
+{% for article in blogs.lash-stylist.articles %}
+    {% assign names = names | append: article.title | append: "$$$" %}
+    {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
+    {% assign source = article.image.src | img_url: '200x' %}
+    {% assign pictures = pictures | append: source | append: "$$$" %}      
+    {% for tag in article.tags %}
+        {% assign abilities = abilities | append: tag | append: "," %}
+    {% endfor %}
+    {% assign abilities = abilities | append: "$$$" %}
+    {% assign type = type | append: "lashes" | append: "$$$" %}
+{% endfor %}
+
+{% assign names = names | split: "$$$" %}
+{% assign descriptions = descriptions | split: "$$$" %}
+{% assign pictures = pictures | split: "$$$" %}
+{% assign abilities = abilities | split: "$$$" %}
+{% assign type = type | split: "$$$" %}
+<!-- end team parsing -->
+
+
+ <div class="section team-header">
     <div class="inner">
         <div class="page-title">
             <img src="{{ 'title-team.png' | asset_url }}">
         </div>
-        {% assign namess = '' %}
-        {% assign descriptions = '' %}
-        {% assign abilitiess = '' %}
-        {% assign pictures = '' %}
-        {% for article in blogs.hair-stylist.articles %}
-            {% assign names = names | append: article.title | append: "$$$" %}
-            {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
-            {% assign source = article.image.src | img_url: '500x' %}
-            {% assign pictures = pictures | append: source | append: "$$$" %}      
-            {% for tag in article.tags %}
-                {% assign abilities = abilities | append: tag | append: "," %}
-            {% endfor %}
-            {% assign abilities = abilities | append: "$$$" %}
-        {% endfor %}
-        {% for article in blogs.nail-tech.articles %}
-            {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
-            {% assign source = article.image.src | img_url: '500x' %}
-            {% assign pictures = pictures | append: source | append: "$$$" %}      
-            {% for tag in article.tags %}
-                {% assign abilities = abilities | append: tag | append: "," %}
-            {% endfor %}
-            {% assign abilities = abilities | append: "$$$" %}
-        {% endfor %}
-        {% for article in blogs.lash-stylist.articles %}
-            {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
-            {% assign source = article.image.src | img_url: '500x' %}
-            {% assign pictures = pictures | append: source | append: "$$$" %}      
-            {% for tag in article.tags %}
-                {% assign abilities = abilities | append: tag | append: "," %}
-            {% endfor %}
-            {% assign abilities = abilities | append: "$$$" %}
-        {% endfor %}
-        {% for article in blogs.esthetician.articles %}
-            {% assign descriptions = descriptions | append: article.content | append: "$$$" %}
-            {% assign source = article.image.src | img_url: '500x' %}
-            {% assign pictures = pictures | append: source | append: "$$$" %}      
-            {% for tag in article.tags %}
-                {% assign abilities = abilities | append: tag | append: "," %}
-            {% endfor %}
-            {% assign abilities = abilities | append: "$$$" %}
-        {% endfor %}
-
-        {% assign names = names | split: "$$$" %}
-        {% assign descriptions = descriptions | split: "$$$" %}
-        {% assign pictures = pictures | split: "$$$" %}
-        {% assign abilities = abilities | split: "$$$" %}
-        
-        {% for name in names %}
-            <div class="employee">
+        <div class="filters">
+            <span class="filter" onclick="toggleEmployees('nails', this)">
+                Nail Techs {% include 'icon-select' %}
+            </span>
+            <span class="filter" onclick="toggleEmployees('hair', this)">
+                Hair Stylists {% include 'icon-select' %}
+            </span>
+            <span class="filter" onclick="toggleEmployees('lashes', this)">
+                Lash Stylists {% include 'icon-select' %}
+            </span>
+            <span class="filter" onclick="toggleEmployees('skin', this)">
+                Estheticians {% include 'icon-select' %}
+            </span>
+        </div>
+    </div>
+ </div>
+      
+{% for name in names %}
+    <div class="section team-member">
+        <div class="inner">  
+            <div class="employee {{ type[forloop.index0] }}">
                 <div class="text">
                     <h2>{{ name }}</h2>
                     <p>{{ descriptions[forloop.index0]}}</p>
@@ -65,8 +97,33 @@
                 </div>
                 <div class="background-image" style="background-image: url(' {{ pictures[forloop.index0] }}');"></div>
             </div>
-        {% endfor %}
+        </div>
     </div>
- </div>
+{% endfor %}
 
  {% include 'text-image-block' with header:"Seeing is believing", paragraph:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", buttonText:"View Galleries" buttonDest:"/" orientation: "reversed" %} 
+
+ <script>
+    function toggleEmployees( type, filter ){
+        var cross = $(filter).find("#cross");
+        var employees = $(".employee");
+        if (cross.hasClass('hide') ){
+            cross.removeClass('hide');
+            $(filter).addClass('unselected');
+            for ( var i = 0; i < $(employees).length; i++){
+                if ( $(employees[i]).hasClass(type)){
+                    $(employees[i]).addClass("hide")
+                }
+            }
+        }
+        else {
+            cross.addClass('hide');
+            $(filter).removeClass('unselected');
+            for ( var i = 0; i < $(employees).length; i++){
+                if ( $(employees[i]).hasClass(type)){
+                    $(employees[i]).removeClass("hide")
+                }
+            }
+        }
+    }
+ </script>

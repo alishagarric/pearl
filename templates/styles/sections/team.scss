@@ -1,12 +1,80 @@
-.team {
+.team-header {
+    .filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .filter {
+            background-color: $cool-grey;
+            @extend p;
+            line-height: 1;
+            padding-top: 10.5px;
+            padding-bottom: 10.5px;
+            padding-left: 12px;
+            padding-right: 12px;
+            width: 100%;
+            margin: 10px;
+            display: inline-block;
+            position: relative;
+            &.unselected {
+                color: rgba( 0, 0, 0, .3);
+                background-color: rgba( 216, 216, 216, .11);
+            }
+            svg {
+                position: absolute;
+                height: 75%;
+                right: 12px;
+                top: 12.5%;
+                cursor: pointer;
+                transform: scale(1);
+                transition-duration: .5s;
+                #cross {
+                    &.hide {
+                        display: none;
+                    }
+                }
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.team-member {
+    padding: 0;
     .employee {
         //on file named base.scss
         width: 100%;
         @extend .image-with-text;
+        padding: 0 0 $base * 2 0;
+        &.hide {
+            display: none;
+        }
         .ability {
             display: inline-block;
             margin-left: $base / 2;
             margin-bottom: 0;
         }
     }
+    &:nth-of-type(even){
+        .employee {
+            flex-direction: row-reverse;
+            .text {
+                text-align: left;
+                margin-right: 0;
+                margin-left: $base * 1.5;
+            }
+            .ability {
+                margin-left: 0;
+                margin-right: $base / 2;
+            }
+            .background-image {
+                &:before {
+                    left: auto;
+                    right: $base * -.75;
+                }
+            }
+        }
+    }
+
 }
