@@ -19,9 +19,15 @@
                     {% include 'svg-arrow-right' %}
                 </div>  
                 <div class="hair-gallery-slider">
-                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
-                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
-                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                    {% for i in (1..20) %}
+                        {% assign img-name = "hair-image-" | append: forloop.index %}
+                        {% assign img-src = settings[img-name] | img_url: '500x' %}
+                        {% if img-src contains "no-image" %}
+                            <!-- don't display image -->
+                        {% else %}
+                            <div class="background-image" style="background: url(' {{img-src}} ')"></div>
+                        {% endif %}
+                    {% endfor %}                
                 </div>
             </div>
         </div>
@@ -37,9 +43,15 @@
                 </div>                  
                 <div class="gallery-holder">
                     <div class="nails-gallery-slider">
-                        <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
-                        <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
-                        <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                        {% for i in (1..20) %}
+                            {% assign img-name = "nails-image-" | append: forloop.index %}
+                            {% assign img-src = settings[img-name] | img_url: '500x' %}
+                            {% if img-src contains "no-image" %}
+                                <!-- don't display image -->
+                            {% else %}
+                                <div class="background-image" style="background: url(' {{img-src}} ')"></div>
+                            {% endif %}
+                        {% endfor %}              
                     </div>
                 </div>
             </div>
@@ -55,9 +67,15 @@
                     {% include 'svg-arrow-right' %}
                 </div>                  
                 <div class="lashes-gallery-slider">
-                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
-                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
-                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                    {% for i in (1..20) %}
+                        {% assign img-name = "lashes-image-" | append: forloop.index %}
+                        {% assign img-src = settings[img-name] | img_url: '500x' %}
+                        {% if img-src contains "no-image" %}
+                            <!-- don't display image -->
+                        {% else %}
+                            <div class="background-image" style="background: url(' {{img-src}} ')"></div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>

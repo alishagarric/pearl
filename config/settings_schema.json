@@ -869,6 +869,293 @@
         "type": "image_picker",
         "id": "hair-image-5",
         "label": "image 5"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-6",
+        "label": "image 6"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-7",
+        "label": "image 7"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-8",
+        "label": "image 8"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-9",
+        "label": "image 9"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-10",
+        "label": "image 10"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-11",
+        "label": "image 11"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-12",
+        "label": "image 12"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-13",
+        "label": "image 13"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-14",
+        "label": "image 14"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-15",
+        "label": "image 15"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-16",
+        "label": "image 16"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-17",
+        "label": "image 17"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-18",
+        "label": "image 18"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-19",
+        "label": "image 19"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-20",
+        "label": "image 20"
+      },
+      {
+        "type": "header",
+        "content": {
+          "en": "Nails"
+        }
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-1",
+        "label": "image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-2",
+        "label": "image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-3",
+        "label": "image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-4",
+        "label": "image 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-5",
+        "label": "image 5"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-6",
+        "label": "image 6"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-7",
+        "label": "image 7"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-8",
+        "label": "image 8"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-9",
+        "label": "image 9"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-10",
+        "label": "image 10"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-11",
+        "label": "image 11"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-12",
+        "label": "image 12"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-13",
+        "label": "image 13"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-14",
+        "label": "image 14"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-15",
+        "label": "image 15"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-16",
+        "label": "image 16"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-17",
+        "label": "image 17"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-18",
+        "label": "image 18"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-19",
+        "label": "image 19"
+      },
+      {
+        "type": "image_picker",
+        "id": "nails-image-20",
+        "label": "image 20"
+      },
+      {
+        "type": "header",
+        "content": {
+          "en": "Lashes"
+        }
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-1",
+        "label": "image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-2",
+        "label": "image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-3",
+        "label": "image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-4",
+        "label": "image 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-5",
+        "label": "image 5"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-6",
+        "label": "image 6"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-7",
+        "label": "image 7"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-8",
+        "label": "image 8"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-9",
+        "label": "image 9"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-10",
+        "label": "image 10"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-11",
+        "label": "image 11"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-12",
+        "label": "image 12"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-13",
+        "label": "image 13"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-14",
+        "label": "image 14"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-15",
+        "label": "image 15"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-16",
+        "label": "image 16"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-17",
+        "label": "image 17"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-18",
+        "label": "image 18"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-19",
+        "label": "image 19"
+      },
+      {
+        "type": "image_picker",
+        "id": "lashes-image-20",
+        "label": "image 20"
       }
     ]
   },
