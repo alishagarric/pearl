@@ -2,6 +2,12 @@
   This page represents the /collections and /products pages.
 {% endcomment %}
 
+<div class="index-sections">
+  {{ content_for_index }}
+</div>
+
+
+<!--
 {% case section.settings.grid %}
   {% when 2 %}
     {%- assign grid_item_width = 'medium-up--one-half' -%}
@@ -48,7 +54,7 @@
   {% endif %}
 </div>
 
-
+-->
 
 {% schema %}
 {

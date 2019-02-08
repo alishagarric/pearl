@@ -21,7 +21,7 @@
 
             <li class="site-nav--has-submenu site-nav__item">
               <button class="site-nav__link btn--link{% if has_active_link %} site-nav__collapse{% else %} site-nav__expand{% endif %}" aria-expanded="{{ has_active_link }}" aria-controls="Collapsible-{{ forloop.index }}">
-                {{ link.title | escape }}
+                {{ link.title | escape }}!
                 <span class="site-nav__link__text" aria-hidden="true">{% if has_active_link %}-{% else %}+{% endif %}</span>
               </button>
               <ul id="Collapsible-{{ forloop.index }}" class="site-nav__submenu{% if has_active_link %} site-nav__submenu--expanded{% else %} site-nav__submenu--collapsed{% endif %}" aria-hidden="{% if has_active_link %}false{% else %}true{% endif %}"{% unless has_active_link %} style="display: none;"{% endunless %}>
