@@ -1,0 +1,89 @@
+.gallery-page {
+    padding-bottom: 0;
+    .page-title {
+        margin-bottom: $base;
+    }
+    .galleries {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        .gallery {
+            background-color: $cool-grey;
+            margin-bottom: 2vw;
+            &:first-of-type {
+                width: 100vw;
+            }
+            &:nth-of-type(odd){
+                margin-right: 0;
+            }
+            width: 45%;
+            margin-right: 2vw;
+            flex-grow: 5;
+            .content {
+                padding: $base * .75 $base * 1.5;
+                position: relative;
+                .title {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    margin-bottom: $base / 4;
+                    h2 {
+                        line-height: 1;
+                        margin-right: $base / 2;
+                    }
+                }
+                .lashes-gallery-slider, .hair-gallery-slider, .nails-gallery-slider{
+                    height: 28.5vw;
+                    width: 58.5vw;
+                    .background-image {
+                        width: 28.5vw;
+                        height: 28.5vw;
+                        margin-right: 1.5vw;
+                    }
+                }
+                .gallery-holder {
+                    height: 28.5vw;
+                    position: relative;
+                    width: 100%;
+                    .nails-gallery-slider {
+                        position: absolute;
+                        right: 0;
+                        .background-image {
+                            margin-right: 0;
+                            margin-left: 1.5vw;
+                        }
+                    }
+                }
+                .hair-gallery-slider {
+                    position: relative;
+                    left: $base * -1.5;
+                    width: 115vw;
+                }
+                .arrow {
+                    position: absolute;
+                    right: $base * 1.5;
+                    top: $base * .75;
+                    svg {
+                        height: 75px !important;
+                        @media (max-width: $screen-base){
+                            height: 7.324vw;
+                        }
+                    }   
+                }
+            }   
+            &:last-of-type {
+                .content {
+                    padding: $base * .75 $base * .5;
+                }
+            }  
+            &:nth-of-type(2){
+                .content {
+                    padding: $base * .75 $base * .5 $base * .75 $base * 1.5;
+                }
+            }   
+        }
+    }
+
+}

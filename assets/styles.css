@@ -837,24 +837,109 @@ footer {
       left: auto;
       right: -37.5px; }
 
-.prices .menu {
-  background-color: #F4F4F4; }
-  .prices .menu.secondary {
-    width: 50%; }
-    .prices .menu.secondary:last-of-type {
-      width: 100%; }
-  .prices .menu .title {
+.prices .page-title {
+  margin-bottom: 50px; }
+.prices .menus {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch; }
+  .prices .menus .menu {
+    background-color: #F4F4F4;
+    margin-bottom: 2vw;
+    width: 45%;
+    margin-right: 2vw;
+    flex-grow: 5; }
+    .prices .menus .menu:first-of-type {
+      width: 100vw; }
+    .prices .menus .menu:nth-of-type(odd) {
+      margin-right: 0; }
+    .prices .menus .menu:last-of-type {
+      margin-right: 0; }
+.prices .text {
+  padding: 37.5px 75px; }
+  .prices .text .title {
     display: flex;
     flex-direction: row;
-    align-items: flex-end; }
-    .prices .menu .title h2 {
+    align-items: flex-end;
+    margin-bottom: 12.5px; }
+    .prices .text .title h2 {
       line-height: 1;
-      margin-right: 50px; }
-  .prices .menu .content {
+      margin-right: 25px; }
+  .prices .text .content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 50vh;
     min-height: 300px; }
-    .prices .menu .content p, .prices .menu .content .team-header .filters .filter, .team-header .filters .prices .menu .content .filter {
-      display: inline-block; }
+    .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter {
+      display: inline-block;
+      width: 48%;
+      margin-right: 4%; }
+
+.gallery-page {
+  padding-bottom: 0; }
+  .gallery-page .page-title {
+    margin-bottom: 50px; }
+  .gallery-page .galleries {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch; }
+    .gallery-page .galleries .gallery {
+      background-color: #F4F4F4;
+      margin-bottom: 2vw;
+      width: 45%;
+      margin-right: 2vw;
+      flex-grow: 5; }
+      .gallery-page .galleries .gallery:first-of-type {
+        width: 100vw; }
+      .gallery-page .galleries .gallery:nth-of-type(odd) {
+        margin-right: 0; }
+      .gallery-page .galleries .gallery .content {
+        padding: 37.5px 75px;
+        position: relative; }
+        .gallery-page .galleries .gallery .content .title {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          margin-bottom: 12.5px; }
+          .gallery-page .galleries .gallery .content .title h2 {
+            line-height: 1;
+            margin-right: 25px; }
+        .gallery-page .galleries .gallery .content .lashes-gallery-slider, .gallery-page .galleries .gallery .content .hair-gallery-slider, .gallery-page .galleries .gallery .content .nails-gallery-slider {
+          height: 28.5vw;
+          width: 58.5vw; }
+          .gallery-page .galleries .gallery .content .lashes-gallery-slider .background-image, .gallery-page .galleries .gallery .content .hair-gallery-slider .background-image, .gallery-page .galleries .gallery .content .nails-gallery-slider .background-image {
+            width: 28.5vw;
+            height: 28.5vw;
+            margin-right: 1.5vw; }
+        .gallery-page .galleries .gallery .content .gallery-holder {
+          height: 28.5vw;
+          position: relative;
+          width: 100%; }
+          .gallery-page .galleries .gallery .content .gallery-holder .nails-gallery-slider {
+            position: absolute;
+            right: 0; }
+            .gallery-page .galleries .gallery .content .gallery-holder .nails-gallery-slider .background-image {
+              margin-right: 0;
+              margin-left: 1.5vw; }
+        .gallery-page .galleries .gallery .content .hair-gallery-slider {
+          position: relative;
+          left: -75px;
+          width: 115vw; }
+        .gallery-page .galleries .gallery .content .arrow {
+          position: absolute;
+          right: 75px;
+          top: 37.5px; }
+          .gallery-page .galleries .gallery .content .arrow svg {
+            height: 75px !important; }
+            @media (max-width: 1024px) {
+              .gallery-page .galleries .gallery .content .arrow svg {
+                height: 7.324vw; } }
+      .gallery-page .galleries .gallery:last-of-type .content {
+        padding: 37.5px 25px; }
+      .gallery-page .galleries .gallery:nth-of-type(2) .content {
+        padding: 37.5px 25px 37.5px 75px; }

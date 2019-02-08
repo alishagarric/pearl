@@ -7,31 +7,23 @@
             <img src="{{ 'title-prices.png' | asset_url }}">
         </div>
     </div>
-    {% for article in blogs.menu.articles limit: 1 %}
-        <div class="menu">
-            <div class="inner">
-                <div class="title">
-                    <h2>{{article.title}}</h2>
-                    <p>Check out <br />our <u>{{article.title}} gallery.</u></p>
-                </div>
-                <div class="content">
-                    {{article.content}}
-                </div>
-            </div>
-        </div>
-    {% endfor %}
-    {% for article in blogs.menu.articles limit: 3 offset: 1 %}
-        <div class="menu secondary">
-            <div class="inner">
-                <div class="title">
-                    <h2>{{article.title}}</h2>
-                    <p>Check out <br />our <u>{{article.title}} gallery.</u></p>
-                </div>
-                <div class="content">
-                    {{article.content}}
+    <div class="menus">
+        {% for article in blogs.menu.articles limit: 4 %}
+            <div class="menu primary">
+                <div class="text">
+                    <div class="title">
+                        <h2>{{article.title}}</h2>
+                        <p>Check out <br />our <u>{{article.title}} gallery.</u></p>
+                    </div>
+                    <div class="content">
+                        {{article.content}}
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
-
+        {% endfor %}
+    </div>
 </div>
+
+<!--footer -->
+  {% include 'testimonial-slider' %}
+<!--end footer -->

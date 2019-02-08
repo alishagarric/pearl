@@ -1,19 +1,41 @@
 .prices {
-    .menu {
-        background-color: $cool-grey;
-        &.secondary {
-            width: 50%;
-            &:last-of-type {
-                width: 100%;
+    .page-title {
+        margin-bottom: $base;
+    }
+    .menus {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        .menu {
+            background-color: $cool-grey;
+            margin-bottom: 2vw;
+            &:first-of-type {
+                width: 100vw;
             }
+            &:nth-of-type(odd){
+                margin-right: 0;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+            width: 45%;
+            margin-right: 2vw;
+            flex-grow: 5;
         }
+    }
+
+    .text {
+        padding: $base * .75 $base * 1.5;
         .title {
             display: flex;
             flex-direction: row;
             align-items: flex-end;
+            margin-bottom: $base / 4;
             h2 {
                 line-height: 1;
-                margin-right: $base;
+                margin-right: $base / 2;
             }
         }
         .content {
@@ -24,6 +46,8 @@
             min-height: 300px;  
             p {
                 display: inline-block;
+                width: 48%;
+                margin-right: 4%;
             }     
         }
     }

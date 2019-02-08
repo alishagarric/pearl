@@ -1,8 +1,98 @@
+
+
 <!-- /templates/page.gallery.liquid -->
- <div class="section team">
+ <div class="section gallery-page">
     <div class="inner">
         <div class="page-title">
             <img src="{{ 'title-gallery.png' | asset_url }}">
         </div>
     </div>
+    <div class="galleries">
+
+        <div class="gallery">
+            <div class="content">
+                <div class="title">
+                    <h2>Hair</h2>
+                    <p>Check out <br />our <u>hair rates.</u></p>
+                </div>
+                <div class="arrow" onclick="slickHairNext()">
+                    {% include 'svg-arrow-right' %}
+                </div>  
+                <div class="hair-gallery-slider">
+                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="content">
+                <div class="title">
+                    <h2>Nails</h2>
+                    <p>Check out <br />our <u>nails rates.</u></p>
+                </div>
+                <div class="arrow" onclick="slickNailsNext()">
+                    {% include 'svg-arrow-right' %}
+                </div>                  
+                <div class="gallery-holder">
+                    <div class="nails-gallery-slider">
+                        <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                        <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                        <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="content">
+                <div class="title">
+                    <h2>Lashes</h2>
+                    <p>Check out <br />our <u>lashes rates.</u></p>
+                </div>
+                <div class="arrow" onclick="slickLashesNext()">
+                    {% include 'svg-arrow-right' %}
+                </div>                  
+                <div class="lashes-gallery-slider">
+                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                    <div class="background-image" style="background: url(' {{settings.hair-image-1 | img_url: '250x'}}')"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
+
+<!--footer -->
+  {% include 'testimonial-slider' %}
+<!--end footer -->
+
+<script>
+    $(document).ready(function(){
+      $('.lashes-gallery-slider, .nails-gallery-slider').slick({
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 10000,
+          slidesToShow: 2
+      });
+
+      $('.hair-gallery-slider').slick({
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 10000,
+          variableWidth: true
+      });
+    });
+
+    function slickHairNext() {
+        $('.hair-gallery-slider').slick("slickNext");
+    }
+    function slickNailsNext() {
+        $('.nails-gallery-slider').slick("slickNext");
+    }
+    function slickLashesNext() {
+        $('.lashes-gallery-slider').slick("slickNext");
+    }
+</script>

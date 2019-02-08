@@ -836,6 +836,44 @@
   },
   {
     "name": {
+      "en": "Galleries"
+    },
+    "settings": [
+      {
+        "type": "header",
+        "content": {
+          "en": "Hair"
+        }
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-1",
+        "label": "image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-2",
+        "label": "image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-3",
+        "label": "image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-4",
+        "label": "image 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "hair-image-5",
+        "label": "image 5"
+      }
+    ]
+  },
+  {
+    "name": {
       "de": "Warenkorb",
       "en": "Cart",
       "es": "Carrito",
