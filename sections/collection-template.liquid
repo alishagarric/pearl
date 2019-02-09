@@ -1,12 +1,15 @@
 <!-- /templates/collection.liquid -->
 {% paginate collection.products by 12 %}
 
-<div data-section-id="{{ section.id }}" data-section-type="collection-template" data-sort-enabled="{{ section.settings.collection_sort_enable }}" data-tags-enabled="{{ section.settings.collection_tag_enable }}">
-  <header class="grid">
-    <h1 class="grid__item small--text-center {% if section.settings.collection_sort_enable or section.settings.collection_tag_enable %}medium-up--one-third{% endif %}">{% if current_tags.size > 0 %}{{ current_tags.first }}{% else %}{{ collection.title }}{% endif %}</h1>
+<div class="collection-page" data-section-id="{{ section.id }}" data-section-type="collection-template" data-sort-enabled="{{ section.settings.collection_sort_enable }}" data-tags-enabled="{{ section.settings.collection_tag_enable }}">
+  <header>
+    <h1 class="h4"><b>{{ collection.title }}</b></h1>
+    <div class="leaves">
+        <img src="{{ 'leaves-shop.png' | asset_url }}">
+    </div>
 
     {% if section.settings.collection_sort_enable or section.settings.collection_tag_enable %}
-      <div class="collection-sorting grid__item medium-up--two-thirds medium-up--text-right small--text-center">
+      <div>
         {% if section.settings.collection_tag_enable and collection.all_tags.size > 0 %}
           <div class="collection-sorting__dropdown">
             <label for="BrowseBy" class="label--hidden">{{ 'collections.general.tags' | t }}</label>
@@ -43,12 +46,6 @@
             </select>
           </div>
         {% endif %}
-      </div>
-    {% endif %}
-
-    {% if collection.description != blank %}
-      <div class="collection-description grid__item rte">
-        {{ collection.description }}
       </div>
     {% endif %}
   </header>
@@ -112,7 +109,11 @@
 
 {% endpaginate %}
 
+{% include 'text-image-block' with header:"Jean lyfe", paragraph:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", buttonText:"Shop Jackets" buttonDest:"/" orientation: "reversed" %} 
 
+<!--footer -->
+  {% include 'testimonial-slider' %}
+<!--end footer -->
 
 {% schema %}
 {

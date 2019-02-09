@@ -87,3 +87,34 @@
     }
 
 }
+
+.index-sections, .collection-page {
+    width: 80vw;
+    margin-left: 20vw;
+    padding-right: $base;
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 0;
+        margin-bottom: $base;
+        border-bottom: 1px solid $dark-grey;
+        .h4 {
+            color: $black;
+            margin-bottom: 0;
+        }
+        .collection-sorting__dropdown {
+            select, option {
+                @extend .p;
+                padding: $base / 6 $base / 4;
+            }
+        }
+    }
+    .leaves {
+        z-index: 900;
+        position: absolute;
+        width: 50vw;
+        top: 0;
+        left: 25vw;
+    }
+}

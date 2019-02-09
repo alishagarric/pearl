@@ -1,4 +1,7 @@
-<nav>
+<nav class="main-nav">
+  <a href="/" class="logo">
+    <img src="{{ 'logo-light.png' | asset_url }}">
+  </a>
   <ul>
     {% for link in linklists.footer.links %}
       <li><a href="{{ link.url }}">{{ link.title }}</a></li>

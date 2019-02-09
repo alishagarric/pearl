@@ -57,31 +57,26 @@
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | split: '.' | first | handle }}">
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
-
+ 
+  {% section 'header' %}
   {% unless template.name == 'page' or template.name == "index" %}
      {% section "shop-header" %}
   {% endunless %}
- 
-{% section 'header' %}
 
     {% unless template.name == 'page' or template.name == "index" %}
       {% section "sidebar" %}
     {% endunless %}
 
-      <main class="main-content grid__item medium-up--four-fifths" id="MainContent" role="main">
+      <main id="MainContent" role="main">
         {% unless template.name == 'list-collections' or template.name == 'page'%}
-          <hr class="hr--border-top small--hide">
         {% endunless %}
-          {% if settings.show_breadcrumb_nav and template.name != 'list-collection' %}
+          {% if settings.show_breadcrumb_nav and template.name != 'list-collections' %}
             {% unless template.name == "index" or template.name == 'page' %}
               {% include 'breadcrumb-nav' %}
             {% endunless %}
           {% endif %}
         {{ content_for_layout }}
       </main>
-
-
-    <hr>
 
     {% section "footer" %}
 

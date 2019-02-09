@@ -583,14 +583,14 @@ h5, .h5 {
     h5, .h5 {
       font-size: 1.95vw; } }
 
-p, .team-header .filters .filter, .p {
+p, .team-header .filters .filter, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
   font-family: "Montserrat", sans-serif;
   font-size: 14px; }
   @media (max-width: 1024px) {
-    p, .team-header .filters .filter, .p {
+    p, .team-header .filters .filter, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
       font-size: 1.359vw; } }
   @media (max-width: 883px) {
-    p, .team-header .filters .filter, .p {
+    p, .team-header .filters .filter, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
       font-size: 12px; } }
 
 .small {
@@ -619,9 +619,25 @@ p, .team-header .filters .filter, .p {
 .fadeInDown {
   animation-name: fadeInDown; }
 
+#shopify-section-header {
+  position: sticky;
+  top: 0;
+  z-index: 990; }
+
 nav {
   background-color: #000000;
-  padding: 25px; }
+  padding: 25px 50px;
+  position: relative;
+  z-index: 901; }
+  nav .logo {
+    position: absolute;
+    left: 50px;
+    top: 10px; }
+    nav .logo:hover {
+      opacity: 1; }
+    nav .logo img {
+      width: 127px;
+      height: 57px; }
   nav ul {
     display: flex;
     flex-direction: row;
@@ -632,6 +648,44 @@ nav {
         margin-right: 0; }
       nav ul li a {
         color: #FFFFFF; }
+  nav.side-bar {
+    background-color: transparent;
+    width: 20vw;
+    position: absolute;
+    padding-top: 0; }
+    nav.side-bar .list--nav {
+      display: flex;
+      flex-direction: column; }
+      nav.side-bar .list--nav li {
+        width: 100%;
+        background-color: #F4F4F4;
+        border: none;
+        margin-bottom: 8.3333333333px;
+        opacity: .55; }
+        nav.side-bar .list--nav li:hover {
+          opacity: 1; }
+          nav.side-bar .list--nav li:hover a {
+            font-weight: 700; }
+        nav.side-bar .list--nav li a {
+          padding: 8.3333333333px 12.5px; }
+        nav.side-bar .list--nav li.active {
+          opacity: 1;
+          font-weight: 700; }
+  nav.breadcrumb-nav {
+    width: 80vw;
+    margin-left: 20vw;
+    background-color: transparent; }
+
+.shop-bar {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 12.5px 50px 12.5px 12.5px;
+  margin-bottom: 100px;
+  position: relative; }
+  .shop-bar .check-out {
+    margin-left: 25px; }
 
 .footer {
   background-color: #F4F4F4;
@@ -943,3 +997,26 @@ footer {
         padding: 37.5px 25px; }
       .gallery-page .galleries .gallery:nth-of-type(2) .content {
         padding: 37.5px 25px 37.5px 75px; }
+
+.index-sections, .collection-page {
+  width: 80vw;
+  margin-left: 20vw;
+  padding-right: 50px; }
+  .index-sections header, .collection-page header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #979797; }
+    .index-sections header .h4, .collection-page header .h4 {
+      color: #000000;
+      margin-bottom: 0; }
+    .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
+      padding: 8.3333333333px 12.5px; }
+  .index-sections .leaves, .collection-page .leaves {
+    z-index: 900;
+    position: absolute;
+    width: 50vw;
+    top: 0;
+    left: 25vw; }

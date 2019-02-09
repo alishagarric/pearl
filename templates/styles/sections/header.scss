@@ -1,6 +1,26 @@
+#shopify-section-header {
+    position: sticky;
+    top: 0;
+    z-index: 990;
+}
+
 nav {
     background-color: $black;
-    padding: $base / 2;
+    padding: $base / 2 $base;
+    position: relative;
+    z-index: 901;
+    .logo {
+        position: absolute;
+        left: $base;
+        top: $base / 5;
+        &:hover {
+            opacity: 1;
+        }
+        img {
+            width: 127px;
+            height: 57px;
+        }
+    }
     ul {
         display: flex;
         flex-direction: row;
@@ -12,7 +32,56 @@ nav {
             }
             a {
                 color: $white;
+                @extend .p;
             }
         }
+    }
+    &.side-bar {
+        background-color: transparent;
+        width: 20vw;
+        position: absolute;
+        padding-top: 0 ;
+        .list--nav {
+            display: flex;
+            flex-direction: column;
+            li {
+                width: 100%;
+                background-color: $cool-grey;
+                border: none;
+                margin-bottom: $base / 6;
+                opacity: .55;
+                &:hover {
+                    opacity: 1;
+                    a {
+                        font-weight: 700;
+                    }
+                }
+                a {
+                    padding: $base / 6 $base / 4;
+                }
+                &.active {
+                    opacity: 1;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    &.breadcrumb-nav {
+        width: 80vw;
+        margin-left: 20vw;
+        background-color: transparent;
+    }
+}
+
+.shop-bar {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: $base / 4 $base $base / 4 $base /4 ;
+    margin-bottom: $base * 2;
+    position: relative;
+    .check-out {
+        margin-left: $base /2;
     }
 }
