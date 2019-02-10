@@ -1,7 +1,7 @@
 <div class="section services-slider">
     <div class="sliders">
         <div class="left-sliders">
-            <div class="services-title-slider">
+            <div class="services-title-slider phase-1">
                 {% for article in blogs.service.articles %}
                     <h1>{{ article.title }}</h1>
                 {% endfor %}
@@ -48,7 +48,58 @@
     </div>
 </div>
 
+
 <script>
+
+    function nextTitle() {
+        var slider = $('.services-title-slider');
+        if ( slider.hasClass("phase-1") ){
+            slider.removeClass("phase-1");
+            slider.addClass("phase-2");
+        }
+        else if ( slider.hasClass("phase-2") ){
+            slider.removeClass("phase-2");
+            slider.addClass("phase-3");
+        }
+        else if ( slider.hasClass("phase-3") ){
+            slider.removeClass("phase-3");
+            slider.addClass("phase-4");
+        }
+        else if ( slider.hasClass("phase-4") ){
+            slider.removeClass("phase-4");
+            slider.addClass("phase-5");
+        }
+        else if ( slider.hasClass("phase-5") ){
+            slider.removeClass("phase-5");
+            slider.addClass("phase-1");
+        }
+    }
+
+    function PrevTitle() {
+        var slider = $('.services-title-slider');
+        if ( slider.hasClass("phase-1") ){
+            slider.removeClass("phase-1");
+            slider.addClass("phase-5");
+        }
+        else if ( slider.hasClass("phase-2") ){
+            slider.removeClass("phase-2");
+            slider.addClass("phase-1");
+        }
+        else if ( slider.hasClass("phase-3") ){
+            slider.removeClass("phase-3");
+            slider.addClass("phase-2");
+        }
+        else if ( slider.hasClass("phase-4") ){
+            slider.removeClass("phase-4");
+            slider.addClass("phase-3");
+        }
+        else if ( slider.hasClass("phase-5") ){
+            slider.removeClass("phase-5");
+            slider.addClass("phase-4");
+        }
+    }
+
+
     $(document).ready(function(){
       $('.services-main-slider').slick({
           arrows: false/*,
@@ -66,14 +117,6 @@
     });
 
     $(document).ready(function(){
-      $('.services-title-slider').slick({
-          arrows: false/*,
-          autoplay: true,
-          autoplaySpeed: 2000*/
-      });
-    });
-
-    $(document).ready(function(){
       $('.services-info-slider').slick({
           arrows: false/*,
           autoplay: true,
@@ -84,7 +127,7 @@
     function slickServicesPrev() {
         $('.services-main-slider').slick("slickPrev");
         $('.services-secondary-slider').slick("slickPrev");
-      //  $('.services-title-slider').slick("slickPrev");
+        prevTitle();
         $('.services-info-slider').slick("slickPrev");
         changeNav();
     }
@@ -92,7 +135,7 @@
     function slickServicesNext() {
         $('.services-main-slider').slick("slickNext");
         $('.services-secondary-slider').slick("slickNext");
-      //  $('.services-title-slider').slick("slickNext");
+        nextTitle();
         $('.services-info-slider').slick("slickNext");
         changeNav();
     }

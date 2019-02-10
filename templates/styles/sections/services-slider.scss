@@ -25,9 +25,93 @@
             width: 66.5vw;
             border-right: 1px solid $dark-grey;
             .services-title-slider {
+                width: 100%;
                 position: absolute;
                 top: -5vw;
                 z-index: 2;
+                overflow-y: hidden;
+                height: 225px;
+                @media (max-width: $screen-base){
+                    height: 21.95vw;
+                }
+                h1 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    line-height: 1;
+                    margin-bottom: 20px;
+                    opacity: 0;
+                    transition-duration: 1s;
+                    @media (max-width: $screen-base){
+                        margin-bottom: 1.95vw;
+                    }
+                }
+                //five states of slider, all opacity 0 unless in place
+                //regular: 1 in place, 2 below, 5 above
+                &.phase-1 {
+                    h1:first-of-type {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                    h1:nth-of-type(2), h1:nth-of-type(3), h1:nth-of-type(4) {
+                        transform: translateY(-225px);
+                    }
+                    h1:nth-of-type(5) {
+                        transform: translateY(225px);
+                    }
+                }
+                //stage 2: 2 in place, 3 below, 1 above
+                &.phase-2 {
+                    h1:nth-of-type(2) {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                    h1:nth-of-type(5), h1:nth-of-type(3), h1:nth-of-type(4) {
+                        transform: translateY(-225px);
+                    }
+                    h1:nth-of-type(1) {
+                        transform: translateY(225px);
+                    }
+                }
+                //stage 3: 3 in place, 4 below, 2 above
+                &.phase-3 {
+                    h1:nth-of-type(3) {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                    h1:nth-of-type(5), h1:nth-of-type(1), h1:nth-of-type(4) {
+                        transform: translateY(-225px);
+                    }
+                    h1:nth-of-type(2) {
+                        transform: translateY(225px);
+                    }
+                }
+                //stage 4: 4 in place, 5 below, 3 above
+                &.phase-4 {
+                    h1:nth-of-type(4) {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                    h1:nth-of-type(5), h1:nth-of-type(1), h1:nth-of-type(2) {
+                        transform: translateY(-225px);
+                    }
+                    h1:nth-of-type(3) {
+                        transform: translateY(225px);
+                    }
+                }
+                //stage 5: 5 in place, 1 below, 4 above
+                &.phase-5{
+                    h1:nth-of-type(5) {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                    h1:nth-of-type(2), h1:nth-of-type(3), h1:nth-of-type(1) {
+                        transform: translateY(-225px);
+                    }
+                    h1:nth-of-type(4) {
+                        transform: translateY(225px);
+                    }
+                }
             }
             .services-main-slider {
                 @extend .slider-margin-top;
@@ -85,3 +169,4 @@
         }
     }
 }
+
