@@ -6,12 +6,22 @@
         top: -50%;
         right: 0;
         width: 180px;
+        @media (max-width: $screen-sm){
+            top: -15vw;
+            width: 25vw;
+            min-width: 120px;
+        }
     }
     .inner {
         display: flex;
         flex-direction: row;
         align-items: stretch;
         justify-content: space-between;
+        @media (max-width: $screen-sm){
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
         .logo {
             width: 164px;
             img {
@@ -23,9 +33,20 @@
             border-left: 1px solid $dark-grey;
             display: flex;
             align-items: center;
+            @media (max-width: $screen-sm){
+                border-left: 0px;
+            }
         }
-        .contact {
+        .contact, .menu, .logo {
             margin-right: $base * 2;
+            @media (max-width: $screen-base){
+                margin-right: 2vw;
+            }
+        }
+        @media (max-width: $screen-sm){
+            .contact {
+                margin-top: $base / 2;
+            }
         }
     }
 }
@@ -41,4 +62,7 @@
 
 footer {
     margin-top: $base * 3;
+    @media (max-width: $screen-sm){
+        margin-top: 15vw;
+    }
 }

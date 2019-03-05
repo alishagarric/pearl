@@ -404,6 +404,13 @@ textarea {
     max-width: 1224px;
     margin: 0 auto;
     padding: 0 100px; }
+  @media (max-width: 700px) {
+    .section {
+      padding: 50px 0; }
+      .section.double-padding {
+        padding: 50px 0; }
+      .section .inner {
+        padding: 0 50px; } }
 
 ul {
   padding-left: 0; }
@@ -695,11 +702,21 @@ nav {
     top: -50%;
     right: 0;
     width: 180px; }
+    @media (max-width: 700px) {
+      .footer .leaves {
+        top: -15vw;
+        width: 25vw;
+        min-width: 120px; } }
   .footer .inner {
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between; }
+    @media (max-width: 700px) {
+      .footer .inner {
+        flex-direction: column;
+        text-align: center;
+        align-items: center; } }
     .footer .inner .logo {
       width: 164px; }
       .footer .inner .logo img {
@@ -709,8 +726,17 @@ nav {
       border-left: 1px solid #979797;
       display: flex;
       align-items: center; }
-    .footer .inner .contact {
+      @media (max-width: 700px) {
+        .footer .inner .menu, .footer .inner .contact {
+          border-left: 0px; } }
+    .footer .inner .contact, .footer .inner .menu, .footer .inner .logo {
       margin-right: 100px; }
+      @media (max-width: 1024px) {
+        .footer .inner .contact, .footer .inner .menu, .footer .inner .logo {
+          margin-right: 2vw; } }
+    @media (max-width: 700px) {
+      .footer .inner .contact {
+        margin-top: 25px; } }
 
 .copywright {
   padding-top: 0;
@@ -722,6 +748,9 @@ nav {
 
 footer {
   margin-top: 150px; }
+  @media (max-width: 700px) {
+    footer {
+      margin-top: 15vw; } }
 
 .testimonial {
   position: relative; }

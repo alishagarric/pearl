@@ -17,6 +17,15 @@ $base: 50px;
         margin: 0 auto;
         padding: 0 $base * 2;
     }
+    @media (max-width: $screen-sm){
+        padding: $base 0;
+        &.double-padding {
+            padding: $base 0;
+        }
+        .inner {
+            padding: 0 $base;
+        }
+    }
 }
 
 ul {
