@@ -980,20 +980,49 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch; }
+  @media (max-width: 1224px) {
+    .prices .menus {
+      flex-direction: column; } }
   .prices .menus .menu {
     background-color: #F4F4F4;
     margin-bottom: 2vw;
     width: 45%;
     margin-right: 2vw;
     flex-grow: 5; }
+    @media (max-width: 1024px) {
+      .prices .menus .menu {
+        margin-bottom: 25px; } }
     .prices .menus .menu:first-of-type {
       width: 100vw; }
-    .prices .menus .menu:nth-of-type(odd) {
+    .prices .menus .menu:nth-of-type(odd), .prices .menus .menu:last-of-type {
       margin-right: 0; }
-    .prices .menus .menu:last-of-type {
-      margin-right: 0; }
+    .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter {
+      width: 20%;
+      margin-right: 4%; }
+      @media (max-width: 1224px) {
+        .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter {
+          width: 29.33%;
+          margin-right: 4%; } }
+      @media (max-width: 562.5px) {
+        .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter {
+          width: calc(50% - 12.5px);
+          margin-right: 25px; }
+          .prices .menus .menu:last-of-type .content p:nth-of-type(even), .prices .menus .menu:last-of-type .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .menus .menu:last-of-type .content .filter:nth-of-type(even), .prices .menus .menu:first-of-type .content p:nth-of-type(even), .prices .menus .menu:first-of-type .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .menus .menu:first-of-type .content .filter:nth-of-type(even) {
+            margin-right: 0; } }
+    @media (max-width: 1224px) {
+      .prices .menus .menu {
+        width: 100vw;
+        margin-right: 0; } }
 .prices .text {
   padding: 37.5px 75px; }
+  @media (max-width: 700px) {
+    .prices .text {
+      padding-left: 33.3333333333px;
+      padding-right: 33.3333333333px; } }
+  @media (max-width: 450px) {
+    .prices .text {
+      padding-left: 25px;
+      padding-right: 25px; } }
   .prices .text .title {
     display: flex;
     flex-direction: row;
@@ -1002,16 +1031,28 @@ footer {
     .prices .text .title h2 {
       line-height: 1;
       margin-right: 25px; }
+      @media (max-width: 700px) {
+        .prices .text .title h2 {
+          font-size: 44px; } }
   .prices .text .content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    max-height: 50vh;
-    min-height: 300px; }
+    align-content: flex-start; }
     .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter {
       display: inline-block;
-      width: 48%;
+      width: 46%;
       margin-right: 4%; }
+      @media (max-width: 1224px) {
+        .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter {
+          width: 29.33%;
+          margin-right: 4%; } }
+      @media (max-width: 562.5px) {
+        .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter {
+          width: calc(50% - 12.5px);
+          margin-right: 25px; }
+          .prices .text .content p:nth-of-type(even), .prices .text .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .text .content .filter:nth-of-type(even) {
+            margin-right: 0; } }
 
 .gallery-page {
   padding-bottom: 0; }

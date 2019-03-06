@@ -16,7 +16,7 @@
                         <p>Check out <br />our <u>{{article.title}} gallery.</u></p>
                     </div>
                     <div class="content">
-                        {{article.content}}
+                        {{article.content | replace: '$', '</br><b>$' | replace: '+', '+</b>'}}
                     </div>
                 </div>
             </div>

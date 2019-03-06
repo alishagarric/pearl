@@ -8,26 +8,60 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: stretch;
+        @media ( max-width: $screen-md){
+            flex-direction: column;
+        }
         .menu {
             background-color: $cool-grey;
             margin-bottom: 2vw;
+            @media ( max-width: $screen-base){
+                margin-bottom: $base / 2;
+            }
             &:first-of-type {
                 width: 100vw;
             }
-            &:nth-of-type(odd){
+            &:nth-of-type(odd), &:last-of-type{
                 margin-right: 0;
             }
-            &:last-of-type {
-                margin-right: 0;
+            &:last-of-type, &:first-of-type {
+                .content {
+                    p {
+                        width: 20%;
+                        margin-right: 4%;
+                        @media (max-width: $screen-md){
+                            width: 29.33%;
+                            margin-right: 4%
+                        }
+                        @media (max-width: $screen-tiny * 1.25){
+                            width: calc(50% - 12.5px);
+                            margin-right: $base / 2;
+                            &:nth-of-type(even){
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
             }
             width: 45%;
             margin-right: 2vw;
             flex-grow: 5;
+            @media ( max-width: $screen-md){
+                width: 100vw;
+                margin-right: 0;
+            }
         }
     }
 
     .text {
         padding: $base * .75 $base * 1.5;
+        @media ( max-width: $screen-sm){
+            padding-left: $base / 1.5; 
+            padding-right: $base / 1.5;
+        }
+        @media ( max-width: $screen-tiny){
+            padding-left: $base / 2; 
+            padding-right: $base / 2;
+        }
         .title {
             display: flex;
             flex-direction: row;
@@ -36,18 +70,31 @@
             h2 {
                 line-height: 1;
                 margin-right: $base / 2;
+                @media (max-width: $screen-sm){
+                    font-size: 44px;
+                }
             }
         }
         .content {
             display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;   
-            max-height: 50vh;
-            min-height: 300px;  
+            flex-direction: row;
+            flex-wrap: wrap;    
+            align-content: flex-start;
             p {
                 display: inline-block;
-                width: 48%;
+                width: 46%;
                 margin-right: 4%;
+                @media (max-width: $screen-md){
+                    width: 29.33%;
+                    margin-right: 4%
+                }
+                @media (max-width: $screen-tiny * 1.25){
+                    width: calc(50% - 12.5px);
+                    margin-right: $base / 2;
+                    &:nth-of-type(even){
+                        margin-right: 0;
+                    }
+                }
             }     
         }
     }
