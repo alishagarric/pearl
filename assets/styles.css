@@ -1034,6 +1034,11 @@ footer {
       @media (max-width: 700px) {
         .prices .text .title h2 {
           font-size: 44px; } }
+    .prices .text .title a {
+      cursor: pointer; }
+    @media (max-width: 450px) {
+      .prices .text .title p, .prices .text .title .team-header .filters .filter, .team-header .filters .prices .text .title .filter {
+        min-width: 120px; } }
   .prices .text .content {
     display: flex;
     flex-direction: row;
@@ -1074,9 +1079,21 @@ footer {
         width: 100vw; }
       .gallery-page .galleries .gallery:nth-of-type(odd) {
         margin-right: 0; }
+      @media (max-width: 850px) {
+        .gallery-page .galleries .gallery {
+          width: 100vw;
+          margin-right: 0; } }
       .gallery-page .galleries .gallery .content {
         padding: 37.5px 75px;
         position: relative; }
+        @media (max-width: 700px) {
+          .gallery-page .galleries .gallery .content {
+            padding-left: 33.3333333333px;
+            padding-right: 33.3333333333px; } }
+        @media (max-width: 450px) {
+          .gallery-page .galleries .gallery .content {
+            padding-left: 25px;
+            padding-right: 25px; } }
         .gallery-page .galleries .gallery .content .title {
           display: flex;
           flex-direction: row;
@@ -1085,9 +1102,18 @@ footer {
           .gallery-page .galleries .gallery .content .title h2 {
             line-height: 1;
             margin-right: 25px; }
+            @media (max-width: 700px) {
+              .gallery-page .galleries .gallery .content .title h2 {
+                font-size: 44px; } }
+          .gallery-page .galleries .gallery .content .title a {
+            cursor: pointer; }
         .gallery-page .galleries .gallery .content .lashes-gallery-slider, .gallery-page .galleries .gallery .content .hair-gallery-slider, .gallery-page .galleries .gallery .content .nails-gallery-slider {
           height: 28.5vw;
           width: 58.5vw; }
+          @media (max-width: 850px) {
+            .gallery-page .galleries .gallery .content .lashes-gallery-slider, .gallery-page .galleries .gallery .content .hair-gallery-slider, .gallery-page .galleries .gallery .content .nails-gallery-slider {
+              left: -75px;
+              width: 115vw; } }
           .gallery-page .galleries .gallery .content .lashes-gallery-slider .background-image, .gallery-page .galleries .gallery .content .hair-gallery-slider .background-image, .gallery-page .galleries .gallery .content .nails-gallery-slider .background-image {
             width: 28.5vw;
             height: 28.5vw;
@@ -1109,7 +1135,14 @@ footer {
         .gallery-page .galleries .gallery .content .arrow {
           position: absolute;
           right: 75px;
-          top: 37.5px; }
+          top: 37.5px;
+          cursor: pointer; }
+          @media (max-width: 1024px) {
+            .gallery-page .galleries .gallery .content .arrow {
+              right: 25px; } }
+          @media (max-width: 700px) {
+            .gallery-page .galleries .gallery .content .arrow {
+              top: 25px; } }
           .gallery-page .galleries .gallery .content .arrow svg {
             height: 75px !important; }
             @media (max-width: 1024px) {
@@ -1117,8 +1150,25 @@ footer {
                 height: 7.324vw; } }
       .gallery-page .galleries .gallery:last-of-type .content {
         padding: 37.5px 25px; }
+        @media (max-width: 850px) {
+          .gallery-page .galleries .gallery:last-of-type .content {
+            padding-left: 75px; } }
+        @media (max-width: 700px) {
+          .gallery-page .galleries .gallery:last-of-type .content {
+            padding-left: 33.3333333333px; } }
+        @media (max-width: 450px) {
+          .gallery-page .galleries .gallery:last-of-type .content {
+            padding-right: 25px; } }
       .gallery-page .galleries .gallery:nth-of-type(2) .content {
         padding: 37.5px 25px 37.5px 75px; }
+        @media (max-width: 700px) {
+          .gallery-page .galleries .gallery:nth-of-type(2) .content {
+            padding-left: 33.3333333333px;
+            padding-right: 33.3333333333px; } }
+        @media (max-width: 450px) {
+          .gallery-page .galleries .gallery:nth-of-type(2) .content {
+            padding-left: 25px;
+            padding-right: 25px; } }
 
 .index-sections, .collection-page {
   width: 80vw;

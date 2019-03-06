@@ -13,7 +13,7 @@
             <div class="content">
                 <div class="title">
                     <h2>Hair</h2>
-                    <p>Check out <br />our <u>hair rates.</u></p>
+                    <p>Check out <br />our <u><a href="/pages/prices">hair rates.</a></u></p>
                 </div>
                 <div class="arrow" onclick="slickHairNext()">
                     {% include 'svg-arrow-right' %}
@@ -36,7 +36,7 @@
             <div class="content">
                 <div class="title">
                     <h2>Nails</h2>
-                    <p>Check out <br />our <u>nails rates.</u></p>
+                    <p>Check out <br />our <u><a href="/pages/prices">nails rates.</a></u></p>
                 </div>
                 <div class="arrow" onclick="slickNailsNext()">
                     {% include 'svg-arrow-right' %}
@@ -61,7 +61,7 @@
             <div class="content">
                 <div class="title">
                     <h2>Lashes</h2>
-                    <p>Check out <br />our <u>lashes rates.</u></p>
+                    <p>Check out <br />our <u><a href="/pages/prices">lashes rates.</a></u></p>
                 </div>
                 <div class="arrow" onclick="slickLashesNext()">
                     {% include 'svg-arrow-right' %}
@@ -92,14 +92,22 @@
       $('.lashes-gallery-slider, .nails-gallery-slider').slick({
           arrows: false,
           autoplay: true,
-          autoplaySpeed: 10000,
-          slidesToShow: 2
+          autoplaySpeed: 5000,
+          slidesToShow: 2,
+          responsive: [
+            {
+            breakpoint: 850,
+                settings: {
+                    variableWidth: true
+                }
+            },
+          ]
       });
 
       $('.hair-gallery-slider').slick({
           arrows: false,
           autoplay: true,
-          autoplaySpeed: 10000,
+          autoplaySpeed: 50000,
           variableWidth: true
       });
     });

@@ -13,7 +13,7 @@
                 <div class="text">
                     <div class="title">
                         <h2>{{article.title}}</h2>
-                        <p>Check out <br />our <u>{{article.title}} gallery.</u></p>
+                        <p>Check out <br />our <u><a href="/pages/gallery">{{article.title}} gallery.</a></u></p>
                     </div>
                     <div class="content">
                         {{article.content | replace: '$', '</br><b>$' | replace: '+', '+</b>'}}

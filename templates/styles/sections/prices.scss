@@ -74,6 +74,14 @@
                     font-size: 44px;
                 }
             }
+            a {
+                cursor: pointer;
+            }
+            p {
+                @media (max-width: $screen-tiny){
+                    min-width: 120px;
+                }
+            }
         }
         .content {
             display: flex;
