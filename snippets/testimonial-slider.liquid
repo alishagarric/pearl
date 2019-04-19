@@ -1,6 +1,5 @@
 
 <div class="section testimonial double-padding">
-    <div class="inner">
         <div class="testimonial-slider">
             {% for article in blogs.testimonial.articles %}
                 {% include 'testimonial-slider-parsing' %}
@@ -20,7 +19,6 @@
         <div class="arrow arrow-right" onclick="slickNext()">
             {% include 'svg-arrow-right' %}
         </div>  
-    </div>
 </div>
 
 <script>

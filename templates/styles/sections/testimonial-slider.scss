@@ -15,8 +15,20 @@
     }
     .arrow-left {
         left: $base * 1.5;
+        @media (max-width: 750px){
+            left: $base / 2;
+        }
+        @media (max-width: $screen-tiny){
+            left: $base / 5;
+        }
     }
     .arrow-right {
         right: $base * 1.5;
+        @media (max-width: 750px){
+            right: $base / 2;
+        }
+        @media (max-width: $screen-tiny){
+            right: $base / 5;
+        }
     }
 }

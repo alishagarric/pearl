@@ -6,25 +6,63 @@
 
 nav {
     background-color: $black;
-    padding: $base / 2 $base;
+    padding: $base / 8 $base;
     position: relative;
     z-index: 901;
-    .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $screen-sm){
+        padding: $base / 8 $base / 2;
+    }
+    .shop-amount {
         position: absolute;
-        left: $base;
-        top: $base / 5;
+        font-size: 10px;
+        background-color: $white;
+        color: $black;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        line-height: 14px;
+        text-align: center;
+        bottom: 0;
+        right: $base / -10;
+    }
+    .shop-icon {
+        width: 16px;
+        height: 20PX;
+    }
+    .call-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .menu-icon {
+        width: 18px;
+        height: 16px;
+    }
+    .logo {
+        position: relative;
+        top: $base / 10;
         &:hover {
             opacity: 1;
         }
         img {
             width: 127px;
             height: 57px;
+            @media (max-width: $screen-sm){
+                height: 32px;
+                width: 71px;
+            }
         }
     }
     ul {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        @media (max-width: $screen-sm){
+            display: none;
+        }
         li {
             margin-right: $base / 2;
             &:last-of-type {
@@ -33,6 +71,19 @@ nav {
             a {
                 color: $white;
                 @extend .p;
+                position: relative;
+            }
+        }
+    }
+    .mobile-nav {
+        display: none;
+        @media (max-width: $screen-sm){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            a {
+                position: relative;
+                padding-left: $base / 3;
             }
         }
     }

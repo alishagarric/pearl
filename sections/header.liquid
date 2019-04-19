@@ -4,7 +4,28 @@
   </a>
   <ul>
     {% for link in linklists.footer.links %}
-      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      <li>
+        <a href="{{ link.url }}">
+          {{ link.title }}
+        </a>
+      </li>
     {% endfor %}
+      <li>
+        <a href="/cart">
+          <img class="shop-icon" src="{{ 'icon-shop.png' | asset_url }}" alt="shop">
+          <div class="shop-amount">{{ cart.item_count }}</div>
+        </a>
+      </li>
   </ul>
+  <div class="mobile-nav">
+    <a href="tel:1-775-323-7375">
+      <img class="call-icon" src="{{ 'icon-call.png' | asset_url }}" alt="call us">
+    </a>
+    <a href="/collections">
+      <img class="shop-icon" src=" {{ 'icon-shop.png' | asset_url }}" alt="shop">
+      <div class="shop-amount">{{ cart.item_count }}</div>
+    </a>
+    <a href="#">
+      <img class="menu-icon" src="{{ 'icon-hamburger.png' | asset_url }}"  alt="menu">
+    </a>
 </nav>
