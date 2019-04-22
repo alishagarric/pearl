@@ -101,14 +101,17 @@
     </div>
 {% endfor %}
 
+<p class="hide empty-team-list bold">Please select a filter to view some team members.</p>
+
  {% include 'text-image-block' with header:"Seeing is believing", paragraph:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", buttonText:"View Galleries" buttonDest:"/" orientation: "reversed" %} 
 
  <script>
     function toggleEmployees( type, filter ){
         var cross = $(filter).find("#cross");
         var employees = $(".employee");
-        if (cross.hasClass('hide') ){
-            cross.removeClass('hide');
+        var searchClass = cross.attr("class").split(' ');
+        if ( searchClass[0] == "hide" ){
+            cross[0].classList.remove("hide");
             $(filter).addClass('unselected');
             for ( var i = 0; i < $(employees).length; i++){
                 if ( $(employees[i]).hasClass(type)){
@@ -117,13 +120,33 @@
             }
         }
         else {
-            cross.addClass('hide');
+            
+            cross[0].classList.add("hide");
             $(filter).removeClass('unselected');
             for ( var i = 0; i < $(employees).length; i++){
                 if ( $(employees[i]).hasClass(type)){
                     $(employees[i]).removeClass("hide")
                 }
             }
+        }
+        checkIfEmpty();
+    }
+
+    function checkIfEmpty(){
+        var filters = $(".filters > .filter");
+        var show = true;
+        for ( var i = 0; i < filters.length; i++ ){
+            console.log( filters[i] );
+            if ( $(filters[i]).hasClass("unselected") != true ){
+                show = false;
+            }
+        }
+        console.log( show );
+        if ( show == true ){
+            $(".empty-team-list").removeClass("hide");
+        }
+        else {
+            $(".empty-team-list").addClass("hide");
         }
     }
  </script>

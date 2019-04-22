@@ -47,6 +47,10 @@
                         @media (max-width: $screen-sm){
                             font-size: 44px;
                         }
+                        @media ( max-width: $screen-tiny * .80 ){
+                            margin-right: $base / 5;
+                            transform: translateY(-3px);
+                        }
                     }
                     a {
                         cursor: pointer;
@@ -92,6 +96,9 @@
                     }
                     @media( max-width: $screen-sm){
                         top: $base * .5;
+                    }
+                    @media( max-width: $screen-tiny){
+                        right: $base / 5;
                     }
                     cursor: pointer;
                     svg {

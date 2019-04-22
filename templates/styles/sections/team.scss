@@ -1,8 +1,17 @@
 .team-header {
+    @media (max-width: $screen-smedium){
+        .inner {
+            padding: 0;
+        }
+    }
     .filters {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @media (max-width: $screen-sm){
+            flex-direction: column;
+            align-items: center;
+        }
         .filter {
             background-color: $cool-grey;
             @extend p;
@@ -12,9 +21,17 @@
             padding-left: 12px;
             padding-right: 12px;
             width: 100%;
-            margin: 10px;
+            margin: $base / 5;
             display: inline-block;
             position: relative;
+            @media (max-width: $screen-sm){
+                width: 80%;
+                margin: $base / 10 0;
+            }
+            @media (max-width: $screen-tiny){
+                width: calc( 100vw - 25px);
+                margin: $base / 10 0 0 0;
+            }
             &.unselected {
                 color: rgba( 0, 0, 0, .3);
                 background-color: rgba( 216, 216, 216, .11);
@@ -47,6 +64,11 @@
         width: 100%;
         @extend .image-with-text;
         padding: 0 0 $base * 2 0;
+        @media (max-width: 750px){
+            .background-image {
+                margin-top: $base / 5;
+            }
+        }
         &.hide {
             display: none;
         }
@@ -54,15 +76,25 @@
             display: inline-block;
             margin-left: $base / 2;
             margin-bottom: 0;
+            @media (max-width: 750px){
+                transform: translateX( $base / 4 );
+            }
         }
     }
     &:nth-of-type(even){
         .employee {
             flex-direction: row-reverse;
+            @media (max-width: 750px){
+                flex-direction: column;
+            }
             .text {
                 text-align: left;
                 margin-right: 0;
                 margin-left: $base * 1.5;
+                @media (max-width: 750px){
+                    margin-left: 0;
+                    text-align: center;
+                }
             }
             .ability {
                 margin-left: 0;
@@ -72,9 +104,20 @@
                 &:before {
                     left: auto;
                     right: $base * -.75;
+                    @media (max-width: 750px){
+                        height: 0;
+                        width: 0;
+                    }
                 }
             }
         }
     }
+}
 
+.empty-team-list {
+    text-align: center;
+    width: 100%;
+    &.hide {
+        display: none;
+    }
 }
