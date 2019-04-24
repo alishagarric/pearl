@@ -45,9 +45,9 @@
   </style>
 {% endunless %}
 
-
-  <div class="shop-bar">
   {% comment %}
+  <div class="shop-bar">
+  
         <form action="/search" method="get" class="search-bar small--hide" role="search">
         {% endcomment %}
           {% comment %}<input type="hidden" name="type" value="product">{% endcomment %}
@@ -58,7 +58,7 @@
           </button>
           <input type="search" name="q" class="search-bar__input" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}" aria-label="{{ 'general.search.placeholder' | t }}">
         </form>
-        {% endcomment %}
+        
 
         <div>
             <a href="/cart">
@@ -73,6 +73,7 @@
             </a>
         </div>
   </div>
+  {% endcomment %}
 
 
 

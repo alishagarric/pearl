@@ -28,6 +28,9 @@ $base: 50px;
             padding: 0 $base;
         }
     }
+    @media (max-width: 650px){
+        margin-top: $base !important;
+    }
 }
 
 ul {

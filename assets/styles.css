@@ -411,6 +411,9 @@ textarea {
         padding: 50px 0; }
       .section .inner {
         padding: 0 50px; } }
+  @media (max-width: 650px) {
+    .section {
+      margin-top: 50px !important; } }
 
 ul {
   padding-left: 0; }
@@ -687,6 +690,9 @@ nav {
       margin-right: 25px; }
       nav ul li:last-of-type {
         margin-right: 0; }
+      nav ul li:nth-of-type(5) {
+        margin-right: 12.5px;
+        transform: translateY(1px); }
       nav ul li a {
         color: #FFFFFF;
         position: relative; }
@@ -704,7 +710,7 @@ nav {
     background-color: transparent;
     width: 20vw;
     position: absolute;
-    padding-top: 0; }
+    padding-top: 100px; }
     nav.side-bar .list--nav {
       display: flex;
       flex-direction: column; }
@@ -790,6 +796,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 650px) {
+    .copywright {
+      margin-top: 0 !important; } }
 
 footer {
   margin-top: 150px; }
@@ -831,6 +840,7 @@ footer {
 
 .slider-bottom-height, .services-slider .sliders .left-sliders .services-info-slider, .services-slider .sliders .right-slider-and-tools .slider-nav {
   height: 16.66vh;
+  min-height: 115px;
   overflow-x: scroll; }
   @media (max-height: 600px) {
     .slider-bottom-height, .services-slider .sliders .left-sliders .services-info-slider, .services-slider .sliders .right-slider-and-tools .slider-nav {
@@ -935,26 +945,53 @@ footer {
   height: 50vh;
   min-height: 300px; }
 
+@media (max-width: 450px) {
+  .product-sample .inner {
+    padding: 2.5vw; } }
 .product-sample h4 {
   border-bottom: 1px solid #979797; }
+  @media (max-width: 700px) {
+    .product-sample h4 {
+      padding-bottom: 10px;
+      font-size: 21px; } }
 .product-sample .items {
   display: flex;
   flex-direction: row; }
+  @media (max-width: 600px) {
+    .product-sample .items {
+      flex-direction: column; } }
   .product-sample .items .item {
     margin-right: 2.5vw;
     text-align: center; }
+    @media (max-width: 600px) {
+      .product-sample .items .item {
+        margin-bottom: 33.3333333333px;
+        margin-right: 0; } }
     .product-sample .items .item p, .product-sample .items .item .team-header .filters .filter, .team-header .filters .product-sample .items .item .filter {
       margin-bottom: 0;
       margin-top: 12.5px; }
+      @media (max-width: 600px) {
+        .product-sample .items .item p, .product-sample .items .item .team-header .filters .filter, .team-header .filters .product-sample .items .item .filter {
+          margin-top: 0; } }
       .product-sample .items .item p.light, .product-sample .items .item .team-header .filters .light.filter, .team-header .filters .product-sample .items .item .light.filter {
         margin-top: 5px; }
     .product-sample .items .item:last-of-type {
       margin-right: 0; }
+@media (max-width: 450px) {
+  .product-sample {
+    padding-bottom: 0; } }
 
 .one-stop-shop {
   margin-left: 2.5vw !important;
   width: 97.5vw;
-  position: relative; }
+  position: relative;
+  background-position: left center !important; }
+  @media (max-width: 700px) {
+    .one-stop-shop {
+      background-position: 40% top !important; } }
+  @media (max-width: 450px) {
+    .one-stop-shop {
+      background-position: 30% top !important; } }
   .one-stop-shop::after {
     position: absolute;
     width: 1px;
@@ -963,6 +1000,17 @@ footer {
     background-color: #979797;
     left: 0;
     top: -15%; }
+    @media (max-width: 450px) {
+      .one-stop-shop::after {
+        height: 115%;
+        top: -7.5%; } }
+  @media (max-width: 700px) {
+    .one-stop-shop h3 {
+      margin-bottom: 10px; } }
+  @media (max-width: 450px) {
+    .one-stop-shop h3 {
+      width: 120%;
+      transform: translateX(-10%); } }
   .one-stop-shop .arrow {
     transform: rotate(-90deg) translateY(3px);
     margin-bottom: 12.5px; }
@@ -971,6 +1019,11 @@ footer {
     text-align: center;
     width: 40vw;
     margin-left: 50vw; }
+    @media (max-width: 700px) {
+      .one-stop-shop .text {
+        width: 62.5vw;
+        padding-right: 0;
+        margin-left: 17.5vw; } }
     .one-stop-shop .text button {
       margin-top: 25px; }
 

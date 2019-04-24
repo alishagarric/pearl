@@ -1,16 +1,35 @@
 .product-sample {
+    .inner {
+        @media ( max-width: $screen-tiny ){
+            padding: 2.5vw;
+        }
+    }
     h4 {
         border-bottom: 1px solid $dark-grey;
+        @media ( max-width: $screen-sm ){
+            padding-bottom: $base / 5;
+            font-size: 21px;
+        }
     }
     .items {
         display: flex;
         flex-direction: row;
+        @media (max-width: 600px){
+            flex-direction: column;
+        }
         .item {
             margin-right: 2.5vw;
             text-align: center;
+            @media (max-width: 600px){
+                margin-bottom: $base / 1.5;
+                margin-right: 0;
+            }
             p {
                 margin-bottom: 0;
                 margin-top: $base / 4;
+                @media (max-width: 600px){
+                    margin-top: 0;
+                }
                 &.light {
                     margin-top: $base / 10;
                 }
@@ -19,5 +38,8 @@
                 margin-right: 0;
             }
         }
+    }
+    @media ( max-width: $screen-tiny ){
+        padding-bottom: 0;
     }
 }

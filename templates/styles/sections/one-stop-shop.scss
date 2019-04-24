@@ -2,6 +2,13 @@
     margin-left: 2.5vw !important;
     width: 97.5vw;
     position: relative;
+    background-position: left center !important;
+    @media (max-width: $screen-sm){
+        background-position: 40% top !important;
+    }
+    @media (max-width: $screen-tiny){
+        background-position: 30% top !important;
+    }
     &::after {
         position: absolute;
         width: 1px;
@@ -10,7 +17,19 @@
         background-color: $dark-grey;
         left: 0;
         top: -15%;
-
+        @media (max-width: $screen-tiny){
+            height: 115%;
+            top: -7.5%;
+        }
+    }
+    h3 {
+        @media (max-width: $screen-sm){
+            margin-bottom: $base / 5;
+        }
+        @media (max-width: $screen-tiny){
+            width: 120%;
+            transform: translateX(-10%);
+        }
     }
     .arrow {
         transform: rotate(-90deg) translateY(3px);
@@ -21,6 +40,11 @@
        text-align: center;
        width: 40vw;
        margin-left: 50vw;
+       @media (max-width: $screen-sm){
+        width: 62.5vw;
+        padding-right: 0;
+        margin-left: 17.5vw;
+       }
        button {
            margin-top: $base / 2;
        }

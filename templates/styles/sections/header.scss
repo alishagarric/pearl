@@ -68,6 +68,10 @@ nav {
             &:last-of-type {
                 margin-right: 0;
             }
+            &:nth-of-type(5) {
+                margin-right: $base / 4;
+                transform: translateY(1px);
+            }
             a {
                 color: $white;
                 @extend .p;
@@ -91,7 +95,7 @@ nav {
         background-color: transparent;
         width: 20vw;
         position: absolute;
-        padding-top: 0 ;
+        padding-top: $base * 2;
         .list--nav {
             display: flex;
             flex-direction: column;

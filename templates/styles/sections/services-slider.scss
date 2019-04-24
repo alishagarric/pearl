@@ -7,6 +7,7 @@
 
 .slider-bottom-height {
     height: 16.66vh;
+    min-height: 115px;
     overflow-x: scroll;
     @media (max-height: 600px ){
         height: 100px;
