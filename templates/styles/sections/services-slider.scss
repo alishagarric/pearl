@@ -33,6 +33,10 @@
 
 .services-slider {
     max-height: 1200px;
+    padding-top: $base !important;
+    @media (max-width: 650px){
+        padding-top: 0 !important;
+    }
     .sliders {
         display: flex;
         flex-direction: row;
@@ -42,6 +46,10 @@
         .left-sliders {
             position: relative;
             width: 66.5vw;
+            @media (max-width: 600px){
+                width: 100vw;
+                padding-left: 2.5vw;
+            }
             &:after {
                 content: "";
                 position: absolute;
@@ -49,9 +57,12 @@
                 width: 1px;
                 height: 100%;
                 top: 0;
-                right: 0;
+                right: -1px;
                 @media (min-height: 1400px){
                     height: 1060px;
+                }
+                @media (max-width: 600px){
+                    display: none;
                 }
             }
             .services-title-slider {
@@ -61,6 +72,7 @@
                 z-index: 2;
                 overflow-y: hidden;
                 height: 225px;
+                transform: translateX(-1px);
                 @media (max-width: $screen-base){
                     height: 21.95vw;
                 }
@@ -207,17 +219,52 @@
         }
         .right-slider-and-tools {
             width: 33.5vw;
+            @media (max-width: 600px){
+                width: 0;
+                padding-left: 0;
+                z-index: 3;
+            }
             .slider-nav {
                 padding-top: $base / 3;
                 text-align: right;
                 margin-right: $base / 3;
                 overflow-y: hidden;
                 @extend .slider-bottom-height;
+                @media (max-width: 600px){
+                    position: absolute;
+                    z-index: 2;
+                    top: 100px;
+                    right: 0;
+                }
                 p {
                     line-height: 1.5;
                     margin-bottom: 0;
+                    position: relative;
                     &.selected {
                         font-weight: 700;
+                    }
+                    @media (max-width: 600px){
+                        display: none;
+                    }
+                }
+                .mobile-nav {
+                    display: none;
+                    height: $base / 2.5;
+                    position: relative;
+                    @media (max-width: 600px){
+                        display: block;
+                    }
+                    &.selected {
+                        &:after {
+                            position: absolute;
+                            content: '\2022';
+                            height: 10px;
+                            width: 10px;
+                            color: $black;
+                            left: 0;
+                            font-size: 25px;
+                            transform: translate( -1px, -7px);
+                        }
                     }
                 }
             }

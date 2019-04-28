@@ -3,7 +3,7 @@
         <div class="left-sliders">
             <div class="services-title-slider phase-1">
                 {% for article in blogs.service.articles %}
-                    <h1>{{ article.title }}</h1>
+                    <h1 class="bold">{{ article.title }}</h1>
                 {% endfor %}
             </div>
             <div class="services-main-slider">
@@ -43,6 +43,7 @@
             <div class="slider-nav">
                 {% for article in blogs.service.articles %}
                     <p class="{% if forloop.index == 1 %} selected {% endif %}" data-index="{{forloop.index0}}">{{ article.title }}</p>
+                    <div class="mobile-nav {% if forloop.index == 1 %} selected {% endif %}" data-index="{{forloop.index0}}">&#9900;</div>
                 {% endfor %}    
             </div>
         </div>
@@ -52,19 +53,32 @@
 
 <script>
 
-    function nextButtons(){
+    function switchButtons( direction ){
         var activePrice = $('.learn-prices > a.active');
         var activeTeam = $('.learn-people > a.active');
         var activeGallery = $('.learn-gallery > a.active');
         
-        var nextPrice = activePrice.next('a');
-        var nextTeam = activeTeam.next('a');
-        var nextGallery = activeGallery.next('a');
+        if ( direction == "next" ){
+            var nextPrice = activePrice.next('a');
+            var nextTeam = activeTeam.next('a');
+            var nextGallery = activeGallery.next('a');
 
-        if ( nextPrice.length == 0 ){
-            nextPrice = $('.learn-prices > a:first');
-            nextTeam = $('.learn-people > a:first');
-            nextGallery = $('.learn-gallery > a:first');
+            if ( nextPrice.length == 0 ){
+                nextPrice = $('.learn-prices > a:first');
+                nextTeam = $('.learn-people > a:first');
+                nextGallery = $('.learn-gallery > a:first');
+            }
+        }
+        else {
+            var nextPrice = activePrice.prev('a');
+            var nextTeam = activeTeam.prev('a');
+            var nextGallery = activeGallery.prev('a');
+
+            if ( nextPrice.length == 0 ){
+                nextPrice = $('.learn-prices > a:last');
+                nextTeam = $('.learn-people > a:last');
+                nextGallery = $('.learn-gallery > a:last');
+            } 
         }
 
         activePrice.removeClass("active");
@@ -75,6 +89,7 @@
         nextTeam.addClass("active");
         nextGallery.addClass("active");
     }
+    
     function nextTitle() {
         var slider = $('.services-title-slider');
         if ( slider.hasClass("phase-1") ){
@@ -152,6 +167,7 @@
         $('.services-main-slider').slick("slickPrev");
         $('.services-secondary-slider').slick("slickPrev");
         prevTitle();
+        switchButtons( "prev" );
         $('.services-info-slider').slick("slickPrev");
         changeNav();
     }
@@ -160,15 +176,17 @@
         $('.services-main-slider').slick("slickNext");
         $('.services-secondary-slider').slick("slickNext");
         nextTitle();
-        nextButtons();
+        switchButtons( "next" );
         $('.services-info-slider').slick("slickNext");
         changeNav();
     }
 
     function changeNav(){
         var currentSlide = $('.services-main-slider').slick('slickCurrentSlide');
-        $('.slider-nav p').removeClass("selected");
+        $('.slider-nav p, .slider-nav .mobile-nav').removeClass("selected");
         var navTitles = $('.slider-nav p');
+        var navBullets = $('.slider-nav .mobile-nav');
         $(navTitles[currentSlide]).addClass("selected");
+        $(navBullets[currentSlide]).addClass("selected");
     }
 </script>

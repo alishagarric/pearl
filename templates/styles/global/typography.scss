@@ -51,6 +51,9 @@ h5, .h5 {
     @media (max-width: $screen-base){
         font-size: 1.95vw;
     }
+    @media (max-width: $screen-sm){
+        font-size: 14px;
+    }
 }
 
 p, .p {
