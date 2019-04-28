@@ -19,6 +19,7 @@
                     </div>
                 {% endfor %}
             </div>
+            {% include 'learn-container' %}
         </div>
         <div class="right-slider-and-tools">
             <div class="services-secondary-slider-container">
@@ -51,6 +52,29 @@
 
 <script>
 
+    function nextButtons(){
+        var activePrice = $('.learn-prices > a.active');
+        var activeTeam = $('.learn-people > a.active');
+        var activeGallery = $('.learn-gallery > a.active');
+        
+        var nextPrice = activePrice.next('a');
+        var nextTeam = activeTeam.next('a');
+        var nextGallery = activeGallery.next('a');
+
+        if ( nextPrice.length == 0 ){
+            nextPrice = $('.learn-prices > a:first');
+            nextTeam = $('.learn-people > a:first');
+            nextGallery = $('.learn-gallery > a:first');
+        }
+
+        activePrice.removeClass("active");
+        activeTeam.removeClass("active");
+        activeGallery.removeClass("active");
+
+        nextPrice.addClass("active");
+        nextTeam.addClass("active");
+        nextGallery.addClass("active");
+    }
     function nextTitle() {
         var slider = $('.services-title-slider');
         if ( slider.hasClass("phase-1") ){
@@ -75,7 +99,7 @@
         }
     }
 
-    function PrevTitle() {
+    function prevTitle() {
         var slider = $('.services-title-slider');
         if ( slider.hasClass("phase-1") ){
             slider.removeClass("phase-1");
@@ -136,6 +160,7 @@
         $('.services-main-slider').slick("slickNext");
         $('.services-secondary-slider').slick("slickNext");
         nextTitle();
+        nextButtons();
         $('.services-info-slider').slick("slickNext");
         changeNav();
     }

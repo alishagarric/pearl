@@ -1,0 +1,61 @@
+<div class="learn-container">
+    <div class="learn-prices">
+        {% assign first = "active" %}
+        {% for article in blogs.service.articles %}
+            {% if article.title == "Shop" %}
+                <a class="{{ first }}" href="{{ collections[settings.shop-slide-collection-2].url }}">
+                    <h5 class="bold">Shop {{ collections[settings.shop-slide-collection-2].title }}</h5>
+                </a>
+            {% else %}
+                <a class="{{ first }}" href="/pages/prices">
+                    <h5 class="bold">Prices</h5>
+                </a>
+            {% endif %}
+            {% assign first = "" %}
+        {% endfor %}
+    </div>
+    <div class="learn-people">
+        {% assign first = "active" %}
+        {% for article in blogs.service.articles %}
+            {% if article.title == "Shop" %}
+                {% for collection in collections limit: 1 %}
+                    <a class="{{ first }}" href="{{ collections[settings.shop-slide-collection-1].url }}">
+                        <h5 class="bold">Shop {{ collections[settings.shop-slide-collection-1].title }}</h5>
+                    </a>
+                {% endfor %}
+            {% elsif article.title == "Skin" %}
+                <a class="{{ first }}" href="/pages/team">
+                    <h5 class="bold">Estheticians</h5>
+                </a>
+            {% elsif article.title == "Hair" %}
+                <a class="{{ first }}" href="/pages/team">
+                    <h5 class="bold">Stylists</h5>  
+                </a>
+            {% else %}
+                <a class="{{ first }}" href="/pages/team">
+                    <h5 class="bold">Technicians</h5>
+                </a>
+            {% endif %}
+            {% assign first = "" %}
+        {% endfor %}
+    </div>
+    <div class="learn-gallery">
+        {% assign first = "active" %}
+        {% for article in blogs.service.articles %}
+            {% if article.title == "Shop" %}
+                <a class="{{ first }}" href="/collections">
+                    <h5 class="bold">Shop All</h5>
+                </a>
+            {% elsif article.title == "Skin" %}
+                <a class="{{ first }}" href="tel:775-323-7375">
+                    <h5 class="bold">Book Apointment</h5>
+                </a>
+            {% else %}
+                <a class="{{ first }}" href="/pages/gallery">
+                    <h5 class="bold">{{ article.title}} Gallery</h5>
+                </a>
+            {% endif %}
+            {% assign first = "" %}
+        {% endfor %}                
+    </div>
+</div>

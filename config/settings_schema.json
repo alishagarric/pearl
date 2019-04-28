@@ -1188,6 +1188,23 @@
   },
   {
     "name": {
+      "en": "Shop Slide Buttons"
+    },
+    "settings": [
+      {
+        "type":      "collection",
+        "id":        "shop-slide-collection-1",
+        "label":     "First Featured Collection"
+     },
+     {
+        "type":      "collection",
+        "id":        "shop-slide-collection-2",
+        "label":     "Second Featured Collection"
+     }
+    ]
+  },
+  {
+    "name": {
       "de": "navigation",
       "en": "Navigation",
       "es": "Navegación",

@@ -47,6 +47,7 @@ h4, .h4 {
 h5, .h5 {
     font-family: $fnt-header;
     font-size: 20px;
+    letter-spacing: .03em;
     @media (max-width: $screen-base){
         font-size: 1.95vw;
     }

@@ -588,7 +588,8 @@ h4, .h4 {
 
 h5, .h5 {
   font-family: "Playfair Display", serif;
-  font-size: 20px; }
+  font-size: 20px;
+  letter-spacing: .03em; }
   @media (max-width: 1024px) {
     h5, .h5 {
       font-size: 1.95vw; } }
@@ -846,6 +847,12 @@ footer {
     .slider-bottom-height, .services-slider .sliders .left-sliders .services-info-slider, .services-slider .sliders .right-slider-and-tools .slider-nav {
       height: 100px; } }
 
+.slider-buttons-bottom-padding, .services-slider .sliders .left-sliders .learn-container {
+  padding-bottom: 16.66vh; }
+  @media (max-height: 600px) {
+    .slider-buttons-bottom-padding, .services-slider .sliders .left-sliders .learn-container {
+      height: 100px; } }
+
 .services-slider .sliders {
   display: flex;
   flex-direction: row; }
@@ -916,6 +923,32 @@ footer {
       position: relative; }
     .services-slider .sliders .left-sliders .services-info-slider {
       padding-top: 25px; }
+    .services-slider .sliders .left-sliders .learn-container {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      margin-bottom: 25px; }
+      .services-slider .sliders .left-sliders .learn-container .learn-prices a, .services-slider .sliders .left-sliders .learn-container .learn-people a, .services-slider .sliders .left-sliders .learn-container .learn-gallery a {
+        padding-left: 35.7142857143px;
+        display: none; }
+        .services-slider .sliders .left-sliders .learn-container .learn-prices a:hover, .services-slider .sliders .left-sliders .learn-container .learn-people a:hover, .services-slider .sliders .left-sliders .learn-container .learn-gallery a:hover {
+          opacity: 1; }
+        .services-slider .sliders .left-sliders .learn-container .learn-prices a h5, .services-slider .sliders .left-sliders .learn-container .learn-people a h5, .services-slider .sliders .left-sliders .learn-container .learn-gallery a h5 {
+          color: #000000;
+          margin-bottom: 10px; }
+        .services-slider .sliders .left-sliders .learn-container .learn-prices a.active, .services-slider .sliders .left-sliders .learn-container .learn-people a.active, .services-slider .sliders .left-sliders .learn-container .learn-gallery a.active {
+          display: block; }
+      .services-slider .sliders .left-sliders .learn-container .learn-gallery a {
+        height: 43px;
+        background-color: #000000;
+        border-top-right-radius: 22px;
+        border-bottom-right-radius: 22px; }
+        .services-slider .sliders .left-sliders .learn-container .learn-gallery a:hover {
+          opacity: 1; }
+        .services-slider .sliders .left-sliders .learn-container .learn-gallery a h5 {
+          color: #FFFFFF;
+          line-height: 43px; }
   .services-slider .sliders .right-slider-and-tools {
     width: 33.5vw; }
     .services-slider .sliders .right-slider-and-tools .slider-nav {

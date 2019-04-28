@@ -14,6 +14,13 @@
     }
 }
 
+.slider-buttons-bottom-padding {
+    padding-bottom: 16.66vh;
+    @media (max-height: 600px){
+        height: 100px;
+    }
+}
+
 .services-slider {
     .sliders {
         display: flex;
@@ -122,6 +129,45 @@
             .services-info-slider {
                 @extend .slider-bottom-height;
                 padding-top: $base / 2;
+            }
+            .learn-container {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: 2;
+                @extend .slider-buttons-bottom-padding;
+                margin-bottom: $base  / 2;
+                .learn-prices, .learn-people, .learn-gallery {
+                    a {
+                        padding-left: $base / 1.4;
+                        display: none;
+                        &:hover {
+                            opacity: 1;
+                        }
+                        h5 {
+                            color: $black;
+                            margin-bottom: $base / 5;
+                        }
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+                .learn-gallery {
+                    a {
+                        height: 43px;
+                        background-color: $black;
+                        border-top-right-radius: 22px;
+                        border-bottom-right-radius: 22px;
+                        &:hover {
+                            opacity: 1;
+                        }
+                        h5 {
+                            color: $white;
+                            line-height: 43px;
+                        }
+                    }
+                }
             }
         }
         .right-slider-and-tools {
