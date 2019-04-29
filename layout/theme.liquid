@@ -63,7 +63,7 @@
     {% comment %} {% section "shop-header" %} {% endcomment %}
   {% endunless %}
 
-    {% unless template.name == 'page' or template.name == "index" or template.name == "product" %}
+    {% unless template.name == 'page' or template.name == "index" or template.name == "product" or template.name == "cart" %}
       {% section "sidebar" %}
     {% endunless %}
 

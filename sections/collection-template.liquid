@@ -1,6 +1,7 @@
 <!-- /templates/collection.liquid -->
 {% paginate collection.products by 12 %}
 
+
 <div class="display-collection collection-page" data-section-id="{{ section.id }}" data-section-type="collection-template" data-sort-enabled="{{ section.settings.collection_sort_enable }}" data-tags-enabled="{{ section.settings.collection_tag_enable }}">
   {% include 'breadcrumb-nav' %}
   <header>
