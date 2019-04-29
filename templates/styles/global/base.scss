@@ -177,6 +177,10 @@ img {
 button {
     border: 1px solid $white;
     background-color: transparent;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: .3px;
+    line-height: 1;
     a {
         color: $white;
         display: inline-block;
@@ -190,6 +194,18 @@ button {
         border: 1px solid $black;
         a {
             color: $black;
+        }
+    }
+    &.blue {
+        color: $white;
+        background-color: $blue;
+        @extend .bold;
+        padding: 13.5px 40px;
+        border: none;
+        a {
+            color: $white;
+            background-color: $blue;
+            @extend .bold;
         }
     }
     &.full-width {

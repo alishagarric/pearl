@@ -1,7 +1,8 @@
 <!-- /templates/collection.liquid -->
 {% paginate collection.products by 12 %}
 
-<div class="collection-page" data-section-id="{{ section.id }}" data-section-type="collection-template" data-sort-enabled="{{ section.settings.collection_sort_enable }}" data-tags-enabled="{{ section.settings.collection_tag_enable }}">
+<div class="display-collection collection-page" data-section-id="{{ section.id }}" data-section-type="collection-template" data-sort-enabled="{{ section.settings.collection_sort_enable }}" data-tags-enabled="{{ section.settings.collection_tag_enable }}">
+  {% include 'breadcrumb-nav' %}
   <header>
     <h1 class="h4"><b>{{ collection.title }}</b></h1>
     <div class="leaves">
@@ -77,13 +78,13 @@
           <div class="grid grid--uniform">
             {% assign collection_index = 1 %}
             {% for i in (1..6) %}
-              <div class="grid__item small--one-half medium-up--one-third text-center">
+              <div class="grid__item small--one-half medium-up--one-third text-center item">
                 <a href="/admin/products" class="grid__image">
                   {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
                   {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
                 </a>
-                <div class="product__title"><a href="/admin/products">{{ 'homepage.onboarding.product_title' | t }}</a></div>
-                <div class="product__price">$19.99</div>
+                <p class="product__title item"><a href="/admin/products">{{ 'homepage.onboarding.product_title' | t }}</a></div>
+                <p class="product__price light">$19.99</div>
               </div>
               {% assign collection_index = collection_index | plus: 1 %}
             {% endfor %}

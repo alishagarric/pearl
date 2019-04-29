@@ -59,22 +59,15 @@
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
  
   {% section 'header' %}
-  {% unless template.name == 'page' or template.name == "index" %}
-     {% section "shop-header" %}
+  {% unless template.name == 'page' or template.name == "index" or template.name == "product" %}
+    {% comment %} {% section "shop-header" %} {% endcomment %}
   {% endunless %}
 
-    {% unless template.name == 'page' or template.name == "index" %}
+    {% unless template.name == 'page' or template.name == "index" or template.name == "product" %}
       {% section "sidebar" %}
     {% endunless %}
 
       <main id="MainContent" role="main">
-        {% unless template.name == 'list-collections' or template.name == 'page'%}
-        {% endunless %}
-          {% if settings.show_breadcrumb_nav and template.name != 'list-collections' %}
-            {% unless template.name == "index" or template.name == 'page' %}
-              {% include 'breadcrumb-nav' %}
-            {% endunless %}
-          {% endif %}
         {{ content_for_layout }}
       </main>
 

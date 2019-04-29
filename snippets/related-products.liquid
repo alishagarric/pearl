@@ -1,32 +1,28 @@
-{% assign number_of_products = 3 %}
-{% assign number_of_products_to_fetch = number_of_products | plus: 1 %}
+{% for collection in product.collections %}
+  {% if collection.title != "Home page" %}
+    {% assign ourCollection = collection %}
+  {% endif %}
+{% endfor %}
+{% if ourCollection and ourCollection.all_products_count > 3 %}
 
-{% if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' %}
-  {% assign found_a_collection = false %}
-  {% for c in product.collections %}
-    {% if found_a_collection == false and c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1 %}
-      {% assign found_a_collection = true %}
-      {% assign collection = c %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-
-{% if collection and collection.products_count > 1 %}
-  <section class="related-products">
-    <hr>
-    <h2 class="section-header__title h3">{{ 'products.general.related_products_title' | t }}</h2>
-    <div class="grid grid--uniform">
-      {% assign current_product = product %}
-      {% assign current_product_found = false %}
-      {% for product in collection.products limit: number_of_products_to_fetch %}
-        {% if product.handle == current_product.handle %}
-          {% assign current_product_found = true %}
-        {% else %}
-          {% unless current_product_found == false and forloop.last %}
-            {% include 'product-grid-item' %}
-          {% endunless %}
-        {% endif %}
-      {% endfor %}
+  <div class="section product-sample">
+    <div class="inner">
+        <h4><strong>{{ 'products.general.related_products_title' | t }}</strong></h4>
+        <div class="items">
+            {% assign count = 0 %}
+            {% assign currentProduct = product %}
+            {% for product in collection.products %}
+                {% if product.handle != currentProduct.handle and count < 3 %}
+                  <div class="item">
+                      <img src="{{ product.featured_image | img_url: '1000x' }}">
+                      <p>{{ product.title }}</p>
+                      <p class="light">{{ product.price | money }}<p>
+                  </div>
+                  {% assign count = count | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
-  </section>
+  </div>
+
 {% endif %}

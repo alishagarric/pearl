@@ -127,7 +127,7 @@ $mobile-icon-line-thickness: 5px;
 {{ base_font_bold_italic | font_face }}
 {{ header_font_bold | font_face }}
 
-$font-stack-header: {{ header_font.family }}, {{ header_font.fallback_families }};
+$font-stack-header: 'Playfair Display', serif;
 $font-weight-header: {{ header_font.weight }};
 $font-weight-header--bold: {{ header_font_bold.weight | default: 700 }};
 $font-style-header: {{ header_font.style }};
@@ -141,7 +141,7 @@ $nav-link-height: $font-size-nav * 3;
 
 $font-weight-body: {{ base_font.weight }};
 $font-weight-body--bold: {{ base_font_bold.weight | default: 700 }};
-$font-stack-body: {{ base_font.family }}, {{ base_font.fallback_families }};
+$font-stack-body: 'Montserrat', sans-serif;
 $font-stack-style: {{ base_font.style }};
 $font-size-base: {{ settings.type_base_size }}; // Henceforth known as 1em
 
@@ -2938,10 +2938,10 @@ select::-ms-expand {
 
 .breadcrumb-nav {
   padding: 0;
-  margin: (-$gutter / 3) 0 ($gutter / 3);
+  margin: $gutter * 3 0 ($gutter / 3) 0;
   font-size: $font-size-base * 0.9;
   line-height: $font-size-base * 1.6;
-
+  justify-content: flex-start;
   @include media-query($small) {
     margin-top: $gutter / 3;
   }
@@ -3009,10 +3009,7 @@ select::-ms-expand {
   color: $color-headings-text;
 }
 
-.product__price,
-.product__price--on-sale {
-  @include header-font-stack();
-}
+
 
 .product__price--on-sale {
   color: $color-sale-badge;

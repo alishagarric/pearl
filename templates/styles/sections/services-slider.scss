@@ -31,9 +31,24 @@
     }
 }
 
+.elements-buttom-push {
+    bottom: calc(66.66vh - 55px);
+    @media( max-height: 690px){
+        bottom: calc( 50vh + 60px );
+    }
+    @media (min-height: 1024px){
+        bottom: auto;
+        top: 0;
+    }
+    @media( max-height: 600px){
+        bottom: 360px;
+    }
+}
+
 .services-slider {
     max-height: 1200px;
     padding-top: $base !important;
+    overflow: hidden;
     @media (max-width: 650px){
         padding-top: 0 !important;
     }
@@ -68,7 +83,6 @@
             .services-title-slider {
                 width: 100%;
                 position: absolute;
-                bottom: calc(66.66vh - 55px);
                 z-index: 2;
                 overflow-y: hidden;
                 height: 225px;
@@ -76,16 +90,7 @@
                 @media (max-width: $screen-base){
                     height: 21.95vw;
                 }
-                @media( max-height: 690px){
-                    bottom: calc( 50vh + 60px );
-                }
-                @media (min-height: 1024px){
-                    bottom: auto;
-                    top: 0;
-                }
-                @media( max-height: 600px){
-                    bottom: 360px;
-                }
+                @extend .elements-buttom-push;
                 h1 {
                     position: absolute;
                     top: 0;
@@ -230,11 +235,13 @@
                 margin-right: $base / 3;
                 overflow-y: hidden;
                 @extend .slider-bottom-height;
+                @extend .elements-buttom-push;
                 @media (max-width: 600px){
                     position: absolute;
                     z-index: 2;
                     top: 100px;
                     right: 0;
+                    
                 }
                 p {
                     line-height: 1.5;

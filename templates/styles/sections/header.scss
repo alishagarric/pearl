@@ -93,9 +93,9 @@ nav {
     }
     &.side-bar {
         background-color: transparent;
-        width: 20vw;
         position: absolute;
         padding-top: $base * 2;
+        padding-right: $base / 2;
         .list--nav {
             display: flex;
             flex-direction: column;
@@ -105,6 +105,9 @@ nav {
                 border: none;
                 margin-bottom: $base / 6;
                 opacity: .55;
+                a {
+                    font-size: 14px;
+                }
                 &:hover {
                     opacity: 1;
                     a {
@@ -122,8 +125,6 @@ nav {
         }
     }
     &.breadcrumb-nav {
-        width: 80vw;
-        margin-left: 20vw;
         background-color: transparent;
     }
 }

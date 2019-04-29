@@ -532,7 +532,11 @@ img {
 
 button {
   border: 1px solid #FFFFFF;
-  background-color: transparent; }
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: .3px;
+  line-height: 1; }
   button a {
     color: #FFFFFF;
     display: inline-block;
@@ -545,6 +549,14 @@ button {
     border: 1px solid #000000; }
     button.dark a {
       color: #000000; }
+  button.blue {
+    color: #FFFFFF;
+    background-color: #8BA6BB;
+    padding: 13.5px 40px;
+    border: none; }
+    button.blue a {
+      color: #FFFFFF;
+      background-color: #8BA6BB; }
   button.full-width {
     width: 100%; }
 
@@ -597,14 +609,14 @@ h5, .h5 {
     h5, .h5 {
       font-size: 14px; } }
 
-p, .team-header .filters .filter, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
+p, .team-header .filters .filter, .product__price, .product__title, #ProductSection .product-container .product-info #ProductPrice, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
   font-family: "Montserrat", sans-serif;
   font-size: 14px; }
   @media (max-width: 1024px) {
-    p, .team-header .filters .filter, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
+    p, .team-header .filters .filter, .product__price, .product__title, #ProductSection .product-container .product-info #ProductPrice, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
       font-size: 1.359vw; } }
   @media (max-width: 883px) {
-    p, .team-header .filters .filter, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
+    p, .team-header .filters .filter, .product__price, .product__title, #ProductSection .product-container .product-info #ProductPrice, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
       font-size: 12px; } }
 
 .small {
@@ -614,13 +626,16 @@ p, .team-header .filters .filter, .p, nav ul li a, .index-sections header .colle
     .small {
       font-size: 1.18vw; } }
 
-.bold {
+.bold, button.blue, button.blue a {
   font-weight: 700; }
+
+.light, #ProductSection .product-container .product-info #ProductPrice {
+  font-weight: 300; }
 
 .caps {
   text-transform: uppercase; }
 
-.light {
+.light, #ProductSection .product-container .product-info #ProductPrice {
   font-weight: 300; }
 
 @keyframes fadeInDown {
@@ -712,9 +727,9 @@ nav {
           padding-left: 16.6666666667px; } }
   nav.side-bar {
     background-color: transparent;
-    width: 20vw;
     position: absolute;
-    padding-top: 100px; }
+    padding-top: 100px;
+    padding-right: 25px; }
     nav.side-bar .list--nav {
       display: flex;
       flex-direction: column; }
@@ -724,6 +739,8 @@ nav {
         border: none;
         margin-bottom: 8.3333333333px;
         opacity: .55; }
+        nav.side-bar .list--nav li a {
+          font-size: 14px; }
         nav.side-bar .list--nav li:hover {
           opacity: 1; }
           nav.side-bar .list--nav li:hover a {
@@ -734,8 +751,6 @@ nav {
           opacity: 1;
           font-weight: 700; }
   nav.breadcrumb-nav {
-    width: 80vw;
-    margin-left: 20vw;
     background-color: transparent; }
 
 .shop-bar {
@@ -865,9 +880,23 @@ footer {
     .slider-buttons-bottom-padding, .services-slider .sliders .left-sliders .learn-container {
       padding-bottom: 170px; } }
 
+.elements-buttom-push, .services-slider .sliders .left-sliders .services-title-slider, .services-slider .sliders .right-slider-and-tools .slider-nav {
+  bottom: calc(66.66vh - 55px); }
+  @media (max-height: 690px) {
+    .elements-buttom-push, .services-slider .sliders .left-sliders .services-title-slider, .services-slider .sliders .right-slider-and-tools .slider-nav {
+      bottom: calc( 50vh + 60px ); } }
+  @media (min-height: 1024px) {
+    .elements-buttom-push, .services-slider .sliders .left-sliders .services-title-slider, .services-slider .sliders .right-slider-and-tools .slider-nav {
+      bottom: auto;
+      top: 0; } }
+  @media (max-height: 600px) {
+    .elements-buttom-push, .services-slider .sliders .left-sliders .services-title-slider, .services-slider .sliders .right-slider-and-tools .slider-nav {
+      bottom: 360px; } }
+
 .services-slider {
   max-height: 1200px;
-  padding-top: 50px !important; }
+  padding-top: 50px !important;
+  overflow: hidden; }
   @media (max-width: 650px) {
     .services-slider {
       padding-top: 0 !important; } }
@@ -900,7 +929,6 @@ footer {
       .services-slider .sliders .left-sliders .services-title-slider {
         width: 100%;
         position: absolute;
-        bottom: calc(66.66vh - 55px);
         z-index: 2;
         overflow-y: hidden;
         height: 225px;
@@ -908,16 +936,6 @@ footer {
         @media (max-width: 1024px) {
           .services-slider .sliders .left-sliders .services-title-slider {
             height: 21.95vw; } }
-        @media (max-height: 690px) {
-          .services-slider .sliders .left-sliders .services-title-slider {
-            bottom: calc( 50vh + 60px ); } }
-        @media (min-height: 1024px) {
-          .services-slider .sliders .left-sliders .services-title-slider {
-            bottom: auto;
-            top: 0; } }
-        @media (max-height: 600px) {
-          .services-slider .sliders .left-sliders .services-title-slider {
-            bottom: 360px; } }
         .services-slider .sliders .left-sliders .services-title-slider h1 {
           position: absolute;
           top: 0;
@@ -1016,14 +1034,14 @@ footer {
             z-index: 2;
             top: 100px;
             right: 0; } }
-        .services-slider .sliders .right-slider-and-tools .slider-nav p, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .filter {
+        .services-slider .sliders .right-slider-and-tools .slider-nav p, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .filter, .services-slider .sliders .right-slider-and-tools .slider-nav .product__price, .services-slider .sliders .right-slider-and-tools .slider-nav .product__title, .services-slider .sliders .right-slider-and-tools .slider-nav #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .services-slider .sliders .right-slider-and-tools .slider-nav #ProductPrice {
           line-height: 1.5;
           margin-bottom: 0;
           position: relative; }
-          .services-slider .sliders .right-slider-and-tools .slider-nav p.selected, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .selected.filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .selected.filter {
+          .services-slider .sliders .right-slider-and-tools .slider-nav p.selected, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .selected.filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .selected.filter, .services-slider .sliders .right-slider-and-tools .slider-nav .selected.product__price, .services-slider .sliders .right-slider-and-tools .slider-nav .selected.product__title, .services-slider .sliders .right-slider-and-tools .slider-nav #ProductSection .product-container .product-info .selected#ProductPrice, #ProductSection .product-container .product-info .services-slider .sliders .right-slider-and-tools .slider-nav .selected#ProductPrice {
             font-weight: 700; }
           @media (max-width: 600px) {
-            .services-slider .sliders .right-slider-and-tools .slider-nav p, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .filter {
+            .services-slider .sliders .right-slider-and-tools .slider-nav p, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .filter, .services-slider .sliders .right-slider-and-tools .slider-nav .product__price, .services-slider .sliders .right-slider-and-tools .slider-nav .product__title, .services-slider .sliders .right-slider-and-tools .slider-nav #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .services-slider .sliders .right-slider-and-tools .slider-nav #ProductPrice {
               display: none; } }
         .services-slider .sliders .right-slider-and-tools .slider-nav .mobile-nav {
           display: none;
@@ -1083,13 +1101,13 @@ footer {
       .product-sample .items .item {
         margin-bottom: 33.3333333333px;
         margin-right: 0; } }
-    .product-sample .items .item p, .product-sample .items .item .team-header .filters .filter, .team-header .filters .product-sample .items .item .filter {
+    .product-sample .items .item p, .product-sample .items .item .team-header .filters .filter, .team-header .filters .product-sample .items .item .filter, .product-sample .items .item .product__price, .product-sample .items .item .product__title, .product-sample .items .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .product-sample .items .item #ProductPrice {
       margin-bottom: 0;
       margin-top: 12.5px; }
       @media (max-width: 600px) {
-        .product-sample .items .item p, .product-sample .items .item .team-header .filters .filter, .team-header .filters .product-sample .items .item .filter {
+        .product-sample .items .item p, .product-sample .items .item .team-header .filters .filter, .team-header .filters .product-sample .items .item .filter, .product-sample .items .item .product__price, .product-sample .items .item .product__title, .product-sample .items .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .product-sample .items .item #ProductPrice {
           margin-top: 0; } }
-      .product-sample .items .item p.light, .product-sample .items .item .team-header .filters .light.filter, .team-header .filters .product-sample .items .item .light.filter {
+      .product-sample .items .item p.light, .product-sample .items .item .team-header .filters .light.filter, .team-header .filters .product-sample .items .item .light.filter, .product-sample .items .item .light.product__price, .product-sample .items .item .light.product__title, .product-sample .items .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .product-sample .items .item #ProductPrice {
         margin-top: 5px; }
     .product-sample .items .item:last-of-type {
       margin-right: 0; }
@@ -1262,18 +1280,18 @@ footer {
         width: 100vw; }
       .prices .menus .menu:nth-of-type(odd), .prices .menus .menu:last-of-type {
         margin-right: 0; }
-      .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter {
+      .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:last-of-type .content .product__price, .prices .menus .menu:last-of-type .content .product__title, .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter, .prices .menus .menu:first-of-type .content .product__price, .prices .menus .menu:first-of-type .content .product__title, .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice {
         width: 20%;
         margin-right: 4%; }
         @media (max-width: 1224px) {
-          .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter {
+          .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:last-of-type .content .product__price, .prices .menus .menu:last-of-type .content .product__title, .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter, .prices .menus .menu:first-of-type .content .product__price, .prices .menus .menu:first-of-type .content .product__title, .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice {
             width: 29.33%;
             margin-right: 4%; } }
         @media (max-width: 562.5px) {
-          .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter {
+          .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:last-of-type .content .product__price, .prices .menus .menu:last-of-type .content .product__title, .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter, .prices .menus .menu:first-of-type .content .product__price, .prices .menus .menu:first-of-type .content .product__title, .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice {
             width: calc(50% - 12.5px);
             margin-right: 25px; }
-            .prices .menus .menu:last-of-type .content p:nth-of-type(even), .prices .menus .menu:last-of-type .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .menus .menu:last-of-type .content .filter:nth-of-type(even), .prices .menus .menu:first-of-type .content p:nth-of-type(even), .prices .menus .menu:first-of-type .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .menus .menu:first-of-type .content .filter:nth-of-type(even) {
+            .prices .menus .menu:last-of-type .content p:nth-of-type(even), .prices .menus .menu:last-of-type .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .menus .menu:last-of-type .content .filter:nth-of-type(even), .prices .menus .menu:last-of-type .content .product__price:nth-of-type(even), .prices .menus .menu:last-of-type .content .product__title:nth-of-type(even), .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice:nth-of-type(even), #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice:nth-of-type(even), .prices .menus .menu:first-of-type .content p:nth-of-type(even), .prices .menus .menu:first-of-type .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .menus .menu:first-of-type .content .filter:nth-of-type(even), .prices .menus .menu:first-of-type .content .product__price:nth-of-type(even), .prices .menus .menu:first-of-type .content .product__title:nth-of-type(even), .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice:nth-of-type(even), #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice:nth-of-type(even) {
               margin-right: 0; } }
       @media (max-width: 1224px) {
         .prices .menus .menu {
@@ -1303,26 +1321,26 @@ footer {
       .prices .text .title a {
         cursor: pointer; }
       @media (max-width: 450px) {
-        .prices .text .title p, .prices .text .title .team-header .filters .filter, .team-header .filters .prices .text .title .filter {
+        .prices .text .title p, .prices .text .title .team-header .filters .filter, .team-header .filters .prices .text .title .filter, .prices .text .title .product__price, .prices .text .title .product__title, .prices .text .title #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .title #ProductPrice {
           min-width: 120px; } }
     .prices .text .content {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       align-content: flex-start; }
-      .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter {
+      .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter, .prices .text .content .product__price, .prices .text .content .product__title, .prices .text .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .content #ProductPrice {
         display: inline-block;
         width: 46%;
         margin-right: 4%; }
         @media (max-width: 1224px) {
-          .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter {
+          .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter, .prices .text .content .product__price, .prices .text .content .product__title, .prices .text .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .content #ProductPrice {
             width: 29.33%;
             margin-right: 4%; } }
         @media (max-width: 562.5px) {
-          .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter {
+          .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter, .prices .text .content .product__price, .prices .text .content .product__title, .prices .text .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .content #ProductPrice {
             width: calc(50% - 12.5px);
             margin-right: 25px; }
-            .prices .text .content p:nth-of-type(even), .prices .text .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .text .content .filter:nth-of-type(even) {
+            .prices .text .content p:nth-of-type(even), .prices .text .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .text .content .filter:nth-of-type(even), .prices .text .content .product__price:nth-of-type(even), .prices .text .content .product__title:nth-of-type(even), .prices .text .content #ProductSection .product-container .product-info #ProductPrice:nth-of-type(even), #ProductSection .product-container .product-info .prices .text .content #ProductPrice:nth-of-type(even) {
               margin-right: 0; } }
 
 .gallery-page {
@@ -1465,3 +1483,35 @@ footer {
     width: 50vw;
     top: 0;
     left: 25vw; }
+
+.display-collection .item p, .display-collection .item .team-header .filters .filter, .team-header .filters .display-collection .item .filter, .display-collection .item .product__price, .display-collection .item .product__title, .display-collection .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .display-collection .item #ProductPrice {
+  margin-bottom: 0;
+  margin-top: 12.5px; }
+  @media (max-width: 600px) {
+    .display-collection .item p, .display-collection .item .team-header .filters .filter, .team-header .filters .display-collection .item .filter, .display-collection .item .product__price, .display-collection .item .product__title, .display-collection .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .display-collection .item #ProductPrice {
+      margin-top: 0; } }
+  .display-collection .item p.light, .display-collection .item .team-header .filters .light.filter, .team-header .filters .display-collection .item .light.filter, .display-collection .item .light.product__price, .display-collection .item .light.product__title, .display-collection .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .display-collection .item #ProductPrice {
+    margin-top: 5px; }
+.display-collection .leaves {
+  max-width: 645px; }
+
+#ProductSection {
+  padding-bottom: 0;
+  padding-top: 50px; }
+  #ProductSection .product-container {
+    display: flex;
+    flex-direction: row; }
+    #ProductSection .product-container .product-image {
+      flex: 1; }
+      #ProductSection .product-container .product-image .product-single__thumbnails li {
+        margin-bottom: 0; }
+    #ProductSection .product-container .product-info {
+      padding-left: 50px;
+      flex: 2; }
+      #ProductSection .product-container .product-info h1 {
+        margin-bottom: 0; }
+  #ProductSection .breadcrumb-nav {
+    margin-top: 0;
+    padding-bottom: 16.6666666667px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #979797; }

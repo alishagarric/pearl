@@ -1,0 +1,33 @@
+#ProductSection {
+    padding-bottom: 0;
+    padding-top: $base;
+    .product-container {
+        display: flex; 
+        flex-direction: row;
+        .product-image {
+            flex: 1;
+            .product-single__thumbnails {
+                li {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .product-info {
+            padding-left: $base;
+            flex: 2;
+            h1 {
+                margin-bottom: 0;
+            }
+            #ProductPrice {
+                @extend p;
+                @extend .light;
+            }
+        }
+    }
+    .breadcrumb-nav {
+        margin-top: 0;
+        padding-bottom: $base / 3;
+        margin-bottom: $base / 2;
+        border-bottom: 1px solid $dark-grey;
+    }
+}

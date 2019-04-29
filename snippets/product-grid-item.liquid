@@ -71,7 +71,7 @@
 
     {% else %}
 
-      <span class="product__price">
+      <span class="product__price light">
         {% if product.price_varies %}
           {% assign price = product.price | money %}
           {{ 'products.product.from_text_html' | t: price: price }}

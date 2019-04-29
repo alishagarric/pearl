@@ -1,0 +1,21 @@
+.display-collection {
+    .item {
+        p {
+            margin-bottom: 0;
+            margin-top: $base / 4;
+            @media (max-width: 600px){
+                margin-top: 0;
+            }
+            &.light {
+                margin-top: $base / 10;
+            }
+        }
+    }
+    .leaves {
+        max-width: 645px;
+    }
+}
+
+.product__price, .product__title {
+    @extend p;
+}
