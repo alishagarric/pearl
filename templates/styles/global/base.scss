@@ -174,7 +174,7 @@ img {
     }
 }
 
-button {
+button, .button {
     border: 1px solid $white;
     background-color: transparent;
     text-transform: uppercase;
@@ -196,6 +196,11 @@ button {
             color: $black;
         }
     }
+    &.black {
+        background-color: $black;
+        color: $white;
+        border: none;
+    }
     &.blue {
         color: $white;
         background-color: $blue;
@@ -207,6 +212,11 @@ button {
             background-color: $blue;
             @extend .bold;
         }
+    }
+    &.blue-outline {
+        background-color: $white;
+        border: 1px solid $blue;
+        color: $blue;
     }
     &.full-width {
         width: 100%;

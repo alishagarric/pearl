@@ -107,47 +107,43 @@
             </table>
 
             <footer class="cart__footer">
-              <div class="grid">
-                <div class="grid__item medium-up--one-half">
-                  <textarea name="note" id="CartSpecialInstructions" class="input--block cart__note" placeholder="{{ 'cart.general.note' | t }}">{{ cart.note }}</textarea>
-                </div>
-                <div class="grid__item text-center medium-up--one-half medium-up--text-right">
+              <textarea name="note" id="CartSpecialInstructions" class="input--block cart__note" placeholder="{{ 'cart.general.note' | t }}">{{ cart.note }}</textarea>
+              <div class="cart-info">
+                <p>
+                  <span class="cart__subtotal-title h3">{{ 'cart.general.subtotal' | t }}</span>
+                  <span class="cart__subtotal h3">{{ cart.total_price | money }}</span>
+                </p>
+                {% if cart.total_discounts > 0 %}
+                  {% assign savings = cart.total_discounts | money %}
                   <p>
-                    <span class="cart__subtotal-title h3">{{ 'cart.general.subtotal' | t }}</span>
-                    <span class="cart__subtotal h3">{{ cart.total_price | money }}</span>
+                    <span class="cart-subtotal__savings"><em>{{ 'cart.general.savings_html' | t: price: savings }}</em></span>
                   </p>
-                  {% if cart.total_discounts > 0 %}
-                    {% assign savings = cart.total_discounts | money %}
-                    <p>
-                      <span class="cart-subtotal__savings"><em>{{ 'cart.general.savings_html' | t: price: savings }}</em></span>
-                    </p>
-                  {% endif %}
+                {% endif %}
 
-                  {%- capture taxes_shipping_checkout -%}
-                    {%- if shop.taxes_included and shop.shipping_policy.body != blank -%}
-                      {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                    {%- elsif shop.taxes_included -%}
-                      {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
-                    {%- elsif shop.shipping_policy.body != blank -%}
-                      {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
-                    {%- else -%}
-                      {{ 'cart.general.taxes_and_shipping_at_checkout' | t }}
-                    {%- endif -%}
-                  {%- endcapture -%}
+                {%- capture taxes_shipping_checkout -%}
+                  {%- if shop.taxes_included and shop.shipping_policy.body != blank -%}
+                    {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                  {%- elsif shop.taxes_included -%}
+                    {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
+                  {%- elsif shop.shipping_policy.body != blank -%}
+                    {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                  {%- else -%}
+                    {{ 'cart.general.taxes_and_shipping_at_checkout' | t }}
+                  {%- endif -%}
+                {%- endcapture -%}
 
-                  <p class="cart__policies txt--emphasis rte">{{ taxes_shipping_checkout }}</p>
-                  <p>
-                    <button type="submit" name="update" class="btn btn--secondary update-cart">
-                      {% include 'icon-update' %}
-                      <span class="icon__fallback-text">{{ 'cart.general.update' | t }}</span>
-                    </button>
-                    <a class="btn btn--secondary" href="/collections/all">{{ 'cart.general.continue_shopping' | t }}</a>
-                  </p>
-                  <p>
-                    <button type="submit" name="checkout" class="btn">{{ 'cart.general.checkout' | t }}</button>
-                  </p>
+                <p class="cart__policies txt--emphasis rte">{{ taxes_shipping_checkout }}</p>
+                <p class="sub-actions">
+                  <button type="submit" name="update" class="btn btn--secondary update-cart">
+                    {% include 'icon-update' %}
+                    <span class="icon__fallback-text">{{ 'cart.general.update' | t }}</span>
+                  </button>
+                  <a class="btn btn--secondary" href="/collections">{{ 'cart.general.continue_shopping' | t }}</a>
+                </p>
+                <p>
+                  <button type="submit" name="checkout" class="btn checkout">{{ 'cart.general.checkout' | t }}</button>
+                </p>
                 </div>
-              </div>
             </footer>
           </form>
         {% else %}
@@ -155,9 +151,10 @@
           The cart is empty
         {% endcomment %}
           <div id="EmptyCart">
-            <h1>{{ 'cart.general.title' | t }}</h1>
             <p class="cart--empty-message">{{ 'cart.general.empty' | t }}</p>
-            <p class="cart--continue-message">{{ 'cart.general.continue_browsing_html' | t }}</p>
+              <button class="black">
+                <a href="/collections">Start Shopping</a>
+              </button>
             <p class="cart--cookie-message">{{ 'cart.general.cookies_required' | t }}</p>
           </div>
         {% endif %}
@@ -165,3 +162,10 @@
     </div>
   </div>
 </div>
+
+{% include 'text-image-block' with header:"One Stop Shop", paragraph:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", buttonText:"Salon Services" buttonDest:"/" orientation: "reversed" %} 
+
+
+<!--footer -->
+  {% include 'testimonial-slider' %}
+<!--end footer -->

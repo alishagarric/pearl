@@ -530,14 +530,14 @@ img {
           right: 0;
           top: -15%; } }
 
-button {
+button, .button {
   border: 1px solid #FFFFFF;
   background-color: transparent;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: .3px;
   line-height: 1; }
-  button a {
+  button a, .button a {
     color: #FFFFFF;
     display: inline-block;
     font-size: 14px;
@@ -545,19 +545,27 @@ button {
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: .3px; }
-  button.dark {
+  button.dark, .button.dark {
     border: 1px solid #000000; }
-    button.dark a {
+    button.dark a, .button.dark a {
       color: #000000; }
-  button.blue {
+  button.black, .button.black {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none; }
+  button.blue, .button.blue {
     color: #FFFFFF;
     background-color: #8BA6BB;
     padding: 13.5px 40px;
     border: none; }
-    button.blue a {
+    button.blue a, .button.blue a {
       color: #FFFFFF;
       background-color: #8BA6BB; }
-  button.full-width {
+  button.blue-outline, .button.blue-outline {
+    background-color: #FFFFFF;
+    border: 1px solid #8BA6BB;
+    color: #8BA6BB; }
+  button.full-width, .button.full-width {
     width: 100%; }
 
 h1, .h1 {
@@ -609,14 +617,14 @@ h5, .h5 {
     h5, .h5 {
       font-size: 14px; } }
 
-p, .team-header .filters .filter, .product__price, .product__title, #ProductSection .product-container .product-info #ProductPrice, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
+p, .team-header .filters .filter, .product__price, .product__title, #ProductSection .product-container .product-info #ProductPrice, .cart-section .cart__footer textarea, .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .cart__subtotal, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
   font-family: "Montserrat", sans-serif;
   font-size: 14px; }
   @media (max-width: 1024px) {
-    p, .team-header .filters .filter, .product__price, .product__title, #ProductSection .product-container .product-info #ProductPrice, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
+    p, .team-header .filters .filter, .product__price, .product__title, #ProductSection .product-container .product-info #ProductPrice, .cart-section .cart__footer textarea, .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .cart__subtotal, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
       font-size: 1.359vw; } }
   @media (max-width: 883px) {
-    p, .team-header .filters .filter, .product__price, .product__title, #ProductSection .product-container .product-info #ProductPrice, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
+    p, .team-header .filters .filter, .product__price, .product__title, #ProductSection .product-container .product-info #ProductPrice, .cart-section .cart__footer textarea, .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .cart__subtotal, .p, nav ul li a, .index-sections header .collection-sorting__dropdown select, .index-sections header .collection-sorting__dropdown option, .collection-page header .collection-sorting__dropdown select, .collection-page header .collection-sorting__dropdown option {
       font-size: 12px; } }
 
 .small {
@@ -626,7 +634,7 @@ p, .team-header .filters .filter, .product__price, .product__title, #ProductSect
     .small {
       font-size: 1.18vw; } }
 
-.bold, button.blue, button.blue a {
+.bold, button.blue, .button.blue, button.blue a, .button.blue a, .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .cart__subtotal {
   font-weight: 700; }
 
 .light, #ProductSection .product-container .product-info #ProductPrice {
@@ -1034,14 +1042,14 @@ footer {
             z-index: 2;
             top: 100px;
             right: 0; } }
-        .services-slider .sliders .right-slider-and-tools .slider-nav p, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .filter, .services-slider .sliders .right-slider-and-tools .slider-nav .product__price, .services-slider .sliders .right-slider-and-tools .slider-nav .product__title, .services-slider .sliders .right-slider-and-tools .slider-nav #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .services-slider .sliders .right-slider-and-tools .slider-nav #ProductPrice {
+        .services-slider .sliders .right-slider-and-tools .slider-nav p, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .filter, .services-slider .sliders .right-slider-and-tools .slider-nav .product__price, .services-slider .sliders .right-slider-and-tools .slider-nav .product__title, .services-slider .sliders .right-slider-and-tools .slider-nav #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .services-slider .sliders .right-slider-and-tools .slider-nav #ProductPrice, .services-slider .sliders .right-slider-and-tools .slider-nav .cart-section .cart__footer textarea, .cart-section .cart__footer .services-slider .sliders .right-slider-and-tools .slider-nav textarea, .services-slider .sliders .right-slider-and-tools .slider-nav .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .services-slider .sliders .right-slider-and-tools .slider-nav .cart__subtotal-title, .services-slider .sliders .right-slider-and-tools .slider-nav .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .services-slider .sliders .right-slider-and-tools .slider-nav .cart__subtotal {
           line-height: 1.5;
           margin-bottom: 0;
           position: relative; }
-          .services-slider .sliders .right-slider-and-tools .slider-nav p.selected, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .selected.filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .selected.filter, .services-slider .sliders .right-slider-and-tools .slider-nav .selected.product__price, .services-slider .sliders .right-slider-and-tools .slider-nav .selected.product__title, .services-slider .sliders .right-slider-and-tools .slider-nav #ProductSection .product-container .product-info .selected#ProductPrice, #ProductSection .product-container .product-info .services-slider .sliders .right-slider-and-tools .slider-nav .selected#ProductPrice {
+          .services-slider .sliders .right-slider-and-tools .slider-nav p.selected, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .selected.filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .selected.filter, .services-slider .sliders .right-slider-and-tools .slider-nav .selected.product__price, .services-slider .sliders .right-slider-and-tools .slider-nav .selected.product__title, .services-slider .sliders .right-slider-and-tools .slider-nav #ProductSection .product-container .product-info .selected#ProductPrice, #ProductSection .product-container .product-info .services-slider .sliders .right-slider-and-tools .slider-nav .selected#ProductPrice, .services-slider .sliders .right-slider-and-tools .slider-nav .cart-section .cart__footer textarea.selected, .cart-section .cart__footer .services-slider .sliders .right-slider-and-tools .slider-nav textarea.selected, .services-slider .sliders .right-slider-and-tools .slider-nav .cart-section .cart__footer .cart-info .selected.cart__subtotal-title, .cart-section .cart__footer .cart-info .services-slider .sliders .right-slider-and-tools .slider-nav .selected.cart__subtotal-title, .services-slider .sliders .right-slider-and-tools .slider-nav .cart-section .cart__footer .cart-info .selected.cart__subtotal, .cart-section .cart__footer .cart-info .services-slider .sliders .right-slider-and-tools .slider-nav .selected.cart__subtotal {
             font-weight: 700; }
           @media (max-width: 600px) {
-            .services-slider .sliders .right-slider-and-tools .slider-nav p, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .filter, .services-slider .sliders .right-slider-and-tools .slider-nav .product__price, .services-slider .sliders .right-slider-and-tools .slider-nav .product__title, .services-slider .sliders .right-slider-and-tools .slider-nav #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .services-slider .sliders .right-slider-and-tools .slider-nav #ProductPrice {
+            .services-slider .sliders .right-slider-and-tools .slider-nav p, .services-slider .sliders .right-slider-and-tools .slider-nav .team-header .filters .filter, .team-header .filters .services-slider .sliders .right-slider-and-tools .slider-nav .filter, .services-slider .sliders .right-slider-and-tools .slider-nav .product__price, .services-slider .sliders .right-slider-and-tools .slider-nav .product__title, .services-slider .sliders .right-slider-and-tools .slider-nav #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .services-slider .sliders .right-slider-and-tools .slider-nav #ProductPrice, .services-slider .sliders .right-slider-and-tools .slider-nav .cart-section .cart__footer textarea, .cart-section .cart__footer .services-slider .sliders .right-slider-and-tools .slider-nav textarea, .services-slider .sliders .right-slider-and-tools .slider-nav .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .services-slider .sliders .right-slider-and-tools .slider-nav .cart__subtotal-title, .services-slider .sliders .right-slider-and-tools .slider-nav .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .services-slider .sliders .right-slider-and-tools .slider-nav .cart__subtotal {
               display: none; } }
         .services-slider .sliders .right-slider-and-tools .slider-nav .mobile-nav {
           display: none;
@@ -1101,13 +1109,13 @@ footer {
       .product-sample .items .item {
         margin-bottom: 33.3333333333px;
         margin-right: 0; } }
-    .product-sample .items .item p, .product-sample .items .item .team-header .filters .filter, .team-header .filters .product-sample .items .item .filter, .product-sample .items .item .product__price, .product-sample .items .item .product__title, .product-sample .items .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .product-sample .items .item #ProductPrice {
+    .product-sample .items .item p, .product-sample .items .item .team-header .filters .filter, .team-header .filters .product-sample .items .item .filter, .product-sample .items .item .product__price, .product-sample .items .item .product__title, .product-sample .items .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .product-sample .items .item #ProductPrice, .product-sample .items .item .cart-section .cart__footer textarea, .cart-section .cart__footer .product-sample .items .item textarea, .product-sample .items .item .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .product-sample .items .item .cart__subtotal-title, .product-sample .items .item .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .product-sample .items .item .cart__subtotal {
       margin-bottom: 0;
       margin-top: 12.5px; }
       @media (max-width: 600px) {
-        .product-sample .items .item p, .product-sample .items .item .team-header .filters .filter, .team-header .filters .product-sample .items .item .filter, .product-sample .items .item .product__price, .product-sample .items .item .product__title, .product-sample .items .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .product-sample .items .item #ProductPrice {
+        .product-sample .items .item p, .product-sample .items .item .team-header .filters .filter, .team-header .filters .product-sample .items .item .filter, .product-sample .items .item .product__price, .product-sample .items .item .product__title, .product-sample .items .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .product-sample .items .item #ProductPrice, .product-sample .items .item .cart-section .cart__footer textarea, .cart-section .cart__footer .product-sample .items .item textarea, .product-sample .items .item .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .product-sample .items .item .cart__subtotal-title, .product-sample .items .item .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .product-sample .items .item .cart__subtotal {
           margin-top: 0; } }
-      .product-sample .items .item p.light, .product-sample .items .item .team-header .filters .light.filter, .team-header .filters .product-sample .items .item .light.filter, .product-sample .items .item .light.product__price, .product-sample .items .item .light.product__title, .product-sample .items .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .product-sample .items .item #ProductPrice {
+      .product-sample .items .item p.light, .product-sample .items .item .team-header .filters .light.filter, .team-header .filters .product-sample .items .item .light.filter, .product-sample .items .item .light.product__price, .product-sample .items .item .light.product__title, .product-sample .items .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .product-sample .items .item #ProductPrice, .product-sample .items .item .cart-section .cart__footer textarea.light, .cart-section .cart__footer .product-sample .items .item textarea.light, .product-sample .items .item .cart-section .cart__footer .cart-info .light.cart__subtotal-title, .cart-section .cart__footer .cart-info .product-sample .items .item .light.cart__subtotal-title, .product-sample .items .item .cart-section .cart__footer .cart-info .light.cart__subtotal, .cart-section .cart__footer .cart-info .product-sample .items .item .light.cart__subtotal {
         margin-top: 5px; }
     .product-sample .items .item:last-of-type {
       margin-right: 0; }
@@ -1280,18 +1288,18 @@ footer {
         width: 100vw; }
       .prices .menus .menu:nth-of-type(odd), .prices .menus .menu:last-of-type {
         margin-right: 0; }
-      .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:last-of-type .content .product__price, .prices .menus .menu:last-of-type .content .product__title, .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter, .prices .menus .menu:first-of-type .content .product__price, .prices .menus .menu:first-of-type .content .product__title, .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice {
+      .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:last-of-type .content .product__price, .prices .menus .menu:last-of-type .content .product__title, .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice, .prices .menus .menu:last-of-type .content .cart-section .cart__footer textarea, .cart-section .cart__footer .prices .menus .menu:last-of-type .content textarea, .prices .menus .menu:last-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .prices .menus .menu:last-of-type .content .cart__subtotal-title, .prices .menus .menu:last-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .prices .menus .menu:last-of-type .content .cart__subtotal, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter, .prices .menus .menu:first-of-type .content .product__price, .prices .menus .menu:first-of-type .content .product__title, .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice, .prices .menus .menu:first-of-type .content .cart-section .cart__footer textarea, .cart-section .cart__footer .prices .menus .menu:first-of-type .content textarea, .prices .menus .menu:first-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .prices .menus .menu:first-of-type .content .cart__subtotal-title, .prices .menus .menu:first-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .prices .menus .menu:first-of-type .content .cart__subtotal {
         width: 20%;
         margin-right: 4%; }
         @media (max-width: 1224px) {
-          .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:last-of-type .content .product__price, .prices .menus .menu:last-of-type .content .product__title, .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter, .prices .menus .menu:first-of-type .content .product__price, .prices .menus .menu:first-of-type .content .product__title, .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice {
+          .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:last-of-type .content .product__price, .prices .menus .menu:last-of-type .content .product__title, .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice, .prices .menus .menu:last-of-type .content .cart-section .cart__footer textarea, .cart-section .cart__footer .prices .menus .menu:last-of-type .content textarea, .prices .menus .menu:last-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .prices .menus .menu:last-of-type .content .cart__subtotal-title, .prices .menus .menu:last-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .prices .menus .menu:last-of-type .content .cart__subtotal, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter, .prices .menus .menu:first-of-type .content .product__price, .prices .menus .menu:first-of-type .content .product__title, .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice, .prices .menus .menu:first-of-type .content .cart-section .cart__footer textarea, .cart-section .cart__footer .prices .menus .menu:first-of-type .content textarea, .prices .menus .menu:first-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .prices .menus .menu:first-of-type .content .cart__subtotal-title, .prices .menus .menu:first-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .prices .menus .menu:first-of-type .content .cart__subtotal {
             width: 29.33%;
             margin-right: 4%; } }
         @media (max-width: 562.5px) {
-          .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:last-of-type .content .product__price, .prices .menus .menu:last-of-type .content .product__title, .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter, .prices .menus .menu:first-of-type .content .product__price, .prices .menus .menu:first-of-type .content .product__title, .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice {
+          .prices .menus .menu:last-of-type .content p, .prices .menus .menu:last-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:last-of-type .content .filter, .prices .menus .menu:last-of-type .content .product__price, .prices .menus .menu:last-of-type .content .product__title, .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice, .prices .menus .menu:last-of-type .content .cart-section .cart__footer textarea, .cart-section .cart__footer .prices .menus .menu:last-of-type .content textarea, .prices .menus .menu:last-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .prices .menus .menu:last-of-type .content .cart__subtotal-title, .prices .menus .menu:last-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .prices .menus .menu:last-of-type .content .cart__subtotal, .prices .menus .menu:first-of-type .content p, .prices .menus .menu:first-of-type .content .team-header .filters .filter, .team-header .filters .prices .menus .menu:first-of-type .content .filter, .prices .menus .menu:first-of-type .content .product__price, .prices .menus .menu:first-of-type .content .product__title, .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice, .prices .menus .menu:first-of-type .content .cart-section .cart__footer textarea, .cart-section .cart__footer .prices .menus .menu:first-of-type .content textarea, .prices .menus .menu:first-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .prices .menus .menu:first-of-type .content .cart__subtotal-title, .prices .menus .menu:first-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .prices .menus .menu:first-of-type .content .cart__subtotal {
             width: calc(50% - 12.5px);
             margin-right: 25px; }
-            .prices .menus .menu:last-of-type .content p:nth-of-type(even), .prices .menus .menu:last-of-type .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .menus .menu:last-of-type .content .filter:nth-of-type(even), .prices .menus .menu:last-of-type .content .product__price:nth-of-type(even), .prices .menus .menu:last-of-type .content .product__title:nth-of-type(even), .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice:nth-of-type(even), #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice:nth-of-type(even), .prices .menus .menu:first-of-type .content p:nth-of-type(even), .prices .menus .menu:first-of-type .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .menus .menu:first-of-type .content .filter:nth-of-type(even), .prices .menus .menu:first-of-type .content .product__price:nth-of-type(even), .prices .menus .menu:first-of-type .content .product__title:nth-of-type(even), .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice:nth-of-type(even), #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice:nth-of-type(even) {
+            .prices .menus .menu:last-of-type .content p:nth-of-type(even), .prices .menus .menu:last-of-type .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .menus .menu:last-of-type .content .filter:nth-of-type(even), .prices .menus .menu:last-of-type .content .product__price:nth-of-type(even), .prices .menus .menu:last-of-type .content .product__title:nth-of-type(even), .prices .menus .menu:last-of-type .content #ProductSection .product-container .product-info #ProductPrice:nth-of-type(even), #ProductSection .product-container .product-info .prices .menus .menu:last-of-type .content #ProductPrice:nth-of-type(even), .prices .menus .menu:last-of-type .content .cart-section .cart__footer textarea:nth-of-type(even), .cart-section .cart__footer .prices .menus .menu:last-of-type .content textarea:nth-of-type(even), .prices .menus .menu:last-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal-title:nth-of-type(even), .cart-section .cart__footer .cart-info .prices .menus .menu:last-of-type .content .cart__subtotal-title:nth-of-type(even), .prices .menus .menu:last-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal:nth-of-type(even), .cart-section .cart__footer .cart-info .prices .menus .menu:last-of-type .content .cart__subtotal:nth-of-type(even), .prices .menus .menu:first-of-type .content p:nth-of-type(even), .prices .menus .menu:first-of-type .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .menus .menu:first-of-type .content .filter:nth-of-type(even), .prices .menus .menu:first-of-type .content .product__price:nth-of-type(even), .prices .menus .menu:first-of-type .content .product__title:nth-of-type(even), .prices .menus .menu:first-of-type .content #ProductSection .product-container .product-info #ProductPrice:nth-of-type(even), #ProductSection .product-container .product-info .prices .menus .menu:first-of-type .content #ProductPrice:nth-of-type(even), .prices .menus .menu:first-of-type .content .cart-section .cart__footer textarea:nth-of-type(even), .cart-section .cart__footer .prices .menus .menu:first-of-type .content textarea:nth-of-type(even), .prices .menus .menu:first-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal-title:nth-of-type(even), .cart-section .cart__footer .cart-info .prices .menus .menu:first-of-type .content .cart__subtotal-title:nth-of-type(even), .prices .menus .menu:first-of-type .content .cart-section .cart__footer .cart-info .cart__subtotal:nth-of-type(even), .cart-section .cart__footer .cart-info .prices .menus .menu:first-of-type .content .cart__subtotal:nth-of-type(even) {
               margin-right: 0; } }
       @media (max-width: 1224px) {
         .prices .menus .menu {
@@ -1321,26 +1329,26 @@ footer {
       .prices .text .title a {
         cursor: pointer; }
       @media (max-width: 450px) {
-        .prices .text .title p, .prices .text .title .team-header .filters .filter, .team-header .filters .prices .text .title .filter, .prices .text .title .product__price, .prices .text .title .product__title, .prices .text .title #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .title #ProductPrice {
+        .prices .text .title p, .prices .text .title .team-header .filters .filter, .team-header .filters .prices .text .title .filter, .prices .text .title .product__price, .prices .text .title .product__title, .prices .text .title #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .title #ProductPrice, .prices .text .title .cart-section .cart__footer textarea, .cart-section .cart__footer .prices .text .title textarea, .prices .text .title .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .prices .text .title .cart__subtotal-title, .prices .text .title .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .prices .text .title .cart__subtotal {
           min-width: 120px; } }
     .prices .text .content {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       align-content: flex-start; }
-      .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter, .prices .text .content .product__price, .prices .text .content .product__title, .prices .text .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .content #ProductPrice {
+      .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter, .prices .text .content .product__price, .prices .text .content .product__title, .prices .text .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .content #ProductPrice, .prices .text .content .cart-section .cart__footer textarea, .cart-section .cart__footer .prices .text .content textarea, .prices .text .content .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .prices .text .content .cart__subtotal-title, .prices .text .content .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .prices .text .content .cart__subtotal {
         display: inline-block;
         width: 46%;
         margin-right: 4%; }
         @media (max-width: 1224px) {
-          .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter, .prices .text .content .product__price, .prices .text .content .product__title, .prices .text .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .content #ProductPrice {
+          .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter, .prices .text .content .product__price, .prices .text .content .product__title, .prices .text .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .content #ProductPrice, .prices .text .content .cart-section .cart__footer textarea, .cart-section .cart__footer .prices .text .content textarea, .prices .text .content .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .prices .text .content .cart__subtotal-title, .prices .text .content .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .prices .text .content .cart__subtotal {
             width: 29.33%;
             margin-right: 4%; } }
         @media (max-width: 562.5px) {
-          .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter, .prices .text .content .product__price, .prices .text .content .product__title, .prices .text .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .content #ProductPrice {
+          .prices .text .content p, .prices .text .content .team-header .filters .filter, .team-header .filters .prices .text .content .filter, .prices .text .content .product__price, .prices .text .content .product__title, .prices .text .content #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .prices .text .content #ProductPrice, .prices .text .content .cart-section .cart__footer textarea, .cart-section .cart__footer .prices .text .content textarea, .prices .text .content .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .prices .text .content .cart__subtotal-title, .prices .text .content .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .prices .text .content .cart__subtotal {
             width: calc(50% - 12.5px);
             margin-right: 25px; }
-            .prices .text .content p:nth-of-type(even), .prices .text .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .text .content .filter:nth-of-type(even), .prices .text .content .product__price:nth-of-type(even), .prices .text .content .product__title:nth-of-type(even), .prices .text .content #ProductSection .product-container .product-info #ProductPrice:nth-of-type(even), #ProductSection .product-container .product-info .prices .text .content #ProductPrice:nth-of-type(even) {
+            .prices .text .content p:nth-of-type(even), .prices .text .content .team-header .filters .filter:nth-of-type(even), .team-header .filters .prices .text .content .filter:nth-of-type(even), .prices .text .content .product__price:nth-of-type(even), .prices .text .content .product__title:nth-of-type(even), .prices .text .content #ProductSection .product-container .product-info #ProductPrice:nth-of-type(even), #ProductSection .product-container .product-info .prices .text .content #ProductPrice:nth-of-type(even), .prices .text .content .cart-section .cart__footer textarea:nth-of-type(even), .cart-section .cart__footer .prices .text .content textarea:nth-of-type(even), .prices .text .content .cart-section .cart__footer .cart-info .cart__subtotal-title:nth-of-type(even), .cart-section .cart__footer .cart-info .prices .text .content .cart__subtotal-title:nth-of-type(even), .prices .text .content .cart-section .cart__footer .cart-info .cart__subtotal:nth-of-type(even), .cart-section .cart__footer .cart-info .prices .text .content .cart__subtotal:nth-of-type(even) {
               margin-right: 0; } }
 
 .gallery-page {
@@ -1483,13 +1491,13 @@ footer {
 .display-collection {
   margin-left: 192px;
   padding-right: 50px; }
-  .display-collection .item p, .display-collection .item .team-header .filters .filter, .team-header .filters .display-collection .item .filter, .display-collection .item .product__price, .display-collection .item .product__title, .display-collection .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .display-collection .item #ProductPrice {
+  .display-collection .item p, .display-collection .item .team-header .filters .filter, .team-header .filters .display-collection .item .filter, .display-collection .item .product__price, .display-collection .item .product__title, .display-collection .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .display-collection .item #ProductPrice, .display-collection .item .cart-section .cart__footer textarea, .cart-section .cart__footer .display-collection .item textarea, .display-collection .item .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .display-collection .item .cart__subtotal-title, .display-collection .item .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .display-collection .item .cart__subtotal {
     margin-bottom: 0;
     margin-top: 12.5px; }
     @media (max-width: 600px) {
-      .display-collection .item p, .display-collection .item .team-header .filters .filter, .team-header .filters .display-collection .item .filter, .display-collection .item .product__price, .display-collection .item .product__title, .display-collection .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .display-collection .item #ProductPrice {
+      .display-collection .item p, .display-collection .item .team-header .filters .filter, .team-header .filters .display-collection .item .filter, .display-collection .item .product__price, .display-collection .item .product__title, .display-collection .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .display-collection .item #ProductPrice, .display-collection .item .cart-section .cart__footer textarea, .cart-section .cart__footer .display-collection .item textarea, .display-collection .item .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .display-collection .item .cart__subtotal-title, .display-collection .item .cart-section .cart__footer .cart-info .cart__subtotal, .cart-section .cart__footer .cart-info .display-collection .item .cart__subtotal {
         margin-top: 0; } }
-    .display-collection .item p.light, .display-collection .item .team-header .filters .light.filter, .team-header .filters .display-collection .item .light.filter, .display-collection .item .light.product__price, .display-collection .item .light.product__title, .display-collection .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .display-collection .item #ProductPrice {
+    .display-collection .item p.light, .display-collection .item .team-header .filters .light.filter, .team-header .filters .display-collection .item .light.filter, .display-collection .item .light.product__price, .display-collection .item .light.product__title, .display-collection .item #ProductSection .product-container .product-info #ProductPrice, #ProductSection .product-container .product-info .display-collection .item #ProductPrice, .display-collection .item .cart-section .cart__footer textarea.light, .cart-section .cart__footer .display-collection .item textarea.light, .display-collection .item .cart-section .cart__footer .cart-info .light.cart__subtotal-title, .cart-section .cart__footer .cart-info .display-collection .item .light.cart__subtotal-title, .display-collection .item .cart-section .cart__footer .cart-info .light.cart__subtotal, .cart-section .cart__footer .cart-info .display-collection .item .light.cart__subtotal {
       margin-top: 5px; }
   .display-collection .leaves {
     max-width: 645px; }
@@ -1515,7 +1523,52 @@ footer {
     margin-bottom: 25px;
     border-bottom: 1px solid #979797; }
 
-.cart-section .h4 {
-  border-bottom: 1px solid #979797;
-  padding-bottom: 16.6666666667px;
-  margin-bottom: 12.5px; }
+.cart-section {
+  padding-top: 50px; }
+  .cart-section .h4 {
+    border-bottom: 1px solid #979797;
+    padding-bottom: 16.6666666667px;
+    margin-bottom: 12.5px; }
+  .cart-section .cart__footer {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; }
+    .cart-section .cart__footer textarea {
+      flex: 1;
+      background-color: #F4F4F4;
+      color: #000000;
+      padding: 25px;
+      margin-bottom: 0; }
+      .cart-section .cart__footer textarea::placeholder {
+        color: rgba(0, 0, 0, 0.45); }
+    .cart-section .cart__footer .cart-info {
+      flex: 1;
+      margin-left: 50px; }
+      .cart-section .cart__footer .cart-info .cart__subtotal-title, .cart-section .cart__footer .cart-info .cart__subtotal {
+        text-align: right; }
+      .cart-section .cart__footer .cart-info .cart__policies {
+        margin-bottom: 25px;
+        text-align: right; }
+      .cart-section .cart__footer .cart-info .btn--secondary {
+        border-width: 1px;
+        display: block; }
+      .cart-section .cart__footer .cart-info .btn.checkout {
+        width: 100%; }
+      .cart-section .cart__footer .cart-info p:last-of-type, .cart-section .cart__footer .cart-info .team-header .filters .filter:last-of-type, .team-header .filters .cart-section .cart__footer .cart-info .filter:last-of-type, .cart-section .cart__footer .cart-info .product__price:last-of-type, .cart-section .cart__footer .cart-info .product__title:last-of-type, .cart-section .cart__footer .cart-info #ProductSection .product-container .product-info #ProductPrice:last-of-type, #ProductSection .product-container .product-info .cart-section .cart__footer .cart-info #ProductPrice:last-of-type, .cart-section .cart__footer .cart-info textarea:last-of-type, .cart-section .cart__footer .cart-info .cart__subtotal-title:last-of-type, .cart-section .cart__footer .cart-info .cart__subtotal:last-of-type {
+        margin-bottom: 0; }
+      .cart-section .cart__footer .cart-info p:first-of-type, .cart-section .cart__footer .cart-info .team-header .filters .filter:first-of-type, .team-header .filters .cart-section .cart__footer .cart-info .filter:first-of-type, .cart-section .cart__footer .cart-info .product__price:first-of-type, .cart-section .cart__footer .cart-info .product__title:first-of-type, .cart-section .cart__footer .cart-info #ProductSection .product-container .product-info #ProductPrice:first-of-type, #ProductSection .product-container .product-info .cart-section .cart__footer .cart-info #ProductPrice:first-of-type, .cart-section .cart__footer .cart-info textarea:first-of-type, .cart-section .cart__footer .cart-info .cart__subtotal-title:first-of-type, .cart-section .cart__footer .cart-info .cart__subtotal:first-of-type {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; }
+      .cart-section .cart__footer .cart-info .sub-actions {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 12.5px; }
+        .cart-section .cart__footer .cart-info .sub-actions .update-cart {
+          width: 50px;
+          margin-right: 12.5px; }
+        .cart-section .cart__footer .cart-info .sub-actions a.btn--secondary {
+          flex: 10;
+          margin: 0; }

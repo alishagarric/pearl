@@ -1,7 +1,68 @@
 .cart-section {
+    padding-top: $base;
     .h4 {
         border-bottom: 1px solid $dark-grey;
         padding-bottom: $base / 3;
         margin-bottom: $base / 4;
+    }
+    .cart__footer {
+        margin-top: 0;
+        display: flex; flex-direction: row;
+        align-items: stretch;
+        textarea {
+            flex: 1;
+            @extend p;
+            background-color: $cool-grey;
+            color: $black;
+            padding: $base / 2;
+            margin-bottom: 0;
+            &::placeholder {
+                color: rgba($black, .45);
+            }
+        }
+        .cart-info {
+            flex: 1;
+            margin-left: $base;
+            .cart__subtotal-title, .cart__subtotal {
+                @extend p;
+                @extend .bold;
+                text-align: right;
+            }
+            .cart__policies {
+                margin-bottom: $base  / 2;
+                text-align: right;
+            }
+            .btn--secondary {
+                border-width: 1px;
+                display: block;
+            }
+            .btn {
+                &.checkout {
+                    width: 100%;
+                }
+            }
+            p:last-of-type {
+                margin-bottom: 0;
+            }
+            p:first-of-type {
+                margin-bottom: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            .sub-actions {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: $base / 4;
+                .update-cart {
+                    width: 50px;
+                    margin-right: $base / 4;
+                }
+                a.btn--secondary {
+                    flex: 10;
+                    margin: 0;
+                }
+            }
+        }
     }
 }
