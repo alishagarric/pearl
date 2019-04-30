@@ -1,14 +1,42 @@
 .cart-section {
     padding-top: $base;
+    @media (max-width: 650px){
+        padding-top: 0;
+    }
+    .inner {
+        @media (max-width: 650px){
+            padding-left: 2.5vw;
+            padding-right: 2.5vw;
+            .responsive-table__row {
+                td {
+                    padding: $base /4 0 0 0;
+                    &:last-of-type {
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+    }
     .h4 {
         border-bottom: 1px solid $dark-grey;
         padding-bottom: $base / 3;
         margin-bottom: $base / 4;
     }
+    .item-title {
+        @media (max-width: 883px){
+            font-size: 14px;
+        }
+    }
     .cart__footer {
         margin-top: 0;
-        display: flex; flex-direction: row;
+        display: flex; 
+        flex-direction: row;
         align-items: stretch;
+        @media (max-width: 650px){
+            margin-top: $base;
+            flex-direction: column;
+            justify-content: center;
+        }
         textarea {
             flex: 1;
             @extend p;
@@ -19,14 +47,34 @@
             &::placeholder {
                 color: rgba($black, .45);
             }
+            @media (max-width: 650px){
+                padding: $base / 4;
+                margin-bottom: $base / 2;
+                height: 50px !important;
+                flex: auto
+            }
         }
         .cart-info {
             flex: 1;
             margin-left: $base;
+            @media (max-width: 650px){
+                margin-left: 0;
+                text-align: center;
+                p {
+                    text-align: center !important;
+                    display: block;
+                    display: flex;
+                    justify-content: center !important;
+                    align-items: center;
+                }
+            }
             .cart__subtotal-title, .cart__subtotal {
                 @extend p;
                 @extend .bold;
                 text-align: right;
+                @media (max-width: 650px){
+                    font-size: 24px;
+                }
             }
             .cart__policies {
                 margin-bottom: $base  / 2;

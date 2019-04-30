@@ -42,6 +42,9 @@ h4, .h4 {
     @media (max-width: $screen-base){
         font-size: 3.5vw;
     }
+    @media (max-width: $screen-sm){
+        font-size: 22px;
+    }
 }
 
 h5, .h5 {

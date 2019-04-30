@@ -51,7 +51,7 @@
                     </td>
                     <td class="cart__table-cell--meta small--text-center">
                       <p>
-                        <a href="{{ item.url }}">{{ item.product.title }}</a>
+                        <a class="item-title" href="{{ item.url }}">{{ item.product.title }}</a>
                         {% unless item.variant.title contains 'Default' %}
                           <br><small>{{ item.variant.title }}</small>
                         {% endunless %}
@@ -109,9 +109,8 @@
             <footer class="cart__footer">
               <textarea name="note" id="CartSpecialInstructions" class="input--block cart__note" placeholder="{{ 'cart.general.note' | t }}">{{ cart.note }}</textarea>
               <div class="cart-info">
-                <p>
-                  <span class="cart__subtotal-title h3">{{ 'cart.general.subtotal' | t }}</span>
-                  <span class="cart__subtotal h3">{{ cart.total_price | money }}</span>
+                <p class="cart__subtotal-title h3">
+                  {{ 'cart.general.subtotal' | t }} {{ cart.total_price | money }}
                 </p>
                 {% if cart.total_discounts > 0 %}
                   {% assign savings = cart.total_discounts | money %}
