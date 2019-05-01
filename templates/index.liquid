@@ -1,9 +1,9 @@
 {% include 'services-slider' %}
-{% include 'text-image-block' with header:"670 Alvaro Street", paragraph:"Located on the corner of Keystone Ave and W Seventh Street accross the street from Starbucks.", bullet1:"775 323 7375", bullet2:"Tuesday - Saturday", bullet3:"10am - 5pm"%}  
+{% include 'text-image-block' with header:settings.address-line-1, paragraph:settings.address-description, bullet1:settings.phone-number, bullet2:settings.address-days, bullet3:settings.address-hours, image:settings.address-img %}  
 {% include 'testimonial-slider' %}
 {% include 'one-stop-shop' %}
 {% include 'product-sample' %}
-{% include 'text-image-block' with header:"Seeing is believing", paragraph:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", buttonText:"View Galleries" buttonDest:"/" orientation: "reversed" %} 
+{% include 'text-image-block' with header:settings.global-1-header, paragraph:settings.global-1-paragraph, buttonText:settings.global-1-button-text, buttonDest:settings.global-1-button-dest, orientation: "reversed", image:settings.global-1-img %} 
 
 
 <!--footer -->

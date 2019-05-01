@@ -128,14 +128,14 @@ abbr[title] {
  */
 b,
 strong {
-  font-weight: inherit; }
+  font-weight: bold; }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bold; }
 
 /**
  * Add the correct font style in Android 4.3-.
@@ -531,7 +531,6 @@ img {
           top: -15%; } }
 
 button, .button {
-  border: 1px solid #FFFFFF;
   background-color: transparent;
   text-transform: uppercase;
   font-size: 14px;

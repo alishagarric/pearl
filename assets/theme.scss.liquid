@@ -49,23 +49,23 @@ $grid-breakpoint-has-push: ($medium-up);
 /*================ Color Variables ================*/
 
 // Background
-$color-body: {{ settings.color_body_bg }};
+$color-body: white;
 
 // Primary color
-$color-primary: {{ settings.color_primary_color }};
+$color-primary: black;
 
 // Button colors
 $color-btn-primary-bg: $color-primary;
 $color-btn-primary-hover: darken($color-btn-primary-bg, 10%);
 $color-btn-primary-active: darken($color-btn-primary-hover, 10%);
-$color-btn-primary-text: {{ settings.color_primary_button_text }};
+$color-btn-primary-text: black;
 
 // Badges and sale prices
-$color-sale-badge: {{ settings.color_sale_badge }};
+$color-sale-badge: #8BA6BB;
 $color-sold-out-badge: #888888;
 
 // Text colors
-$color-body-text: {{ settings.color_body_text }};
+$color-body-text: black;
 $color-link: $color-primary;
 $opacity-link-hover: 0.7;
 $color-headings-text: $color-body-text;
@@ -76,10 +76,10 @@ $color-nav-active: $color-nav;
 $color-text-shadow: rgba(0, 0, 0, 0.1);
 
 // Border colors
-$color-border: {{ settings.color_borders }};
+$color-border: black;
 
 // Form colors
-$color-form: {{ settings.color_form }};
+$color-form: #8BA6BB;
 $color-form-text: #333;
 $input-padding-top-bottom: 13px;
 $input-padding-left-right: 15px;
@@ -99,9 +99,9 @@ $color-blankstate: rgba($color-body-text, 0.35);
 $color-blankstate-background: rgba($color-body-text, 0.10);
 
 // Overlays
-$color-overlay-title-text: {{ settings.color_image_overlay_text }};
-$color-image-overlay: {{ settings.color_image_overlay }};
-$opacity-image-overlay: {{ settings.image_overlay_opacity }};
+$color-overlay-title-text: black;
+$color-image-overlay: #8BA6BB;
+$opacity-image-overlay: .5;
 $transition-link-hover: 0.1s cubic-bezier(0.44, 0.13, 0.48, 0.87);
 
 /*====== Sizes ======*/
@@ -110,40 +110,24 @@ $gutter: 30px;
 $mobile-icon-line-thickness: 5px;
 
 /*====== Typography ======*/
-{%- assign base_font = settings.type_base_font -%}
-{%- assign header_font = settings.type_header_font -%}
-
-{{ base_font | font_face }}
-{{ header_font | font_face }}
-
-{%- assign base_font_bold = base_font | font_modify: 'weight', 'bolder' -%}
-{%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
-{%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
-
-{%- assign header_font_bold = header_font | font_modify: 'weight', 'bolder' -%}
-
-{{ base_font_bold | font_face }}
-{{ base_font_italic | font_face }}
-{{ base_font_bold_italic | font_face }}
-{{ header_font_bold | font_face }}
 
 $font-stack-header: 'Playfair Display', serif;
-$font-weight-header: {{ header_font.weight }};
-$font-weight-header--bold: {{ header_font_bold.weight | default: 700 }};
-$font-style-header: {{ header_font.style }};
-$font-size-header: {{ settings.type_header_base_size }};
+$font-weight-header: 400;
+$font-weight-header--bold: 600;
+$font-style-header: normal;
+$font-size-header: 20px;
 
-$font-size-button: {{ settings.type_button_base_size }};
+$font-size-button: 14px;
 $font-size-button-mobile: $font-size-button - 1px;
 
-$font-size-nav: {{ settings.type_navigation_base_size }};
+$font-size-nav: 14px;
 $nav-link-height: $font-size-nav * 3;
 
-$font-weight-body: {{ base_font.weight }};
-$font-weight-body--bold: {{ base_font_bold.weight | default: 700 }};
+$font-weight-body: 300;
+$font-weight-body--bold: 700;
 $font-stack-body: 'Montserrat', sans-serif;
-$font-stack-style: {{ base_font.style }};
-$font-size-base: {{ settings.type_base_size }}; // Henceforth known as 1em
+$font-stack-style: normal;
+$font-size-base: 14px; // Henceforth known as 1em
 
 /*====== z-index ======*/
 $z-index-skip-to-content: 10000; // really high to be safe of app markup
