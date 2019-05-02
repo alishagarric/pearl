@@ -111,7 +111,7 @@
 
 {% endpaginate %}
 
-{% include 'text-image-block' with header:"Jean lyfe", paragraph:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", buttonText:"Shop Jackets" buttonDest:"/" orientation: "reversed" %} 
+{% include 'text-image-block' with header:settings.global-2-header, paragraph:settings.global-2-paragraph, buttonText:settings.global-2-button-text, buttonDest:settings.global-2-button-dest, orientation: "reversed", image:settings.global-2-img %}
 
 <!--footer -->
   {% include 'testimonial-slider' %}

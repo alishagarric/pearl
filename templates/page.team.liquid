@@ -103,7 +103,7 @@
 
 <p class="hide empty-team-list bold">Please select a filter to view some team members.</p>
 
- {% include 'text-image-block' with header:"Seeing is believing", paragraph:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", buttonText:"View Galleries" buttonDest:"/" orientation: "reversed" %} 
+{% include 'text-image-block' with header:settings.global-1-header, paragraph:settings.global-1-paragraph, buttonText:settings.global-1-button-text, buttonDest:settings.global-1-button-dest, orientation: "reversed", image:settings.global-1-img %}  
 
  <script>
     function toggleEmployees( type, filter ){

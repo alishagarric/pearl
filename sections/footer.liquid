@@ -16,16 +16,16 @@
       </div>
       <div class="contact">
         <ul>
-          <li>670 Alvaro St</li>
+          <li>{{ settings.address-line-1 }}</li>
           <li>Reno, NV 89503</li>
-          <li>775 323 7375</li>
+          <li>{{ settings.phone-number }}</li>
           <div class="social-row"></div>
         </ul>
       </div>
     </div>
   </div>
   <div class="section copywright bg-black txt-white">
-    <div>© 2018 Pearle Studios</div>
+    <div>© {{ "now" | date: "%Y" }} Pearle Studios</div>
   </div>
 </footer>
 

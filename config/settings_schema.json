@@ -148,6 +148,76 @@
   },
   {
     "name": {
+      "en": "🌎2️⃣ Global Block 2"
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "global-2-img",
+        "label": "image"
+      },
+      {
+        "type":      "text",
+        "id":        "global-2-header",
+        "label":     "Header",
+        "default":   "Seeing is believing"
+      },
+      {
+        "type":      "textarea",
+        "id":        "global-2-paragraph",
+        "label":     "Text",
+        "default":   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+      },
+      {
+        "type":      "text",
+        "id":        "global-2-button-text",
+        "label":     "Button Text",
+        "default":   "View Galleries"
+      },
+      {
+        "id": "global-2-button-dest",
+        "type": "url",
+        "label": "Button URL"
+      }
+    ]
+  },
+  {
+    "name": {
+      "en": "🛍 Cart Block"
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "cart-block-img",
+        "label": "image"
+      },
+      {
+        "type":      "text",
+        "id":        "cart-block-header",
+        "label":     "Header",
+        "default":   "Seeing is believing"
+      },
+      {
+        "type":      "textarea",
+        "id":        "cart-block-paragraph",
+        "label":     "Text",
+        "default":   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+      },
+      {
+        "type":      "text",
+        "id":        "cart-block-button-text",
+        "label":     "Button Text",
+        "default":   "View Galleries"
+      },
+      {
+        "id": "cart-block-button-dest",
+        "type": "url",
+        "label": "Button URL"
+      }
+    ]
+  },
+  {
+    "name": {
       "en": "📸 Galleries"
     },
     "settings": [
@@ -469,23 +539,6 @@
         "id": "lashes-image-20",
         "label": "image 20"
       }
-    ]
-  },
-  {
-    "name": {
-      "en": "Shop Slide Buttons"
-    },
-    "settings": [
-      {
-        "type":      "collection",
-        "id":        "shop-slide-collection-1",
-        "label":     "First Featured Collection"
-     },
-     {
-        "type":      "collection",
-        "id":        "shop-slide-collection-2",
-        "label":     "Second Featured Collection"
-     }
     ]
   }
 ]

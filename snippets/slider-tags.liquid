@@ -1,0 +1,35 @@
+{% comment %} If on shop slide, loop through collections and display them {% endcomment %}
+{% if article.title == "Shop" %}
+    <p class="bold">
+        {% for collection in collections %}
+            {% unless collection.handle == "frontpage" %}
+                +{{ collection.title | lowercase }}&nbsp;&nbsp;&nbsp;
+            {% endunless%}
+        {% endfor %}
+    </p>
+{% comment %} If on service slide, loop through menus {% endcomment %}
+{% else %}
+    {% assign compareTitle = article.title %}
+    {% for article in blogs.menu.articles %}
+        {% if article.title == compareTitle %}
+            {% comment %} Parse menu content to remove prices and create service array {% endcomment %}
+            {% assign services = "" %}
+            {% assign buffer = article.content %}
+            {% assign buffer = buffer | replace: "<p>", "", | replace: "</p>" | split: "$" %}
+            {% for service in buffer %}
+                {% assign buffer2 = service | split: "+" %}
+                {% assign buffer2 = buffer2[1] %}
+                {% assign services = services | append: buffer2 | append: "###" %}
+            {% endfor %}
+            {% assign services = services | split: "###" %}
+        {% endif %}
+    {% endfor %}
+    {% comment %} Display each item in service array {% endcomment %}
+    <p class="bold">
+        {% for service in services %}
+            {% if "" != service | strip %}
+                +{{ service | strip }}&nbsp;&nbsp;&nbsp;
+            {% endif %}
+        {% endfor %}
+    </p>
+{% endif %}

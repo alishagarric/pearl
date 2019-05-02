@@ -1634,7 +1634,8 @@ footer {
         border-width: 1px;
         display: block; }
       .cart-section .cart__footer .cart-info .btn.checkout {
-        width: 100%; }
+        width: 100%;
+        color: #FFFFFF; }
       .cart-section .cart__footer .cart-info p:last-of-type, .cart-section .cart__footer .cart-info .team-header .filters .filter:last-of-type, .team-header .filters .cart-section .cart__footer .cart-info .filter:last-of-type, .cart-section .cart__footer .cart-info .product__price:last-of-type, .cart-section .cart__footer .cart-info .product__title:last-of-type, .cart-section .cart__footer .cart-info #ProductSection .product-container .product-info #ProductPrice:last-of-type, #ProductSection .product-container .product-info .cart-section .cart__footer .cart-info #ProductPrice:last-of-type, .cart-section .cart__footer .cart-info textarea:last-of-type, .cart-section .cart__footer .cart-info .cart__subtotal-title:last-of-type, .cart-section .cart__footer .cart-info .cart__subtotal:last-of-type {
         margin-bottom: 0; }
       .cart-section .cart__footer .cart-info p:first-of-type, .cart-section .cart__footer .cart-info .team-header .filters .filter:first-of-type, .team-header .filters .cart-section .cart__footer .cart-info .filter:first-of-type, .cart-section .cart__footer .cart-info .product__price:first-of-type, .cart-section .cart__footer .cart-info .product__title:first-of-type, .cart-section .cart__footer .cart-info #ProductSection .product-container .product-info #ProductPrice:first-of-type, #ProductSection .product-container .product-info .cart-section .cart__footer .cart-info #ProductPrice:first-of-type, .cart-section .cart__footer .cart-info textarea:first-of-type, .cart-section .cart__footer .cart-info .cart__subtotal-title:first-of-type, .cart-section .cart__footer .cart-info .cart__subtotal:first-of-type {

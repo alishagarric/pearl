@@ -3,9 +3,15 @@
         {% assign first = "active" %}
         {% for article in blogs.service.articles %}
             {% if article.title == "Shop" %}
-                <a class="{{ first }}" href="{{ collections[settings.shop-slide-collection-2].url }}">
-                    <h5 class="bold">Shop {{ collections[settings.shop-slide-collection-2].title }}</h5>
-                </a>
+                {% assign selected = false %}
+                {% for collection in collections offset: 1 %}
+                    {% if selected == false and collection.handle != "frontpage" %}
+                        <a class="{{ first }}" href="{{ collection.url }}">
+                            <h5 class="bold">Shop {{ collection.title }}</h5>
+                        </a>
+                        {% assign selected = true %}
+                    {% endif %}
+                {% endfor %}
             {% else %}
                 <a class="{{ first }}" href="/pages/prices">
                     <h5 class="bold">Prices</h5>
@@ -18,10 +24,14 @@
         {% assign first = "active" %}
         {% for article in blogs.service.articles %}
             {% if article.title == "Shop" %}
-                {% for collection in collections limit: 1 %}
-                    <a class="{{ first }}" href="{{ collections[settings.shop-slide-collection-1].url }}">
-                        <h5 class="bold">Shop {{ collections[settings.shop-slide-collection-1].title }}</h5>
-                    </a>
+                {% assign selected = false %}
+                {% for collection in collections %}
+                    {% if selected == false and collection.handle != "frontpage" %}
+                        <a class="{{ first }}" href="{{ collection.url }}">
+                            <h5 class="bold">Shop {{ collection.title }}</h5>
+                        </a>
+                        {% assign selected = true %}
+                    {% endif %}
                 {% endfor %}
             {% elsif article.title == "Skin" %}
                 <a class="{{ first }}" href="/pages/team">
