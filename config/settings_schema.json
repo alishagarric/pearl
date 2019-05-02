@@ -13,6 +13,11 @@
     },
     "settings": [
       {
+        "type":      "header",
+        "content":   "General Info",
+        "info":      "You will see this info in the footer, address block, collection pages and more"
+      },
+      {
         "type":      "text",
         "id":        "phone-number",
         "label":     "Phone Number",
@@ -37,6 +42,11 @@
       "en": "🏠 Address/Hours Block"
     },
     "settings": [
+      {
+        "type":      "header",
+        "content":   "Address Block",
+        "info":      "You will see this block on the home page beneath the services slider"
+      },
       {
         "type": "image_picker",
         "id": "address-img",
@@ -74,6 +84,11 @@
     },
     "settings": [
       {
+        "type":      "header",
+        "content":   "One Stop Shop Block",
+        "info":      "You will see this block on the home page above the featured products"
+      },
+      {
         "type": "image_picker",
         "id": "one-stop-img",
         "label": "image"
@@ -98,6 +113,11 @@
     },
     "settings": [
       {
+        "type":      "header",
+        "content":   "Featured Collection",
+        "info":      "You will see this on the home page beneath the one stop shop block"
+      },
+      {
         "type":      "collection",
         "id":        "featured-collection",
         "label":     "Featured Collection",
@@ -116,6 +136,11 @@
       "en": "🌎1️⃣ Global Block 1"
     },
     "settings": [
+      {
+        "type":      "header",
+        "content":   "First Global Block",
+        "info":      "You will see this block on many places of the website including the home page near the bottom"
+      },
       {
         "type": "image_picker",
         "id": "global-1-img",
@@ -152,6 +177,11 @@
     },
     "settings": [
       {
+        "type":      "header",
+        "content":   "Second Global Block",
+        "info":      "You will see this block on many places of the website including the shop page near the bottom"
+      },
+      {
         "type": "image_picker",
         "id": "global-2-img",
         "label": "image"
@@ -186,6 +216,11 @@
       "en": "🛍 Cart Block"
     },
     "settings": [
+      {
+        "type":      "header",
+        "content":   "First Global Block",
+        "info":      "You will see this block on the cart page near the bottom"
+      },
       {
         "type": "image_picker",
         "id": "cart-block-img",
@@ -222,10 +257,9 @@
     },
     "settings": [
       {
-        "type": "header",
-        "content": {
-          "en": "Hair"
-        }
+        "type":      "header",
+        "content":   "Hair",
+        "info":      "You will see these on the gallery page"
       },
       {
         "type": "image_picker",
