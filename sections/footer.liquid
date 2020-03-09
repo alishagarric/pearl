@@ -10,7 +10,18 @@
       <div class="menu">
         <ul>
           {% for link in linklists.footer.links %}
-            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% if link.title == "Shop" and settings.show-shopping == false %}
+            {% else %}
+              <li>
+                <a href="{{ link.url }}">
+                  {% if link.title == "Prices" and settings.switch-to-services == true %}
+                    Services
+                  {% else %}
+                    {{ link.title }}
+                  {% endif %}
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
       </div>

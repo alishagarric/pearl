@@ -5,17 +5,15 @@
 }
 
 nav {
-    background-color: $black;
-    padding: $base / 8 $base;
-    position: relative;
-    z-index: 901;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    @media (max-width: $screen-sm){
-        padding: $base / 8 $base / 2;
+    .shop-icon {
+        width: 16px;
+        height: 20PX;
     }
+    .call-icon {
+        width: 18px;
+        height: 18px;
+    }
+
     .shop-amount {
         position: absolute;
         font-size: 10px;
@@ -29,13 +27,19 @@ nav {
         bottom: 0;
         right: $base / -10;
     }
-    .shop-icon {
-        width: 16px;
-        height: 20PX;
-    }
-    .call-icon {
-        width: 18px;
-        height: 18px;
+}
+
+nav:not(.overlay-nav) {
+    background-color: $black;
+    padding: $base / 8 $base;
+    position: relative;
+    z-index: 901;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $screen-sm){
+        padding: $base / 8 $base / 2;
     }
     .menu-icon {
         width: 18px;
@@ -139,5 +143,76 @@ nav {
     position: relative;
     .check-out {
         margin-left: $base /2;
+    }
+}
+
+nav.overlay-nav {
+    position: fixed;
+    opacity: 0;
+    transition-duration: .25s;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: black;
+    padding: $base / 2 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .exit {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: $base;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $base / 4;
+        margin-top: $base / 4;
+
+        span {
+            width: $base;
+            height: 1px;
+            display: block;
+            background-color: white;
+            transform: rotate(45deg);
+
+            &:last-of-type {
+                position: absolute;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    ul {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        li, a {
+            color: white;
+            font-size: 20px;
+            padding: $base / 12 0;
+            position: relative;
+        }
+        
+    }
+
+    ul.icons {
+        display: flex;
+        flex-direction: row;
+        li {
+            padding: $base / 4;
+        }
     }
 }

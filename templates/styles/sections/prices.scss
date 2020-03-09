@@ -1,7 +1,11 @@
 .prices {
     padding-bottom: 0;
-    .page-title {
-        margin-bottom: $base;
+    .inner {
+        text-align: center;
+        
+        .page-title {
+            margin-bottom: $base;
+        }
     }
     .menus {
         display: flex;

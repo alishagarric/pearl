@@ -2,7 +2,9 @@
 {% include 'text-image-block' with header:settings.address-line-1, paragraph:settings.address-description, bullet1:settings.phone-number, bullet2:settings.address-days, bullet3:settings.address-hours, image:settings.address-img %}  
 {% include 'testimonial-slider' %}
 {% include 'one-stop-shop' %}
-{% include 'product-sample' %}
+{% if settings.show-shopping == true %}
+  {% include 'product-sample' %}
+{% endif %}
 {% include 'text-image-block' with header:settings.global-1-header, paragraph:settings.global-1-paragraph, buttonText:settings.global-1-button-text, buttonDest:settings.global-1-button-dest, orientation: "reversed", image:settings.global-1-img %} 
 
 

@@ -61,8 +61,15 @@
 
  <div class="section team-header">
     <div class="inner">
-        <div class="page-title">
-            <img src="{{ 'title-team.png' | asset_url }}">
+        <div class="page-title team-title">
+            <h1>{{page.title}}</h1>
+            <img src="{{ 'leaves-1.png' | asset_url }}">
+            <div class="letters-atop">
+                {% assign theTitle = page.title | split: '' %}
+                {% for letter in theTitle %}
+                    <span>{{ letter }}</span>
+                {% endfor %}
+            </div>
         </div>
         <div class="filters">
             <span class="filter" onclick="toggleEmployees('nails', this)">

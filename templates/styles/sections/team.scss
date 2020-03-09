@@ -4,6 +4,12 @@
             padding: 0;
         }
     }
+    .inner {
+        text-align: center;
+        .page-title {
+            margin-bottom: $base;
+        }
+    }
     .filters {
         display: flex;
         flex-direction: row;

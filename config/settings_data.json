@@ -1,5 +1,128 @@
 {
   "current": {
+    "phone-number": "775-323-7375",
+    "show-shopping": false,
+    "switch-to-services": true,
+    "show_breadcrumb_nav": true,
+    "instagram-link": "https:\/\/www.instagram.com\/pearlestudios\/",
+    "address-img": "shopify:\/\/shop_images\/becca-tapert-357541-unsplash.jpg",
+    "address-line-1": "670 Alvaro Street",
+    "address-description": "Located on the corner of Keystone Ave and W Seventh Street accross the street from Starbucks.",
+    "address-days": "Tuesday - Saturday",
+    "address-hours": "10am - 5pm",
+    "one-stop-img": "shopify:\/\/shop_images\/chair_72d11a29-a6cb-4d77-8c01-6d38e9687555.jpg",
+    "one-stop-shop-description": "Always stocked with the latest styles, shop while your hair dye processes or when you're waiting for your SO",
+    "one-stop-salon-description": "We have incredible stylists and technicians that offer hair, nail and lash services.",
+    "featured-collection": "kevin-murphy",
+    "featured-collection-header": "Shop Kevin Murphy",
+    "global-1-img": "shopify:\/\/shop_images\/greg-raines-63369-unsplash.jpg",
+    "global-1-header": "Seeing is believing",
+    "global-1-paragraph": "Really get to know the quality of our services- check out pictures of our clients' hair, nails and lashes.",
+    "global-1-button-text": "View Galleries",
+    "global-1-button-dest": "shopify:\/\/pages\/gallery",
+    "global-2-img": "shopify:\/\/shop_images\/hailey-reed-589440-unsplash.jpg",
+    "global-2-header": "Services Galore",
+    "global-2-paragraph": "Our staff is certified and experienced in a variety of services. Get to know what we offer.",
+    "global-2-button-text": "Our Services",
+    "global-2-button-dest": "shopify:\/\/pages\/prices",
+    "cart-block-img": "shopify:\/\/shop_images\/Screen_Shot_2019-02-05_at_7.40.57_PM.png",
+    "cart-block-header": "One Stop Shop",
+    "cart-block-paragraph": "After you're done shopping, get inspired for your new haircut, set of nails or hair color.",
+    "cart-block-button-text": "Our Galleries",
+    "cart-block-button-dest": "shopify:\/\/pages\/gallery",
+    "hair-image-1": "shopify:\/\/shop_images\/80354984_1616159951857142_2347145077099788385_n.jpg",
+    "hair-image-2": "shopify:\/\/shop_images\/82956708_2400142250298908_3219459087190441653_n.jpg",
+    "hair-image-3": "shopify:\/\/shop_images\/83717652_255990288715735_4387047283236444045_n.jpg",
+    "hair-image-4": "shopify:\/\/shop_images\/84564321_518828658750591_4212874221927595789_n.jpg",
+    "hair-image-5": "shopify:\/\/shop_images\/88131799_151295566337101_8412013468675211847_n.jpg",
+    "hair-image-6": "shopify:\/\/shop_images\/79269421_955136914872446_7053089714457216420_n.jpg",
+    "hair-image-7": "shopify:\/\/shop_images\/84689841_225041685324960_861166295995453765_n.jpg",
+    "hair-image-8": "shopify:\/\/shop_images\/83940723_143697020434046_407514973887780823_n.jpg",
+    "hair-image-9": "shopify:\/\/shop_images\/83254015_186705829070644_9109674662818345509_n.jpg",
+    "hair-image-10": "shopify:\/\/shop_images\/79338477_588041542026402_3906190316124858421_n.jpg",
+    "hair-image-11": "shopify:\/\/shop_images\/83915637_499711447617113_776444961660275069_n.jpg",
+    "hair-image-12": "shopify:\/\/shop_images\/87820389_543066872996981_4280508133336105711_n.jpg",
+    "hair-image-13": "shopify:\/\/shop_images\/78950893_154235712662030_6483307921818145263_n.jpg",
+    "hair-image-14": "shopify:\/\/shop_images\/75388519_541384076703224_4535478470076525698_n.jpg",
+    "hair-image-15": "shopify:\/\/shop_images\/85252443_2428351950810941_7819347205653066246_n.jpg",
+    "hair-image-16": "shopify:\/\/shop_images\/83109033_817115408788951_8330877790729886011_n.jpg",
+    "hair-image-17": "shopify:\/\/shop_images\/84869391_492833034735137_1884576588902985125_n.jpg",
+    "hair-image-18": "shopify:\/\/shop_images\/77104282_2647270908695502_2858542465434213108_n.jpg",
+    "hair-image-19": "shopify:\/\/shop_images\/84721155_180522259888235_2671066618535513877_n.jpg",
+    "hair-image-20": "shopify:\/\/shop_images\/83738083_625833911516378_495867711810389845_n.jpg",
+    "nails-image-1": "shopify:\/\/shop_images\/83594339_192375305213644_1616191397226438907_n.jpg",
+    "nails-image-2": "shopify:\/\/shop_images\/83731297_1011285699258147_1303016925028921110_n.jpg",
+    "nails-image-3": "shopify:\/\/shop_images\/89121087_2538854133102026_443535653208803061_n.jpg",
+    "nails-image-4": "shopify:\/\/shop_images\/79859707_587110188514734_3482458497251947305_n.jpg",
+    "nails-image-5": "shopify:\/\/shop_images\/83920582_826866751111063_2710416376419598079_n.jpg",
+    "nails-image-6": "shopify:\/\/shop_images\/81285030_587316348755483_5866540909224948579_n.jpg",
+    "nails-image-7": "shopify:\/\/shop_images\/85132233_615917948967993_320573355452733938_n.jpg",
+    "nails-image-8": "shopify:\/\/shop_images\/81132154_650184072390975_8257630774146864866_n.jpg",
+    "nails-image-9": "shopify:\/\/shop_images\/84316522_2646125362285947_7055891773688627433_n.jpg",
+    "nails-image-10": "shopify:\/\/shop_images\/83467673_2660176320740956_1980099507966981600_n.jpg",
+    "nails-image-11": "shopify:\/\/shop_images\/82340589_619056632259769_1352847020944706463_n.jpg",
+    "nails-image-12": "shopify:\/\/shop_images\/82945954_969431593457170_9050476746662186322_n.jpg",
+    "nails-image-13": "shopify:\/\/shop_images\/88123330_210011957043599_8470607599256685250_n.jpg",
+    "nails-image-14": "shopify:\/\/shop_images\/83465413_211942973278923_8302121199794373163_n.jpg",
+    "nails-image-15": "shopify:\/\/shop_images\/85180363_528302997803382_4250064053250015134_n.jpg",
+    "nails-image-16": "shopify:\/\/shop_images\/85204572_131256284888936_3438440954590528595_n.jpg",
+    "nails-image-17": "shopify:\/\/shop_images\/84321364_2572592053016844_7940628109691486739_n.jpg",
+    "nails-image-18": "shopify:\/\/shop_images\/84989950_1426459120849430_1626327961905467565_n.jpg",
+    "nails-image-19": "shopify:\/\/shop_images\/83337309_177335523545556_659399370757471220_n.jpg",
+    "nails-image-20": "shopify:\/\/shop_images\/84494134_686356355239597_8213278957975285883_n.jpg",
+    "lashes-image-1": "shopify:\/\/shop_images\/70812435_2233566426754413_7271634766070284288_o.jpg",
+    "lashes-image-2": "shopify:\/\/shop_images\/57561045_1989250657852659_7001683418543030272_o.jpg",
+    "lashes-image-3": "shopify:\/\/shop_images\/59039471_2000991046678620_3464195615930449920_o.jpg",
+    "lashes-image-4": "shopify:\/\/shop_images\/70321177_2233567460087643_6240261935451865088_o.jpg",
+    "lashes-image-5": "shopify:\/\/shop_images\/76607515_2368269803284074_1475952257001324544_o.jpg",
+    "lashes-image-6": "shopify:\/\/shop_images\/72926697_2301861543258234_7593365560713281536_o.jpg",
+    "lashes-image-7": "shopify:\/\/shop_images\/59691404_2002414633202928_260489663423184896_o.jpg",
+    "lashes-image-8": "shopify:\/\/shop_images\/60297389_2017815981662793_2907165351508705280_n.jpg",
+    "lashes-image-9": "shopify:\/\/shop_images\/74153650_2301860169925038_1247333153584971776_o.jpg",
+    "lashes-image-10": "shopify:\/\/shop_images\/53741204_1926958054081920_6362815958205071360_o.jpg",
+    "lashes-image-11": "shopify:\/\/shop_images\/72464748_2274046352706420_8933126277364187136_n.jpg",
+    "lashes-image-12": "shopify:\/\/shop_images\/54519730_1923405371103855_6899540214251782144_o.jpg",
+    "lashes-image-13": "shopify:\/\/shop_images\/72892115_2274046382706417_5528059824090120192_n.jpg",
+    "lashes-image-14": "shopify:\/\/shop_images\/54391516_1926951190749273_8121131318139420672_n.jpg",
+    "lashes-image-15": "",
+    "lashes-image-16": "",
+    "lashes-image-17": "",
+    "lashes-image-18": "",
+    "lashes-image-19": "",
+    "lashes-image-20": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#cfcfcf",
+    "checkout_button_color": "#000000",
+    "checkout_error_color": "#e32c2b",
+    "shop-slide-collection-1": "jeans",
+    "shop-slide-collection-2": "shorts",
+    "cart_enable_ajax": true,
+    "share_image": "",
+    "social_facebook_link": "",
+    "social_twitter_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_snapchat_link": "",
+    "social_google_plus_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_fancy_link": "",
+    "main_blog": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "favicon": "",
     "color_body_bg": "#ffffff",
     "color_body_text": "#333333",
     "color_primary_color": "#333333",
@@ -16,20 +139,14 @@
     "type_base_size": "15px",
     "type_button_base_size": "14px",
     "type_navigation_base_size": "16px",
-    "show_breadcrumb_nav": true,
-    "share_facebook": true,
-    "share_twitter": true,
-    "share_pinterest": true,
     "sections": {
       "featured-products": {
         "type": "featured-products",
         "settings": {
-          "home_page_featured_products": "frontpage"
+          "vendor_show": false,
+          "collection_sort_enable": true,
+          "collection_tag_enable": false
         }
-      },
-      "featured-content": {
-        "type": "featured-content",
-        "settings": {}
       },
       "footer": {
         "type": "footer",
@@ -37,6 +154,7 @@
           "footer-0": {
             "type": "menu",
             "settings": {
+              "title": "Links",
               "menu": "footer"
             }
           }
@@ -44,12 +162,17 @@
         "block_order": [
           "footer-0"
         ],
+        "settings": {
+          "show_payment_icons": true
+        }
+      },
+      "header": {
+        "type": "header",
         "settings": {}
       }
     },
     "content_for_index": [
-      "featured-products",
-      "featured-content"
+      "featured-products"
     ]
   },
   "presets": {
@@ -77,12 +200,6 @@
       "sections": {
         "featured-products": {
           "type": "featured-products",
-          "settings": {
-            "home_page_featured_products": "frontpage"
-          }
-        },
-        "featured-content": {
-          "type": "featured-content",
           "settings": {}
         },
         "footer": {
@@ -102,8 +219,7 @@
         }
       },
       "content_for_index": [
-        "featured-products",
-        "featured-content"
+        "featured-products"
       ]
     },
     "Beauty": {
@@ -130,12 +246,6 @@
       "sections": {
         "featured-products": {
           "type": "featured-products",
-          "settings": {
-            "home_page_featured_products": "frontpage"
-          }
-        },
-        "featured-content": {
-          "type": "featured-content",
           "settings": {}
         },
         "footer": {
@@ -155,8 +265,7 @@
         }
       },
       "content_for_index": [
-        "featured-products",
-        "featured-content"
+        "featured-products"
       ]
     }
   }

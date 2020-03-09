@@ -13,39 +13,51 @@
     },
     "settings": [
       {
-        "type":      "header",
-        "content":   "General Info",
-        "info":      "You will see this info in the footer, address block, collection pages and more"
+        "type": "header",
+        "content": "General Info",
+        "info": "You will see this info in the footer, address block, collection pages and more"
       },
       {
-        "type":      "text",
-        "id":        "phone-number",
-        "label":     "Phone Number",
-        "default":   "775-323-7375"
+        "type": "text",
+        "id": "phone-number",
+        "label": "Phone Number",
+        "default": "775-323-7375"
+      },
+      {
+        "type": "checkbox",
+        "id": "show-shopping",
+        "label": "Allow users to navigate to the shopping portion of the site?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "switch-to-services",
+        "label": "Switch verbiage to 'Services' instead of 'Prices'?",
+        "default": true
       },
       {
         "type": "checkbox",
         "id": "show_breadcrumb_nav",
         "label": "Show Breadcrumb Nav",
-        "default": true         
+        "default": true
       },
       {
-        "type":      "text",
-        "id":        "instagram-link",
-        "label":     "Instagram Link",
-        "default": "https://www.instagram.com/pearlestudios/"
-      }     
+        "type": "text",
+        "id": "instagram-link",
+        "label": "Instagram Link",
+        "default": "https:\/\/www.instagram.com\/pearlestudios\/"
+      }
     ]
   },
   {
     "name": {
-      "en": "🏠 Address/Hours Block"
+      "en": "🏠 Address\/Hours Block"
     },
     "settings": [
       {
-        "type":      "header",
-        "content":   "Address Block",
-        "info":      "You will see this block on the home page beneath the services slider"
+        "type": "header",
+        "content": "Address Block",
+        "info": "You will see this block on the home page beneath the services slider"
       },
       {
         "type": "image_picker",
@@ -53,28 +65,28 @@
         "label": "image"
       },
       {
-        "type":      "text",
-        "id":        "address-line-1",
-        "label":     "Address Line 1",
-        "default":   "670 Alvaro Street"
+        "type": "text",
+        "id": "address-line-1",
+        "label": "Address Line 1",
+        "default": "670 Alvaro Street"
       },
       {
-        "type":      "textarea",
-        "id":        "address-description",
-        "label":     "Description",
-        "default":   "Located on the corner of Keystone Ave and W Seventh Street accross the street from Starbucks."
+        "type": "textarea",
+        "id": "address-description",
+        "label": "Description",
+        "default": "Located on the corner of Keystone Ave and W Seventh Street accross the street from Starbucks."
       },
       {
-        "type":      "text",
-        "id":        "address-days",
-        "label":     "Days Open",
-        "default":   "Tuesday - Saturday"
+        "type": "text",
+        "id": "address-days",
+        "label": "Days Open",
+        "default": "Tuesday - Saturday"
       },
       {
-        "type":      "text",
-        "id":        "address-hours",
-        "label":     "Hours Open",
-        "default":   "10am - 5pm"
+        "type": "text",
+        "id": "address-hours",
+        "label": "Hours Open",
+        "default": "10am - 5pm"
       }
     ]
   },
@@ -84,9 +96,9 @@
     },
     "settings": [
       {
-        "type":      "header",
-        "content":   "One Stop Shop Block",
-        "info":      "You will see this block on the home page above the featured products"
+        "type": "header",
+        "content": "One Stop Shop Block",
+        "info": "You will see this block on the home page above the featured products"
       },
       {
         "type": "image_picker",
@@ -94,16 +106,28 @@
         "label": "image"
       },
       {
-        "type":      "textarea",
-        "id":        "one-stop-shop-description",
-        "label":     "Shop Description",
-        "default":   "Lorem incredible ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+        "type": "textarea",
+        "id": "one-stop-shop-title",
+        "label": "Shop Title",
+        "default": "Swaye Boutique"
       },
       {
-        "type":      "textarea",
-        "id":        "one-stop-salon-description",
-        "label":     "Salon Description",
-        "default":   "Lorem incredible ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+        "type": "textarea",
+        "id": "one-stop-shop-description",
+        "label": "Shop Description",
+        "default": "Lorem incredible ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      },
+      {
+        "type": "textarea",
+        "id": "one-stop-salon-title",
+        "label": "Salon Title",
+        "default": "Salon"
+      },
+      {
+        "type": "textarea",
+        "id": "one-stop-salon-description",
+        "label": "Salon Description",
+        "default": "Lorem incredible ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
       }
     ]
   },
@@ -113,22 +137,22 @@
     },
     "settings": [
       {
-        "type":      "header",
-        "content":   "Featured Collection",
-        "info":      "You will see this on the home page beneath the one stop shop block"
+        "type": "header",
+        "content": "Featured Collection",
+        "info": "You will see this on the home page beneath the one stop shop block"
       },
       {
-        "type":      "collection",
-        "id":        "featured-collection",
-        "label":     "Featured Collection",
+        "type": "collection",
+        "id": "featured-collection",
+        "label": "Featured Collection",
         "info": "Can be found on the home page"
-     },
-     {
-      "type":      "text",
-      "id":        "featured-collection-header",
-      "label":     "Header Text",
-      "default":   "Sweater Season"
-    }
+      },
+      {
+        "type": "text",
+        "id": "featured-collection-header",
+        "label": "Header Text",
+        "default": "Sweater Season"
+      }
     ]
   },
   {
@@ -137,9 +161,9 @@
     },
     "settings": [
       {
-        "type":      "header",
-        "content":   "First Global Block",
-        "info":      "You will see this block on many places of the website including the home page near the bottom"
+        "type": "header",
+        "content": "First Global Block",
+        "info": "You will see this block on many places of the website including the home page near the bottom"
       },
       {
         "type": "image_picker",
@@ -147,22 +171,22 @@
         "label": "image"
       },
       {
-        "type":      "text",
-        "id":        "global-1-header",
-        "label":     "Header",
-        "default":   "Seeing is believing"
+        "type": "text",
+        "id": "global-1-header",
+        "label": "Header",
+        "default": "Seeing is believing"
       },
       {
-        "type":      "textarea",
-        "id":        "global-1-paragraph",
-        "label":     "Text",
-        "default":   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+        "type": "textarea",
+        "id": "global-1-paragraph",
+        "label": "Text",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
       },
       {
-        "type":      "text",
-        "id":        "global-1-button-text",
-        "label":     "Button Text",
-        "default":   "View Galleries"
+        "type": "text",
+        "id": "global-1-button-text",
+        "label": "Button Text",
+        "default": "View Galleries"
       },
       {
         "id": "global-1-button-dest",
@@ -177,9 +201,9 @@
     },
     "settings": [
       {
-        "type":      "header",
-        "content":   "Second Global Block",
-        "info":      "You will see this block on many places of the website including the shop page near the bottom"
+        "type": "header",
+        "content": "Second Global Block",
+        "info": "You will see this block on many places of the website including the shop page near the bottom"
       },
       {
         "type": "image_picker",
@@ -187,22 +211,22 @@
         "label": "image"
       },
       {
-        "type":      "text",
-        "id":        "global-2-header",
-        "label":     "Header",
-        "default":   "Seeing is believing"
+        "type": "text",
+        "id": "global-2-header",
+        "label": "Header",
+        "default": "Seeing is believing"
       },
       {
-        "type":      "textarea",
-        "id":        "global-2-paragraph",
-        "label":     "Text",
-        "default":   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+        "type": "textarea",
+        "id": "global-2-paragraph",
+        "label": "Text",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
       },
       {
-        "type":      "text",
-        "id":        "global-2-button-text",
-        "label":     "Button Text",
-        "default":   "View Galleries"
+        "type": "text",
+        "id": "global-2-button-text",
+        "label": "Button Text",
+        "default": "View Galleries"
       },
       {
         "id": "global-2-button-dest",
@@ -217,9 +241,9 @@
     },
     "settings": [
       {
-        "type":      "header",
-        "content":   "First Global Block",
-        "info":      "You will see this block on the cart page near the bottom"
+        "type": "header",
+        "content": "First Global Block",
+        "info": "You will see this block on the cart page near the bottom"
       },
       {
         "type": "image_picker",
@@ -227,22 +251,22 @@
         "label": "image"
       },
       {
-        "type":      "text",
-        "id":        "cart-block-header",
-        "label":     "Header",
-        "default":   "Seeing is believing"
+        "type": "text",
+        "id": "cart-block-header",
+        "label": "Header",
+        "default": "Seeing is believing"
       },
       {
-        "type":      "textarea",
-        "id":        "cart-block-paragraph",
-        "label":     "Text",
-        "default":   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+        "type": "textarea",
+        "id": "cart-block-paragraph",
+        "label": "Text",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
       },
       {
-        "type":      "text",
-        "id":        "cart-block-button-text",
-        "label":     "Button Text",
-        "default":   "View Galleries"
+        "type": "text",
+        "id": "cart-block-button-text",
+        "label": "Button Text",
+        "default": "View Galleries"
       },
       {
         "id": "cart-block-button-dest",
@@ -257,9 +281,9 @@
     },
     "settings": [
       {
-        "type":      "header",
-        "content":   "Hair",
-        "info":      "You will see these on the gallery page"
+        "type": "header",
+        "content": "Hair",
+        "info": "You will see these on the gallery page"
       },
       {
         "type": "image_picker",

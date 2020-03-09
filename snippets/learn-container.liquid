@@ -3,36 +3,48 @@
         {% assign first = "active" %}
         {% for article in blogs.service.articles %}
             {% if article.title == "Shop" %}
-                {% assign selected = false %}
-                {% for collection in collections offset: 1 %}
-                    {% if selected == false and collection.handle != "frontpage" %}
-                        <a class="{{ first }}" href="{{ collection.url }}">
-                            <h5 class="bold">Shop {{ collection.title }}</h5>
-                        </a>
-                        {% assign selected = true %}
-                    {% endif %}
-                {% endfor %}
+                {% if settings.show-shopping == true %}
+                    {% assign selected = false %}
+                    {% for collection in collections offset: 1 %}
+                        {% if selected == false and collection.handle != "frontpage" %}
+                            <a class="{{ first }}" href="{{ collection.url }}">
+                                <h5 class="bold">Shop {{ collection.title }}</h5>
+                            </a>
+                            {% assign selected = true %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
             {% else %}
                 <a class="{{ first }}" href="/pages/prices">
-                    <h5 class="bold">Prices</h5>
+                    <h5 class="bold">
+                        {% if settings.switch-to-services == true %}
+                            Services
+                        {% else %}
+                            Prices
+                        {% endif %}
+                    </h5>
                 </a>
             {% endif %}
-            {% assign first = "" %}
+            {% if settings.show-shopping == true or forloop.index == 2 %}
+                {% assign first = "" %}
+            {% endif %}
         {% endfor %}
     </div>
     <div class="learn-people">
         {% assign first = "active" %}
         {% for article in blogs.service.articles %}
             {% if article.title == "Shop" %}
-                {% assign selected = false %}
-                {% for collection in collections %}
-                    {% if selected == false and collection.handle != "frontpage" %}
-                        <a class="{{ first }}" href="{{ collection.url }}">
-                            <h5 class="bold">Shop {{ collection.title }}</h5>
-                        </a>
-                        {% assign selected = true %}
-                    {% endif %}
-                {% endfor %}
+                {% if settings.show-shopping == true %}
+                    {% assign selected = false %}
+                    {% for collection in collections %}
+                        {% if selected == false and collection.handle != "frontpage" %}
+                            <a class="{{ first }}" href="{{ collection.url }}">
+                                <h5 class="bold">Shop {{ collection.title }}</h5>
+                            </a>
+                            {% assign selected = true %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
             {% elsif article.title == "Skin" %}
                 <a class="{{ first }}" href="/pages/team">
                     <h5 class="bold">Estheticians</h5>
@@ -46,16 +58,20 @@
                     <h5 class="bold">Technicians</h5>
                 </a>
             {% endif %}
-            {% assign first = "" %}
+            {% if settings.show-shopping == true or forloop.index == 2 %}
+                {% assign first = "" %}
+            {% endif %}
         {% endfor %}
     </div>
     <div class="learn-gallery">
         {% assign first = "active" %}
         {% for article in blogs.service.articles %}
             {% if article.title == "Shop" %}
-                <a class="{{ first }}" href="/collections">
-                    <h5 class="bold">Shop All</h5>
-                </a>
+                {% if settings.show-shopping == true %}
+                    <a class="{{ first }}" href="/collections">
+                        <h5 class="bold">Shop All</h5>
+                    </a>
+                {% endif %}
             {% elsif article.title == "Skin" %}
                 <a class="{{ first }}" href="tel:775-323-7375">
                     <h5 class="bold">Book Apointment</h5>
@@ -65,7 +81,9 @@
                     <h5 class="bold">{{ article.title}} Gallery</h5>
                 </a>
             {% endif %}
-            {% assign first = "" %}
+            {% if settings.show-shopping == true or forloop.index == 2 %}
+                {% assign first = "" %}
+            {% endif %}
         {% endfor %}                
     </div>
 </div>

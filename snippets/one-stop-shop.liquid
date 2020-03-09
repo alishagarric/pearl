@@ -4,10 +4,12 @@
         <div class="arrow">
             {% include 'svg-arrow-left' %}
         </div>  
-        <p><strong>Salon</strong></p>
+        <p><strong>{{ settings.one-stop-salon-title }}</strong></p>
         <p>{{ settings.one-stop-salon-description }}</p>
-        <p><strong>Swaye Boutique</strong></p>
+        <p><strong>{{ settings.one-stop-shop-title }}</strong></p>
         <p>{{ settings.one-stop-shop-description }}</p>
-        <button class="dark full-width"><a href="/collections">Shop Now</a></button>
+        {% if settings.show-shopping == true %}
+            <button class="dark full-width"><a href="/collections">Shop Now</a></button>
+        {% endif %}
     </div>
 </div>

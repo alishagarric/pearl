@@ -4,33 +4,91 @@
   </a>
   <ul>
     {% for link in linklists.footer.links %}
-      <li>
-        <a href="{{ link.url }}">
-          {{ link.title }}
-        </a>
-      </li>
+      {% if link.title == "Shop" and settings.show-shopping == false %}
+      {% else %}
+        <li>
+          <a href="{{ link.url }}">
+            {% if link.title == "Prices" and settings.switch-to-services == true %}
+              Services
+            {% else %}
+              {{ link.title }}
+            {% endif %}
+          </a>
+        </li>
+      {% endif %}
     {% endfor %}
       <li>
         <a href="tel:1-775-323-7375">
           <img class="call-icon" src="{{ 'icon-call.png' | asset_url }}" alt="call us">
         </a>
       </li>
-      <li>
-        <a href="/cart">
-          <img class="shop-icon" src="{{ 'icon-shop.png' | asset_url }}" alt="shop">
-          <div class="shop-amount">{{ cart.item_count }}</div>
-        </a>
-      </li>
+      {% if settings.show-shopping == true %}
+        <li>
+          <a href="/cart">
+            <img class="shop-icon" src="{{ 'icon-shop.png' | asset_url }}" alt="shop">
+            <div class="shop-amount">{{ cart.item_count }}</div>
+          </a>
+        </li>
+      {% endif %}
   </ul>
   <div class="mobile-nav">
     <a href="tel:1-775-323-7375">
       <img class="call-icon" src="{{ 'icon-call.png' | asset_url }}" alt="call us">
     </a>
-    <a href="/collections">
-      <img class="shop-icon" src=" {{ 'icon-shop.png' | asset_url }}" alt="shop">
-      <div class="shop-amount">{{ cart.item_count }}</div>
-    </a>
+    {% if settings.show-shopping == true %}
+      <a href="/collections">
+        <img class="shop-icon" src=" {{ 'icon-shop.png' | asset_url }}" alt="shop">
+        <div class="shop-amount">{{ cart.item_count }}</div>
+      </a>
+    {% endif %}
     <a href="#">
       <img class="menu-icon" src="{{ 'icon-hamburger.png' | asset_url }}"  alt="menu">
     </a>
 </nav>
+
+<nav class="overlay-nav">
+  <div class="exit"><span></span><span></span></div>
+  <ul>
+    {% for link in linklists.footer.links %}
+      {% if link.title == "Shop" and settings.show-shopping == false %}
+      {% else %}
+        <li>
+          <a href="{{ link.url }}">
+            {% if link.title == "Prices" and settings.switch-to-services == true %}
+              Services
+            {% else %}
+              {{ link.title }}
+            {% endif %}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <ul class="icons">
+       <li>
+        <a href="tel:1-775-323-7375">
+          <img class="call-icon" src="{{ 'icon-call.png' | asset_url }}" alt="call us">
+        </a>
+      </li>
+      {% if settings.show-shopping == true %}
+        <li>
+          <a href="/cart">
+            <img class="shop-icon" src="{{ 'icon-shop.png' | asset_url }}" alt="shop">
+            <div class="shop-amount">{{ cart.item_count }}</div>
+          </a>
+        </li>
+      {% endif %}
+  </ul>
+</nav>
+
+<script>
+  $(document).ready(function(){
+    $(".mobile-nav .menu-icon").click(function() {
+      $("nav.overlay-nav").addClass("active");
+    });
+
+    $("nav.overlay-nav .exit").click(function() {
+      $("nav.overlay-nav").removeClass("active");
+    });
+  });
+</script>

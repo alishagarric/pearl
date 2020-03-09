@@ -1,22 +1,31 @@
 <div class="section services-slider">
     <div class="sliders">
         <div class="left-sliders">
-            <div class="services-title-slider phase-1">
+            <div class="services-title-slider phase-1 {% if settings.show-shopping == false %} rotate-4 {% endif %}">
                 {% for article in blogs.service.articles %}
-                    <h1 class="bold">{{ article.title }}</h1>
+                    {% if settings.show-shopping == false and article.title == 'Shop' %}
+                    {% else %}
+                        <h1 class="bold">{{ article.title }}</h1>
+                    {% endif %}
                 {% endfor %}
             </div>
             <div class="services-main-slider">
                 {% for article in blogs.service.articles %}
-                    <div class="background-image" style="background-image: url('{{ article.image.src | img_url: '500x' }}');"></div>
+                    {% if settings.show-shopping == false and article.title == 'Shop' %}
+                    {% else %}
+                        <div class="background-image" style="background-image: url('{{ article.image.src | img_url: '500x' }}');"></div>
+                    {% endif %}
                 {% endfor %}
             </div>
             <div class="services-info-slider">
                 {% for article in blogs.service.articles %}
-                    <div>
-                        <p>{{ article.content }}</p>
-                        {% include 'slider-tags' %}
-                    </div>
+                    {% if settings.show-shopping == false and article.title == 'Shop' %}
+                    {% else %}
+                        <div>
+                            <p>{{ article.content }}</p>
+                            {% include 'slider-tags' %}
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
             {% include 'learn-container' %}
@@ -24,12 +33,19 @@
         <div class="right-slider-and-tools">
             <div class="services-secondary-slider-container">
                 <div class="services-secondary-slider">
+                    {% assign ourIndex = 1 %}
                     {% for article in blogs.service.articles %}
-                        {% if forloop.index != 1 %}
-                            <div class="background-image" style="background-image: url('{{ article.image.src | img_url: '500x' }}');"></div>
+                        {% if settings.show-shopping == false and article.title == 'Shop' %}
+                        {% else %}
+                            {% if ourIndex != 1 %}
+                                <div class="background-image" style="background-image: url('{{ article.image.src | img_url: '500x' }}');"></div>
+                            {% else %}
+                                {% assign skippedUrl = blogs.service.articles[forloop.index].image.src %}
+                            {% endif %}
+                            {% assign ourIndex = ourIndex | plus: 1 %}
                         {% endif %}
                     {% endfor %}
-                    <div class="background-image" style="background-image: url('{{ blogs.service.articles[0].image.src | img_url: '500x' }}');"></div>
+                    <div class="background-image" style="background-image: url('{{ skippedUrl | img_url: '500x' }}');"></div>
                 </div>
                 <div class="arrows">
                     <div class="arrow arrow-left" onclick="slickServicesPrev()">
@@ -41,9 +57,14 @@
                 </div>
             </div>
             <div class="slider-nav">
+                {% assign ourIndex = 1 %}
                 {% for article in blogs.service.articles %}
-                    <p class="{% if forloop.index == 1 %} selected {% endif %}" data-index="{{forloop.index0}}">{{ article.title }}</p>
-                    <div class="mobile-nav {% if forloop.index == 1 %} selected {% endif %}" data-index="{{forloop.index0}}">&#9900;</div>
+                    {% if settings.show-shopping == false and article.title == 'Shop' %}
+                    {% else %}
+                        <p class="{% if ourIndex == 1 %} selected {% endif %}" data-index="{{ ourIndex || minus: 1 }}">{{ article.title }}</p>
+                        <div class="mobile-nav {% if ourIndex == 1 %} selected {% endif %}" data-index="{{ ourIndex || minus: 1 }}">&#9900;</div>
+                        {% assign ourIndex = ourIndex | plus: 1 %}
+                    {% endif %}
                 {% endfor %}    
             </div>
         </div>
@@ -106,7 +127,12 @@
         }
         else if ( slider.hasClass("phase-4") ){
             slider.removeClass("phase-4");
-            slider.addClass("phase-5");
+            if ( slider.hasClass("rotate-4") ){
+                slider.addClass("phase-1");
+            }
+            else {
+                slider.addClass("phase-5");
+            }
         }
         else if ( slider.hasClass("phase-5") ){
             slider.removeClass("phase-5");
@@ -118,7 +144,12 @@
         var slider = $('.services-title-slider');
         if ( slider.hasClass("phase-1") ){
             slider.removeClass("phase-1");
-            slider.addClass("phase-5");
+            if ( slider.hasClass("rotate-4") ){
+                slider.addClass("phase-4");
+            }
+            else {
+                slider.addClass("phase-5");
+            }
         }
         else if ( slider.hasClass("phase-2") ){
             slider.removeClass("phase-2");

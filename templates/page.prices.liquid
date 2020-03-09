@@ -1,10 +1,23 @@
-
+{% if settings.switch-to-services == true %}
+    {% assign theTitle = "services" %}
+{% else %}
+    {% assign theTitle = "prices" %}
+{% endif %}
 
 <!-- /templates/page.prices.liquid -->
  <div class="section prices">
     <div class="inner">
+        <div class="page-title {{ theTitle }}-title">
+            <h1>{{ theTitle}}</h1>
+            <img src="{{ 'leaf-gallery.png' | asset_url }}">
+            <div class="letters-atop">
+                {% assign theTitle = theTitle | split: '' %}
+                {% for letter in theTitle %}
+                    <span>{{ letter }}</span>
+                {% endfor %}
+            </div>
+        </div>
         <div class="page-title">
-            <img src="{{ 'title-prices.png' | asset_url }}">
         </div>
     </div>
     <div class="menus">

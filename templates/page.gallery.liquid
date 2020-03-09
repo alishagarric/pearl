@@ -1,10 +1,21 @@
-
+{% if settings.switch-to-services == true %}
+    {% assign toggleWord = "services" %}
+{% else %}
+    {% assign toggleWord = "rates" %}
+{% endif %}
 
 <!-- /templates/page.gallery.liquid -->
  <div class="section gallery-page">
     <div class="inner">
-        <div class="page-title">
-            <img src="{{ 'title-gallery.png' | asset_url }}">
+        <div class="page-title gallery-title" style="background">
+            <h1>{{page.title}}</h1>
+            <img src="{{ 'leaf-gallery.png' | asset_url }}">
+            <div class="letters-atop">
+                {% assign theTitle = page.title | split: '' %}
+                {% for letter in theTitle %}
+                    <span>{{ letter }}</span>
+                {% endfor %}
+            </div>
         </div>
     </div>
     <div class="galleries">
@@ -13,7 +24,7 @@
             <div class="content">
                 <div class="title">
                     <h2>Hair</h2>
-                    <p>Check out <br />our <u><a href="/pages/prices">hair rates.</a></u></p>
+                    <p>Check out <br />our <u><a href="/pages/prices">hair {{ toggleWord }}.</a></u></p>
                 </div>
                 <div class="arrow" onclick="slickHairNext()">
                     {% include 'svg-arrow-right' %}
@@ -36,7 +47,7 @@
             <div class="content">
                 <div class="title">
                     <h2>Nails</h2>
-                    <p>Check out <br />our <u><a href="/pages/prices">nails rates.</a></u></p>
+                    <p>Check out <br />our <u><a href="/pages/prices">nails {{ toggleWord }}.</a></u></p>
                 </div>
                 <div class="arrow" onclick="slickNailsNext()">
                     {% include 'svg-arrow-right' %}
@@ -61,7 +72,7 @@
             <div class="content">
                 <div class="title">
                     <h2>Lashes</h2>
-                    <p>Check out <br />our <u><a href="/pages/prices">lash rates.</a></u></p>
+                    <p>Check out <br />our <u><a href="/pages/prices">lash {{ toggleWord }}.</a></u></p>
                 </div>
                 <div class="arrow" onclick="slickLashesNext()">
                     {% include 'svg-arrow-right' %}
