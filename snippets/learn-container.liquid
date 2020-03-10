@@ -15,7 +15,7 @@
                     {% endfor %}
                 {% endif %}
             {% else %}
-                <a class="{{ first }}" href="/pages/prices">
+                <a class="{{ first }}" href="/pages/prices?first={{ article.title | downcase }}">
                     <h5 class="bold">
                         {% if settings.switch-to-services == true %}
                             Services
@@ -46,16 +46,32 @@
                     {% endfor %}
                 {% endif %}
             {% elsif article.title == "Skin" %}
-                <a class="{{ first }}" href="/pages/team">
-                    <h5 class="bold">Estheticians</h5>
+                <a class="{{ first }}" href="/pages/team?first=skin">
+                    {% assign size = blogs.esthetician.articles | size %}
+                    {% if size > 0 %}
+                        <h5 class="bold">Estheticians</h5>
+                    {% endif %}
                 </a>
             {% elsif article.title == "Hair" %}
-                <a class="{{ first }}" href="/pages/team">
-                    <h5 class="bold">Stylists</h5>  
+                <a class="{{ first }}" href="/pages/team?first=hair">
+                    {% assign size = blogs.hair-stylist.articles | size %}
+                    {% if size > 0 %}
+                        <h5 class="bold">Stylists</h5>
+                    {% endif %}  
+                </a>
+            {% elsif article.title == "Nails" %}
+                <a class="{{ first }}" href="/pages/team?first=nails">
+                    {% assign size = blogs.nail-tech.articles | size %}
+                    {% if size > 0 %}
+                        <h5 class="bold">Technicians</h5>
+                    {% endif %}
                 </a>
             {% else %}
-                <a class="{{ first }}" href="/pages/team">
-                    <h5 class="bold">Technicians</h5>
+                <a class="{{ first }}" href="/pages/team?first=lashes">
+                    {% assign size = blogs.lash-stylist.articles | size %}
+                    {% if size > 0 %}
+                        <h5 class="bold">Technicians</h5>
+                    {% endif %}
                 </a>
             {% endif %}
             {% if settings.show-shopping == true or forloop.index == 2 %}
@@ -77,7 +93,7 @@
                     <h5 class="bold">Book Apointment</h5>
                 </a>
             {% else %}
-                <a class="{{ first }}" href="/pages/gallery">
+                <a class="{{ first }}" href="/pages/gallery?first={{ article.title | downcase }}">
                     <h5 class="bold">{{ article.title}} Gallery</h5>
                 </a>
             {% endif %}

@@ -1,5 +1,58 @@
+.first-gallery-styles {
+    width: 100vw;
+
+    .slick-slider {
+        position: relative;
+        left: $base * -1.5;
+        width: 115vw;
+    }
+}
+
+.odd-gallery-styles {
+    margin-right: 0;
+}
+
+.last-gallery-styles {
+    .content {
+        padding: $base * .75 $base * .5;
+        @media( max-width: $screen-smedium) {
+            padding-left: $base * 1.5;
+        }
+        @media ( max-width: $screen-sm){
+            padding-left: $base / 1.5; 
+        }
+        @media ( max-width: $screen-tiny){
+            padding-right: $base / 2;
+        }
+    }
+}
+
+.middle-gallery-styles {
+    .content {
+        padding: $base * .75 $base * .5 $base * .75 $base * 1.5;
+        @media ( max-width: $screen-sm){
+            padding-left: $base / 1.5; 
+            padding-right: $base / 1.5;
+        }
+        @media ( max-width: $screen-tiny){
+            padding-left: $base / 2; 
+            padding-right: $base / 2;
+        }
+    }
+
+    .slick-slider {
+        position: absolute;
+        right: 0;
+        .background-image {
+            margin-right: 0;
+            margin-left: 1.5vw;
+        }
+    }
+}
+
 .gallery-page {
     padding-bottom: 0;
+    overflow: hidden;
 
     .inner {
         text-align: center;
@@ -13,15 +66,68 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: stretch;
+
+        &.first-lashes {
+            .gallery:nth-of-type(3) {
+                order: 1;
+                @extend .first-gallery-styles;
+                @extend .odd-gallery-styles;
+            }
+
+            .gallery:nth-of-type(1) {
+                order: 2;
+                @extend .middle-gallery-styles;
+            }
+
+            .gallery:nth-of-type(2) {
+                order: 3;
+                @extend .odd-gallery-styles;
+                @extend .last-gallery-styles;
+            }
+
+        }
+
+        &.first-nails  {
+            .gallery:nth-of-type(2) {
+                order: 1;
+                @extend .first-gallery-styles;
+                @extend .odd-gallery-styles;
+            }
+
+            .gallery:nth-of-type(1) {
+                order: 2;
+                @extend .middle-gallery-styles;
+            }
+
+            .gallery:nth-of-type(3) {
+                order: 3;
+                @extend .odd-gallery-styles;
+                @extend .last-gallery-styles;
+            }
+        }
+
+        &.first-hair  {
+            .gallery:nth-of-type(1) {
+                order: 1;
+                @extend .first-gallery-styles;
+                @extend .odd-gallery-styles;
+            }
+
+            .gallery:nth-of-type(2) {
+                order: 2;
+                @extend .middle-gallery-styles;
+            }
+
+            .gallery:nth-of-type(3) {
+                order: 3;
+                @extend .odd-gallery-styles;
+                @extend .last-gallery-styles;
+            }
+        }
+
         .gallery {
             background-color: $cool-grey;
             margin-bottom: 2vw;
-            &:first-of-type {
-                width: 100vw;
-            }
-            &:nth-of-type(odd){
-                margin-right: 0;
-            }
             width: 45%;
             margin-right: 2vw;
             flex-grow: 5;
@@ -53,6 +159,7 @@
                         }
                         @media ( max-width: $screen-tiny * .80 ){
                             margin-right: $base / 5;
+                            font-size: 38px;
                             transform: translateY(-3px);
                         }
                     }
@@ -66,30 +173,28 @@
                     @media( max-width: $screen-smedium) {
                         left: $base * -1.5;
                         width: 115vw;
+                        
+                    }
+                    @media (max-width: $screen-sm){
+                        height: 45vw;
                     }
                     .background-image {
                         width: 28.5vw;
                         height: 28.5vw;
                         margin-right: 1.5vw;
+                        @media (max-width: $screen-sm){
+                            width: 45vw;
+                            height: 45vw;
+                        }
                     }
                 }
                 .gallery-holder {
                     height: 28.5vw;
                     position: relative;
                     width: 100%;
-                    .nails-gallery-slider {
-                        position: absolute;
-                        right: 0;
-                        .background-image {
-                            margin-right: 0;
-                            margin-left: 1.5vw;
-                        }
+                    @media (max-width: $screen-sm){
+                        height: 45vw;
                     }
-                }
-                .hair-gallery-slider {
-                    position: relative;
-                    left: $base * -1.5;
-                    width: 115vw;
                 }
                 .arrow {
                     position: absolute;
@@ -112,34 +217,7 @@
                         }
                     }   
                 }
-            }   
-            &:last-of-type { 
-                .content {
-                    padding: $base * .75 $base * .5;
-                    @media( max-width: $screen-smedium) {
-                        padding-left: $base * 1.5;
-                    }
-                    @media ( max-width: $screen-sm){
-                        padding-left: $base / 1.5; 
-                    }
-                    @media ( max-width: $screen-tiny){
-                        padding-right: $base / 2;
-                    }
-                }
-            }  
-            &:nth-of-type(2){
-                .content {
-                    padding: $base * .75 $base * .5 $base * .75 $base * 1.5;
-                    @media ( max-width: $screen-sm){
-                        padding-left: $base / 1.5; 
-                        padding-right: $base / 1.5;
-                    }
-                    @media ( max-width: $screen-tiny){
-                        padding-left: $base / 2; 
-                        padding-right: $base / 2;
-                    }
-                }
-            }   
+            }      
         }
     }
 

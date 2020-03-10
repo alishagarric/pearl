@@ -1,3 +1,5 @@
+
+
 {% if settings.switch-to-services == true %}
     {% assign toggleWord = "services" %}
 {% else %}
@@ -24,7 +26,7 @@
             <div class="content">
                 <div class="title">
                     <h2>Hair</h2>
-                    <p>Check out <br />our <u><a href="/pages/prices">hair {{ toggleWord }}.</a></u></p>
+                    <p>Check out <br />our <u><a href="/pages/prices?first=hair">hair {{ toggleWord }}.</a></u></p>
                 </div>
                 <div class="arrow" onclick="slickHairNext()">
                     {% include 'svg-arrow-right' %}
@@ -47,7 +49,7 @@
             <div class="content">
                 <div class="title">
                     <h2>Nails</h2>
-                    <p>Check out <br />our <u><a href="/pages/prices">nails {{ toggleWord }}.</a></u></p>
+                    <p>Check out <br />our <u><a href="/pages/prices?first=nails">nails {{ toggleWord }}.</a></u></p>
                 </div>
                 <div class="arrow" onclick="slickNailsNext()">
                     {% include 'svg-arrow-right' %}
@@ -72,7 +74,7 @@
             <div class="content">
                 <div class="title">
                     <h2>Lashes</h2>
-                    <p>Check out <br />our <u><a href="/pages/prices">lash {{ toggleWord }}.</a></u></p>
+                    <p>Check out <br />our <u><a href="/pages/prices?first=lashes">lash {{ toggleWord }}.</a></u></p>
                 </div>
                 <div class="arrow" onclick="slickLashesNext()">
                     {% include 'svg-arrow-right' %}
@@ -99,8 +101,27 @@
 <!--end footer -->
 
 <script>
+
     $(document).ready(function(){
-      $('.lashes-gallery-slider, .nails-gallery-slider').slick({
+
+        var urlParams = new URLSearchParams(window.location.search);
+        var firstParam = urlParams.get('first') ? urlParams.get('first') : 'hair';
+        $(".galleries").addClass("first-" + firstParam );
+
+        if ( firstParam == 'hair'){
+            var shortClasses = '.lashes-gallery-slider, .nails-gallery-slider';
+            var longClasses = '.hair-gallery-slider';
+        }
+        else if ( firstParam == "lashes" ){
+            var shortClasses = '.hair-gallery-slider, .nails-gallery-slider';
+            var longClasses = '.lashes-gallery-slider';
+        }
+        else {
+            var shortClasses = '.hair-gallery-slider, .lashes-gallery-slider';
+            var longClasses = '.nails-gallery-slider'; 
+        }
+
+      $(shortClasses).slick({
           arrows: false,
           autoplay: true,
           autoplaySpeed: 5000,
@@ -115,7 +136,7 @@
           ]
       });
 
-      $('.hair-gallery-slider').slick({
+      $(longClasses).slick({
           arrows: false,
           autoplay: true,
           autoplaySpeed: 50000,

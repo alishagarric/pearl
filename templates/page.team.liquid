@@ -72,18 +72,30 @@
             </div>
         </div>
         <div class="filters">
-            <span class="filter" onclick="toggleEmployees('nails', this)">
-                Nail Techs {% include 'icon-select' %}
-            </span>
-            <span class="filter" onclick="toggleEmployees('hair', this)">
-                Hair Stylists {% include 'icon-select' %}
-            </span>
-            <span class="filter" onclick="toggleEmployees('lashes', this)">
-                Lash Stylists {% include 'icon-select' %}
-            </span>
-            <span class="filter" onclick="toggleEmployees('skin', this)">
-                Estheticians {% include 'icon-select' %}
-            </span>
+            {% assign size = blogs.nail-tech.articles | size %}
+            {% if size > 0 %}
+                <span class="filter" id="nails" onclick="toggleEmployees('nails', this)">
+                    Nail Techs {% include 'icon-select' %}
+                </span>
+            {% endif %}
+            {% assign size = blogs.hair-stylist.articles | size %}
+            {% if size > 0 %}
+                <span class="filter" id="hair" onclick="toggleEmployees('hair', this)">
+                    Hair Stylists {% include 'icon-select' %}
+                </span>
+            {% endif %}
+            {% assign size = blogs.lash-stylist.articles | size %}
+            {% if size > 0 %}
+                <span class="filter" id="lashes" onclick="toggleEmployees('lashes', this)">
+                    Lash Stylists {% include 'icon-select' %}
+                </span>
+            {% endif %}
+            {% assign size = blogs.esthetician.articles | size %}
+            {% if size > 0 %}
+                <span class="filter" id="skin" onclick="toggleEmployees('skin', this)">
+                    Estheticians {% include 'icon-select' %}
+                </span>
+            {% endif %}
         </div>
     </div>
  </div>
@@ -143,12 +155,10 @@
         var filters = $(".filters > .filter");
         var show = true;
         for ( var i = 0; i < filters.length; i++ ){
-            console.log( filters[i] );
             if ( $(filters[i]).hasClass("unselected") != true ){
                 show = false;
             }
         }
-        console.log( show );
         if ( show == true ){
             $(".empty-team-list").removeClass("hide");
         }
@@ -156,4 +166,15 @@
             $(".empty-team-list").addClass("hide");
         }
     }
+
+    $(document).ready(function(){
+        var urlParams = new URLSearchParams(window.location.search);
+        var firstParam = urlParams.get('first') ? urlParams.get('first') : 'hair';
+        $( ".filter").each(function( index ) {
+            if ( $(this).attr("id") != firstParam ) {
+                toggleEmployees( $(this).attr("id"), $(this) );
+            }
+        });
+        
+    });
  </script>

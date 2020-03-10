@@ -194,6 +194,16 @@
                 @media (max-width: 600px){
                     margin-right: $base / 4;
                 }
+                > div {
+                    display: none;
+                    &:first-of-type {
+                        display: block;
+                    }
+                }
+
+                &.slick-initialized > div {
+                    display: block;
+                }
             }
             .learn-container {
                 position: absolute;
@@ -317,10 +327,19 @@
         }
     }
     .services-main-slider, .services-secondary-slider {
+
+        &.slick-initialized .background-image{
+            display: block;
+        }
+
         .background-image {
+            display: none;
             height: 50vh;
             min-height: 300px;
             max-height: 720px;
+            &:first-of-type {
+                display: block;
+            }
         }
     }
 }

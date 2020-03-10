@@ -1,10 +1,23 @@
 .testimonial {
     position: relative;
     .testimonial-slider {
+
         .slide {
+            display: none;
+            padding: 0 $base * 3;
+            pointer-events: none;
             //on file named base.scss
-            width: 100%;
             @extend .image-with-text;
+
+            @media (max-width: 750px){
+                padding: 0 $base * 1.5;
+            }
+            &:first-of-type {
+                display: flex;
+            }
+        }
+        &.slick-initialized .slide {
+            display: flex;
         }
     }
     .arrow {
